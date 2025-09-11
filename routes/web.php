@@ -24,8 +24,6 @@ Route::post('/track-event', [App\Http\Controllers\WelcomeController::class, 'tra
 Route::get('/', [App\Http\Controllers\WelcomeController::class, 'welcome']);
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/main', [App\Http\Controllers\HomeController::class, 'index'])->name('main');
-    Route::get('/category', [App\Http\Controllers\HomeController::class, 'index'])->name('category');
     Route::get('/project', [App\Http\Controllers\HomeController::class, 'index'])->name('project');
     Route::post('/change_password', [App\Http\Controllers\HomeController::class, 'change_password'])->name('change_password');
 });
