@@ -37,6 +37,14 @@
                     <div class="row">
                         <form enctype="multipart/form-data" @if (isset($category)) method="post" action="{{ route('category.update',$category->id) }}" @else method="post" action="{{ route('category.store') }}" @endif>
                             @csrf
+
+                            <div class="col-lg-12 col-12">
+                                <div class="form-group">
+                                    <label>Page SEO</label>
+                                    <textarea id="page_seo" name="page_seo" class="form-control" rows="10" placeholder="Enter page seo...">{{ $category->page_seo ?? '' }}</textarea>
+                                </div>
+                            </div>
+
                             <div class="col-lg-12 col-12">
                                 <div class="form-group">
                                     <label>Category name</label>

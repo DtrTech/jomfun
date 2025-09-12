@@ -29,7 +29,7 @@
 
     </div>
     <div class="text-center mt-5">
-        <h1>Welcome to Lucky7 LuckyWheel Backend</h1>
+        <h1>Welcome to JomFun Backend</h1>
     </div>
 
 </div>

@@ -37,8 +37,8 @@
                         <thead>
                             <tr>
                                 <th class="checkbox-column dt-no-sorting text-center">#</th>
+                                <th>Page SEO</th>
                                 <th>Name</th>
-                                <!-- <th>Image</th> -->
                                 <th>Created At</th>
                                 <th class="text-center dt-no-sorting">Actions</th>
                             </tr>
@@ -47,17 +47,19 @@
                             @foreach($categories as $num => $row)
                             <tr>
                                 <td class="text-center"> {{$num+1}} </td>
+                                <td style="max-width: 500px; white-space: normal; word-wrap: break-word;">
+                                    {{ \Illuminate\Support\Str::words(strip_tags($row->page_seo), 50, '...') }}
+                                </td>
                                 <td>{{$row->category_name??''}}</td>
-                                <!-- <td>{{$row->category_image??''}}</td> -->
                                 <td>{{$row->created_at??''}}</td>
                                 <td class="text-center">
                                     <ul class="table-controls">
                                         <li>
                                             <a href="{{route('category.edit',$row)}}" class="bs-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit" data-original-title="Edit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2 p-1 br-8 mb-1"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg></a>
                                         </li>
-                                        <!-- <li>
+                                        <li>
                                             <a onclick="if(confirm('Are you sure you want to delete?')){window.location.href='{{route('category.destroy',$row)}}'}" href="#" class="bs-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" data-original-title="Delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash p-1 br-8 mb-1"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></a>
-                                        </li> -->
+                                        </li>
                                     </ul>
                                 </td>
                             </tr>

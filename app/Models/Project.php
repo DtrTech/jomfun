@@ -10,6 +10,9 @@ class Project extends Model
 {
     use HasFactory, SoftDeletes;
     protected $fillable = [
+        'category_id',
+        'category_name',
+        'page_seo',
         'title',
         'sub_title',
         'description',
@@ -17,4 +20,9 @@ class Project extends Model
         'publish_time',
         'status',
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

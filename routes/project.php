@@ -10,4 +10,5 @@ Route::prefix('/project')->as('project.')->middleware(['auth'])->group(function(
     Route::get('/edit/{project}', 'ProjectController@edit')->name('edit');
     Route::post('/update/{project}', 'ProjectController@update')->name('update');
     Route::get('/destroy/{project}', 'ProjectController@destroy')->name('destroy');
+    Route::post('/summernote/upload', 'ProjectController@uploadImage')->name('summernote.upload');
 });

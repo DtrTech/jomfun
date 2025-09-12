@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+<!-- Summernote CSS -->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 @section('content')
 <div class="middle-content container-xxl p-0">
     <div class="secondary-nav">
@@ -37,6 +41,28 @@
                     <div class="row">
                         <form enctype="multipart/form-data" @if (isset($project)) method="post" action="{{ route('project.update',$project->id) }}" @else method="post" action="{{ route('project.store') }}" @endif>
                             @csrf
+
+                            <div class="col-lg-12 col-12">
+                                <div class="form-group">
+                                    <label>Page SEO</label>
+                                    <textarea id="page_seo" name="page_seo" class="form-control" rows="10" placeholder="Enter page seo...">{{ $project->page_seo ?? '' }}</textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-12">
+                                <div class="form-group">
+                                    <label>Category</label>
+                                    <select name="category_id" class="form-control">
+                                        @foreach($categories as $category)
+                                            <option value="{{ $category->id }}" 
+                                                {{ (isset($project) && $project->category_id == $category->id) ? 'selected' : '' }}>
+                                                {{ $category->category_name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+
                             <div class="col-lg-12 col-12">
                                 <div class="form-group">
                                     <label>Project Title</label>
@@ -54,7 +80,7 @@
                             <div class="col-lg-12 col-12">
                                 <div class="form-group">
                                     <label>Description</label>
-                                    <textarea id="description" name="description" class="form-control" rows="10" placeholder="Enter description...">{{ $project->description ?? '' }}</textarea>
+                                    <textarea id="description" name="description" class="form-control summernote" rows="10" placeholder="Enter description...">{{ $project->description ?? '' }}</textarea>
                                 </div>
                             </div>
 
@@ -67,8 +93,8 @@
 
                             <div class="col-lg-12 col-12">
                                 <div class="form-group">
-                                    <label>Publish Date</label>
-                                    <input type="text" name="publish_date" placeholder="publish date..." class="form-control" value="{{ $project->publish_date ?? '' }}" required>
+                                    <label>Publish Date & Time</label>
+                                    <input type="text" id="publish_time" name="publish_time" class="form-control" placeholder="Select date and time" value="{{ $project->publish_time ?? '' }}" required>
                                 </div>
                             </div>
 
@@ -76,36 +102,11 @@
                                 <div class="form-group">
                                     <label>Status</label>
                                     <select name="status" class="form-control">
-                                        <option value="active" {{ (isset($product->status) && $product->status === 'active') ? 'selected' : '' }}>Active</option>
-                                        <option value="inactive" {{ (isset($product->status) && $product->status === 'inactive') ? 'selected' : '' }}>Inactive</option>
+                                        <option value="active" {{ (isset($project->status) && $project->status === 'active') ? 'selected' : '' }}>Active</option>
+                                        <option value="inactive" {{ (isset($project->status) && $project->status === 'inactive') ? 'selected' : '' }}>Inactive</option>
                                     </select>
                                 </div>
                             </div>
-
-                            <!-- <div class="col-lg-12 col-12">
-                                <div class="form-group">
-                                    <label>Project Image</label>
-                                    <input type="file" name="project_image" class="form-control" accept="image/*" onchange="previewImage(event)">
-
-                                    <div class="mt-2">
-                                        @if(!empty($project->project_image))
-                                            <div id="currentImageDiv">
-                                                <p><strong>Current Image:</strong></p>
-                                                <img id="currentImage" 
-                                                    src="{{ $project->project_image }}" 
-                                                    alt="Current Project Image" 
-                                                    width="200" 
-                                                    style="border: 1px solid #ddd; margin-bottom: 10px;">
-                                            </div>
-                                        @endif
-                                        
-                                        <div id="newImageDiv" style="display:none;">
-                                            <p><strong>New Image Preview:</strong></p>
-                                            <img id="imagePreview" src="" alt="New Project Image" width="200" style="border: 1px solid #ddd;">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
 
                             <button type="submit" class="mt-2 btn btn-primary float-right" style="margin-right:10px">Save</button>
                             <a href="{{ route('project.index') }}" class="mt-2 btn btn-warning float-right" style="margin-right:10px">Back</a>
@@ -118,22 +119,60 @@
 </div>
 @endsection
 @section('scripts')
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script>
-function previewImage(event) {
-    const input = event.target;
-    const imagePreview = document.getElementById('imagePreview');
-    const newImageDiv = document.getElementById('newImageDiv');
-    
-    if (input.files && input.files[0]) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            imagePreview.src = e.target.result;
-            newImageDiv.style.display = 'block';
-        };
-        reader.readAsDataURL(input.files[0]);
-    } else {
-        newImageDiv.style.display = 'none';
-    }
-}
+    flatpickr("#publish_time", {
+        enableTime: true,
+        dateFormat: "Y-m-d H:i",
+        time_24hr: true,
+        defaultDate: "{{ isset($project->publish_time) ? $project->publish_time : '' }}"
+    });
+</script>
+
+<!-- Summernote JS -->
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('.summernote').summernote({
+            placeholder: 'Write project description here...',
+            tabsize: 2,
+            height: 500,
+            toolbar: [
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['font', ['fontsize', 'color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['insert', ['link', 'picture', 'video']], 
+                ['view', ['fullscreen', 'codeview']]
+            ],
+            callbacks: {
+                onInit: function() {
+                    $('.summernote').next().find('.note-editable').css('color', '#009688');
+                },
+                onImageUpload: function(files) {
+                    let data = new FormData();
+                    data.append("file", files[0]);
+                    data.append("_token", "{{ csrf_token() }}");
+
+                    $.ajax({
+                        url: "{{ route('project.summernote.upload') }}",
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        data: data,
+                        type: "POST",
+                        success: function (response) {
+                            if (response.url) {
+                                $('.summernote').summernote('insertImage', response.url);
+                            }
+                        },
+                        error: function (xhr) {
+                            alert("Upload failed: " + xhr.responseText);
+                        }
+                    });
+                }
+            }
+        });
+    });
 </script>
 @endsection

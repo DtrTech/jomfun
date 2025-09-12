@@ -10,6 +10,7 @@ class Category extends Model
 {
     use HasFactory, SoftDeletes;
     protected $fillable = [
+        'page_seo',
         'category_name',
     ];
 }
