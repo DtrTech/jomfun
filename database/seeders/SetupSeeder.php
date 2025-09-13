@@ -12,7 +12,7 @@ class SetupSeeder extends Seeder
         if (Setup::count() === 0) {
             $setups = [
                 [
-                    'header_script' => 
+                    'seo_header' => 
                     '   <!-- Basic SEO -->
                         <title>Jomfun – Latest News & Updates</title>
                         <meta name="description" content="Stay updated with Jomfun. Discover the latest news, updates, and stories about Jomfun and related topics.">
