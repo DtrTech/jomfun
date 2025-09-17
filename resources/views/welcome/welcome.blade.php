@@ -1,385 +1,225 @@
-
 <!DOCTYPE html>
-<html lang="en-US" class="" data-skin="light">
+<html lang="en-US" data-skin="light">
 <head>
-    <!-- Basic Meta Tags -->
+    <?php
+    $setup = DB::table('setups')->first();
+    $seo_header = $setup ? $setup->seo_header : '';
+    ?>
+
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-    <meta name="theme-color" content="#fe4641" />
-    
-    <!-- Title and Description -->
-    <title>KL Foodie - KL Food Blog 2025 Malaysia</title>
-    <meta name="description" content="KL Foodie is a food blog that guides you about best cafe, restaurants and food in KL Malaysia in 2025. A must-read guide for Foodie." />
-    
-    <!-- Canonical and Profile -->
     <link rel="profile" href="https://gmpg.org/xfn/11" />
-    <link rel="canonical" href="https://klfoodie.com/" />
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="KL Foodie - KL Food Blog 2025 Malaysia" />
-    <meta property="og:description" content="KL Foodie is a food blog that guides you about best cafe, restaurants and food in KL Malaysia in 2025. A must-read guide for Foodie." />
-    <meta property="og:url" content="https://klfoodie.com/" />
-    <meta property="og:site_name" content="KL Foodie" />
-    <meta property="article:publisher" content="https://www.facebook.com/klfoodie" />
-    <meta property="article:modified_time" content="2025-09-03T07:09:41+00:00" />
-    
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@klfoodie" />
-    
-    <!-- Facebook Pages -->
-    <meta property="fb:pages" content="112274292745476" />
-    
-    <!-- Favicons and Icons -->
-    <link rel="icon" href="https://cdn.klfoodie.com/2023/01/kl-foodies.png" sizes="32x32" />
-    <link rel="icon" href="https://cdn.klfoodie.com/2023/01/kl-foodies.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="https://cdn.klfoodie.com/2023/01/kl-foodies.png" />
-    <meta name="msapplication-TileImage" content="https://cdn.klfoodie.com/2023/01/kl-foodies.png" />
-    
-    <!-- WordPress and Theme Links -->
-    <link rel="alternate" type="application/rss+xml" title="KL Foodie » Feed" href="https://klfoodie.com/feed/" />
-    <link rel="alternate" type="application/rss+xml" title="KL Foodie » Comments Feed" href="https://klfoodie.com/comments/feed/" />
-    <link rel='shortlink' href='https://wp.me/P9pw18-hCP' />
-    <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://klfoodie.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fklfoodie.com%2F" />
-    <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://klfoodie.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fklfoodie.com%2F&#038;format=xml" />
-    <link rel="https://api.w.org/" href="https://klfoodie.com/wp-json/" />
-    <link rel="alternate" title="JSON" type="application/json" href="https://klfoodie.com/wp-json/wp/v2/pages/67755" />
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://klfoodie.com/xmlrpc.php?rsd" />
-    
-    <!-- DNS Prefetch -->
-    <link rel='dns-prefetch' href='//secure.gravatar.com' />
-    <link rel='dns-prefetch' href='//stats.wp.com' />
-    <link rel='dns-prefetch' href='//v0.wordpress.com' />
-    <link rel='dns-prefetch' href='//widgets.wp.com' />
-    <link rel='dns-prefetch' href='//s0.wp.com' />
-    <link rel='dns-prefetch' href='//0.gravatar.com' />
-    <link rel='dns-prefetch' href='//1.gravatar.com' />
-    <link rel='dns-prefetch' href='//2.gravatar.com' />
-    <link rel='dns-prefetch' href='//www.googletagmanager.com' />
-    
-    <!-- WordPress Generated Meta -->
-    <meta name="generator" content="WordPress 6.8.2" />
-    <meta name="generator" content="Site Kit by Google 1.160.1" />
-    <meta name="agd-partner-manual-verification" />
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json" class="yoast-schema-graph">
-    {
-        "@context":"https://schema.org",
-        "@graph":[
-            {
-                "@type":"WebPage",
-                "@id":"https://klfoodie.com/",
-                "url":"https://klfoodie.com/",
-                "name":"KL Foodie - KL Food Blog 2025 Malaysia",
-                "isPartOf":{"@id":"https://klfoodie.com/#website"},
-                "datePublished":"2023-01-11T02:30:35+00:00",
-                "dateModified":"2025-09-03T07:09:41+00:00",
-                "description":"KL Foodie is a food blog that guides you about best cafe, restaurants and food in KL Malaysia in 2025. A must-read guide for Foodie.",
-                "breadcrumb":{"@id":"https://klfoodie.com/#breadcrumb"},
-                "inLanguage":"en-US",
-                "potentialAction":[{"@type":"ReadAction","target":["https://klfoodie.com/"]}]
-            },
-            {
-                "@type":"BreadcrumbList",
-                "@id":"https://klfoodie.com/#breadcrumb",
-                "itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]
-            },
-            {
-                "@type":"WebSite",
-                "@id":"https://klfoodie.com/#website",
-                "url":"https://klfoodie.com/",
-                "name":"KL Foodie",
-                "description":"KL Food Guide 2023",
-                "potentialAction":[{
-                    "@type":"SearchAction",
-                    "target":{"@type":"EntryPoint","urlTemplate":"https://klfoodie.com/?s={search_term_string}"},
-                    "query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}
-                }],
-                "inLanguage":"en-US"
-            }
-        ]
-    }
-    </script>
-    
-    <!-- Core JavaScript Libraries -->
-    <script type="text/javascript" src="https://klfoodie.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
-    <script type="text/javascript" src="https://klfoodie.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
-    
-    <!-- WordPress Emoji and Basic Scripts -->
-    <script type="text/javascript">
-        window._wpemojiSettings = {
-            "baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/",
-            "ext":".png",
-            "svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/",
-            "svgExt":".svg",
-            "source":{"concatemoji":"https:\/\/klfoodie.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.2"}
-        };
-        // WordPress emoji detection and loading script
-        !function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
-    </script>
-    
-    <!-- Advanced Ads Ready Script -->
-    <script id="klfoo-ready">
-        window.advanced_ads_ready=function(e,a){
-            a=a||"complete";
-            var d=function(e){return"interactive"===a?"loading"!==e:"complete"===e};
-            d(document.readyState)?e():document.addEventListener("readystatechange",(function(a){d(a.target.readyState)&&e()}),{once:"interactive"===a})
-        },
-        window.advanced_ads_ready_queue=window.advanced_ads_ready_queue||[];
-    </script>
-    
-    <!-- Plugin Scripts -->
-    <script type="text/javascript" src="https://klfoodie.com/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
-    <script type="text/javascript" src="https://klfoodie.com/wp-content/plugins/say-what/assets/build/frontend.js?ver=fd31684c45e4d85aeb4e" id="say-what-js-js"></script>
-    <script type="text/javascript" src="https://klfoodie.com/wp-content/plugins/pixelyoursite/dist/scripts/jquery.bind-first-0.2.3.min.js?ver=6.8.2" id="jquery-bind-first-js"></script>
-    <script type="text/javascript" src="https://klfoodie.com/wp-content/plugins/pixelyoursite/dist/scripts/js.cookie-2.1.3.min.js?ver=2.1.3" id="js-cookie-pys-js"></script>
-    <script type="text/javascript" src="https://klfoodie.com/wp-content/plugins/pixelyoursite/dist/scripts/tld.min.js?ver=2.3.1" id="js-tld-js"></script>
-    
-    <!-- Core CSS Styles -->
-    <link rel='stylesheet' id='wp-block-library-css' href='https://klfoodie.com/wp-includes/css/dist/block-library/style.min.css?ver=6.8.2' type='text/css' media='all' />
-    <link rel='stylesheet' id='mediaelement-css' href='https://klfoodie.com/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17' type='text/css' media='all' />
-    <link rel='stylesheet' id='wp-mediaelement-css' href='https://klfoodie.com/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.8.2' type='text/css' media='all' />
-    
-    <!-- Plugin CSS Styles -->
-    <link rel='stylesheet' id='contact-form-7-css' href='https://klfoodie.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.1.1' type='text/css' media='all' />
-    <link rel='stylesheet' id='jetpack_likes-css' href='https://klfoodie.com/wp-content/plugins/jetpack/modules/likes/style.css?ver=14.9.1' type='text/css' media='all' />
-    
-    <!-- Theme CSS Styles -->
-    <link rel='stylesheet' id='tie-css-base-css' href='https://klfoodie.com/wp-content/themes/jannah/assets/css/base.min.css?ver=5.4.5' type='text/css' media='all' />
-    <link rel='stylesheet' id='tie-css-styles-css' href='https://klfoodie.com/wp-content/themes/jannah/assets/css/style.min.css?ver=5.4.5' type='text/css' media='all' />
-    <link rel='stylesheet' id='tie-css-widgets-css' href='https://klfoodie.com/wp-content/themes/jannah/assets/css/widgets.min.css?ver=5.4.5' type='text/css' media='all' />
-    <link rel='stylesheet' id='tie-css-helpers-css' href='https://klfoodie.com/wp-content/themes/jannah/assets/css/helpers.min.css?ver=5.4.5' type='text/css' media='all' />
-    <link rel='stylesheet' id='tie-fontawesome5-css' href='https://klfoodie.com/wp-content/themes/jannah/assets/css/fontawesome.css?ver=5.4.5' type='text/css' media='all' />
-    <link rel='stylesheet' id='tie-css-ilightbox-css' href='https://klfoodie.com/wp-content/themes/jannah/assets/ilightbox/dark-skin/skin.css?ver=5.4.5' type='text/css' media='all' />
-    
-    <!-- Analytics and Tracking -->
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829759-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-109829759-1');
-    </script>
-    
-    <!-- Google AdSense -->
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-4743763503059082",
-            enable_page_level_ads: true
-        });
-    </script>
-    
-    <!-- PixelYourSite Configuration -->
-    <script type='application/javascript' id='pys-version-script'>
-        console.log('PixelYourSite Free version 11.1.0');
-    </script>
-    
-    <!-- Third-party Analytics and Ad Scripts -->
-    <script type="application/javascript" src="//anymind360.com/js/10199/ats.js"></script>
-    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-    <script>
-        window.googletag = window.googletag || {cmd: []};
-        googletag.cmd.push(function() {
-            googletag.defineOutOfPageSlot('/43893936/KLF_OutofPage', 'div-gpt-ad-1683023148072-0').addService(googletag.pubads());
-            googletag.pubads().enableSingleRequest();
-            googletag.pubads().collapseEmptyDivs();
-            googletag.enableServices();
-        });
-    </script>
-    
-    <!-- Email Marketing -->
-    <script id="mcjs">
-        !function(c,h,i,m,p){
-            m=c.createElement(h),
-            p=c.getElementsByTagName(h)[0],
-            m.async=1,
-            m.src=i,
-            p.parentNode.insertBefore(m,p)
-        }(document,"script","https://chimpstatic.com/mcjs-connected/js/users/bd12b68891359146e62499c05/5628d7769b7cb3a777f10c988.js");
-    </script>
-    <script type="text/javascript" src="https://xhr.invl.co/magic/2398/auto.js"></script>
-    
-    <!-- Security and Performance -->
-    <script type="text/javascript">
-        (function(url){
-            if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
-            var addEvent = function(evt, handler) {
-                if (window.addEventListener) {
-                    document.addEventListener(evt, handler, false);
-                } else if (window.attachEvent) {
-                    document.attachEvent('on' + evt, handler);
-                }
-            };
-            var removeEvent = function(evt, handler) {
-                if (window.removeEventListener) {
-                    document.removeEventListener(evt, handler, false);
-                } else if (window.detachEvent) {
-                    document.detachEvent('on' + evt, handler);
-                }
-            };
-            var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
-            var logHuman = function() {
-                if (window.wfLogHumanRan) { return; }
-                window.wfLogHumanRan = true;
-                var wfscr = document.createElement('script');
-                wfscr.type = 'text/javascript';
-                wfscr.async = true;
-                wfscr.src = url + '&r=' + Math.random();
-                (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
-                for (var i = 0; i < evts.length; i++) {
-                    removeEvent(evts[i], logHuman);
-                }
-            };
-            for (var i = 0; i < evts.length; i++) {
-                addEvent(evts[i], logHuman);
-            }
-        })('//klfoodie.com/?wordfence_lh=1&hid=21AE35B7C556491D6EDC788481C35AC0');
-    </script>
-    
-    <!-- Inline Styles -->
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
     <style>
-        img:is([sizes="auto" i], [sizes^="auto," i]) { 
-            contain-intrinsic-size: 3000px 1500px 
-        }
+        img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }
     </style>
+
+    {!! $seo_header !!}
     
-    <!-- Widget and Plugin Inline Styles -->
-    <style id='wp-emoji-styles-inline-css' type='text/css'>
-        img.wp-smiley, img.emoji {
-            display: inline !important;
-            border: none !important;
-            box-shadow: none !important;
-            height: 1em !important;
-            width: 1em !important;
-            margin: 0 0.07em !important;
-            vertical-align: -0.1em !important;
-            background: none !important;
-            padding: 0 !important;
-        }
-    </style>
-    
-    <style id='jetpack_facebook_likebox-inline-css' type='text/css'>
-        .widget_facebook_likebox {
-            overflow: hidden;
-        }
-    </style>
-    
-    <style type="text/css">
-        .feedzy-rss-link-icon:after {
-            content: url("https://klfoodie.com/wp-content/plugins/feedzy-rss-feeds/img/external-link.png");
-            margin-left: 3px;
-        }
-    </style>
-    
-    <!-- WordPress Stats -->
-    <style>img#wpstats{display:none}</style>
-    
-    <!-- Custom CSS -->
-    <style type="text/css" id="wp-custom-css">
-        .dable-widget {
-            display: none;
-        }
-        .single-post .dable-widget {
-            display: block !important;
-        }
-    </style>
-    
-    <!-- Responsive Viewport Styles -->
-    <style>
-        .ai-viewports                 {--ai: 1;}
-        .ai-viewport-3                { display: none !important;}
-        .ai-viewport-2                { display: none !important;}
-        .ai-viewport-1                { display: inherit !important;}
-        .ai-viewport-0                { display: none !important;}
-        @media (min-width: 768px) and (max-width: 979px) {
-            .ai-viewport-1                { display: none !important;}
-            .ai-viewport-2                { display: inherit !important;}
-        }
-        @media (max-width: 767px) {
-            .ai-viewport-1                { display: none !important;}
-            .ai-viewport-3                { display: inherit !important;}
-        }
-    </style>
-</head>
+    <script type="text/javascript"></script>
+</script>
+<!-- klfoodie.com is managing ads with Advanced Ads 2.0.11 – https://wpadvancedads.com/ --><script id="klfoo-ready">
+			window.advanced_ads_ready=function(e,a){a=a||"complete";var d=function(e){return"interactive"===a?"loading"!==e:"complete"===e};d(document.readyState)?e():document.addEventListener("readystatechange",(function(a){d(a.target.readyState)&&e()}),{once:"interactive"===a})},window.advanced_ads_ready_queue=window.advanced_ads_ready_queue||[];		</script>
+		<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://klfoodie.com/wp-includes/css/dist/block-library/style.min.css?ver=6.8.2' type='text/css' media='all' />
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio :where(figcaption){color:#ffffffa6}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed :where(figcaption){color:#ffffffa6}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:#ffffffa6}:root :where(.wp-block-image figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme :root :where(.wp-block-image figcaption){color:#ffffffa6}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote:where(.has-text-align-right){border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote:where(.has-text-align-center){border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote:where(.is-style-plain){border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table :where(figcaption){color:#ffffffa6}.wp-block-video :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video :where(figcaption){color:#ffffffa6}.wp-block-video{margin:0 0 1em}:root :where(.wp-block-template-part.has-background){margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='feedzy-rss-feeds-loop-style-inline-css' type='text/css'>
+.wp-block-feedzy-rss-feeds-loop{display:grid;gap:24px;grid-template-columns:repeat(1,1fr)}@media(min-width:782px){.wp-block-feedzy-rss-feeds-loop.feedzy-loop-columns-2,.wp-block-feedzy-rss-feeds-loop.feedzy-loop-columns-3,.wp-block-feedzy-rss-feeds-loop.feedzy-loop-columns-4,.wp-block-feedzy-rss-feeds-loop.feedzy-loop-columns-5{grid-template-columns:repeat(2,1fr)}}@media(min-width:960px){.wp-block-feedzy-rss-feeds-loop.feedzy-loop-columns-2{grid-template-columns:repeat(2,1fr)}.wp-block-feedzy-rss-feeds-loop.feedzy-loop-columns-3{grid-template-columns:repeat(3,1fr)}.wp-block-feedzy-rss-feeds-loop.feedzy-loop-columns-4{grid-template-columns:repeat(4,1fr)}.wp-block-feedzy-rss-feeds-loop.feedzy-loop-columns-5{grid-template-columns:repeat(5,1fr)}}.wp-block-feedzy-rss-feeds-loop .wp-block-image.is-style-rounded img{border-radius:9999px}.wp-block-feedzy-rss-feeds-loop .wp-block-image:has(:is(img:not([src]),img[src=""])){display:none}
+
+</style>
+<link rel='stylesheet' id='mediaelement-css' href='https://klfoodie.com/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css' href='https://klfoodie.com/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.8.2' type='text/css' media='all' />
+<style id='jetpack-sharing-buttons-style-inline-css' type='text/css'>
+.jetpack-sharing-buttons__services-list{display:flex;flex-direction:row;flex-wrap:wrap;gap:0;list-style-type:none;margin:5px;padding:0}.jetpack-sharing-buttons__services-list.has-small-icon-size{font-size:12px}.jetpack-sharing-buttons__services-list.has-normal-icon-size{font-size:16px}.jetpack-sharing-buttons__services-list.has-large-icon-size{font-size:24px}.jetpack-sharing-buttons__services-list.has-huge-icon-size{font-size:36px}@media print{.jetpack-sharing-buttons__services-list{display:none!important}}.editor-styles-wrapper .wp-block-jetpack-sharing-buttons{gap:0;padding-inline-start:0}ul.jetpack-sharing-buttons__services-list.has-background{padding:1.25em 2.375em}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://klfoodie.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_likes-css' href='https://klfoodie.com/wp-content/plugins/jetpack/modules/likes/style.css?ver=14.9.1' type='text/css' media='all' />
+<style id='jetpack_facebook_likebox-inline-css' type='text/css'>
+.widget_facebook_likebox {
+	overflow: hidden;
+}
+
+</style>
+<link rel='stylesheet' id='tie-css-base-css' href='https://klfoodie.com/wp-content/themes/jannah/assets/css/base.min.css?ver=5.4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-css-styles-css' href='https://klfoodie.com/wp-content/themes/jannah/assets/css/style.min.css?ver=5.4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-css-widgets-css' href='https://klfoodie.com/wp-content/themes/jannah/assets/css/widgets.min.css?ver=5.4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-css-helpers-css' href='https://klfoodie.com/wp-content/themes/jannah/assets/css/helpers.min.css?ver=5.4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-fontawesome5-css' href='https://klfoodie.com/wp-content/themes/jannah/assets/css/fontawesome.css?ver=5.4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-css-ilightbox-css' href='https://klfoodie.com/wp-content/themes/jannah/assets/ilightbox/dark-skin/skin.css?ver=5.4.5' type='text/css' media='all' />
+<style id='tie-css-ilightbox-inline-css' type='text/css'>
+body{font-family: Arial,Helvetica,sans-serif;}.wf-active .logo-text,.wf-active h1,.wf-active h2,.wf-active h3,.wf-active h4,.wf-active h5,.wf-active h6,.wf-active .the-subtitle{font-family: 'Roboto Condensed';}.wf-active #main-nav .main-menu > ul > li > a{font-family: 'Roboto';}#main-nav .main-menu > ul > li > a{font-size: 14px;}#the-post .entry-content,#the-post .entry-content p{font-size: 20px;}.brand-title,a:hover,.tie-popup-search-submit,#logo.text-logo a,.theme-header nav .components #search-submit:hover,.theme-header .header-nav .components > li:hover > a,.theme-header .header-nav .components li a:hover,.main-menu ul.cats-vertical li a.is-active,.main-menu ul.cats-vertical li a:hover,.main-nav li.mega-menu .post-meta a:hover,.main-nav li.mega-menu .post-box-title a:hover,.search-in-main-nav.autocomplete-suggestions a:hover,#main-nav .menu ul:not(.cats-horizontal) li:hover > a,#main-nav .menu ul li.current-menu-item:not(.mega-link-column) > a,.top-nav .menu li:hover > a,.top-nav .menu > .tie-current-menu > a,.search-in-top-nav.autocomplete-suggestions .post-title a:hover,div.mag-box .mag-box-options .mag-box-filter-links a.active,.mag-box-filter-links .flexMenu-viewMore:hover > a,.stars-rating-active,body .tabs.tabs .active > a,.video-play-icon,.spinner-circle:after,#go-to-content:hover,.comment-list .comment-author .fn,.commentlist .comment-author .fn,blockquote::before,blockquote cite,blockquote.quote-simple p,.multiple-post-pages a:hover,#story-index li .is-current,.latest-tweets-widget .twitter-icon-wrap span,.wide-slider-nav-wrapper .slide,.wide-next-prev-slider-wrapper .tie-slider-nav li:hover span,.review-final-score h3,#mobile-menu-icon:hover .menu-text,body .entry a,.dark-skin body .entry a,.entry .post-bottom-meta a:hover,.comment-list .comment-content a,q a,blockquote a,.widget.tie-weather-widget .icon-basecloud-bg:after,.site-footer a:hover,.site-footer .stars-rating-active,.site-footer .twitter-icon-wrap span,.site-info a:hover{color: #fe4641;}#instagram-link a:hover{color: #fe4641 !important;border-color: #fe4641 !important;}#theme-header #main-nav .spinner-circle:after{color: #fe4641;}[type='submit'],.button,.generic-button a,.generic-button button,.theme-header .header-nav .comp-sub-menu a.button.guest-btn:hover,.theme-header .header-nav .comp-sub-menu a.checkout-button,nav.main-nav .menu > li.tie-current-menu > a,nav.main-nav .menu > li:hover > a,.main-menu .mega-links-head:after,.main-nav .mega-menu.mega-cat .cats-horizontal li a.is-active,#mobile-menu-icon:hover .nav-icon,#mobile-menu-icon:hover .nav-icon:before,#mobile-menu-icon:hover .nav-icon:after,.search-in-main-nav.autocomplete-suggestions a.button,.search-in-top-nav.autocomplete-suggestions a.button,.spinner > div,.post-cat,.pages-numbers li.current span,.multiple-post-pages > span,#tie-wrapper .mejs-container .mejs-controls,.mag-box-filter-links a:hover,.slider-arrow-nav a:not(.pagination-disabled):hover,.comment-list .reply a:hover,.commentlist .reply a:hover,#reading-position-indicator,#story-index-icon,.videos-block .playlist-title,.review-percentage .review-item span span,.tie-slick-dots li.slick-active button,.tie-slick-dots li button:hover,.digital-rating-static,.timeline-widget li a:hover .date:before,#wp-calendar #today,.posts-list-counter li.widget-post-list:before,.cat-counter a + span,.tie-slider-nav li span:hover,.fullwidth-area .widget_tag_cloud .tagcloud a:hover,.magazine2:not(.block-head-4) .dark-widgetized-area ul.tabs a:hover,.magazine2:not(.block-head-4) .dark-widgetized-area ul.tabs .active a,.magazine1 .dark-widgetized-area ul.tabs a:hover,.magazine1 .dark-widgetized-area ul.tabs .active a,.block-head-4.magazine2 .dark-widgetized-area .tabs.tabs .active a,.block-head-4.magazine2 .dark-widgetized-area .tabs > .active a:before,.block-head-4.magazine2 .dark-widgetized-area .tabs > .active a:after,.demo_store,.demo #logo:after,.demo #sticky-logo:after,.widget.tie-weather-widget,span.video-close-btn:hover,#go-to-top,.latest-tweets-widget .slider-links .button:not(:hover){background-color: #fe4641;color: #FFFFFF;}.tie-weather-widget .widget-title .the-subtitle,.block-head-4.magazine2 #footer .tabs .active a:hover{color: #FFFFFF;}pre,code,.pages-numbers li.current span,.theme-header .header-nav .comp-sub-menu a.button.guest-btn:hover,.multiple-post-pages > span,.post-content-slideshow .tie-slider-nav li span:hover,#tie-body .tie-slider-nav li > span:hover,.slider-arrow-nav a:not(.pagination-disabled):hover,.main-nav .mega-menu.mega-cat .cats-horizontal li a.is-active,.main-nav .mega-menu.mega-cat .cats-horizontal li a:hover,.main-menu .menu > li > .menu-sub-content{border-color: #fe4641;}.main-menu .menu > li.tie-current-menu{border-bottom-color: #fe4641;}.top-nav .menu li.tie-current-menu > a:before,.top-nav .menu li.menu-item-has-children:hover > a:before{border-top-color: #fe4641;}.main-nav .main-menu .menu > li.tie-current-menu > a:before,.main-nav .main-menu .menu > li:hover > a:before{border-top-color: #FFFFFF;}header.main-nav-light .main-nav .menu-item-has-children li:hover > a:before,header.main-nav-light .main-nav .mega-menu li:hover > a:before{border-left-color: #fe4641;}.rtl header.main-nav-light .main-nav .menu-item-has-children li:hover > a:before,.rtl header.main-nav-light .main-nav .mega-menu li:hover > a:before{border-right-color: #fe4641;border-left-color: transparent;}.top-nav ul.menu li .menu-item-has-children:hover > a:before{border-top-color: transparent;border-left-color: #fe4641;}.rtl .top-nav ul.menu li .menu-item-has-children:hover > a:before{border-left-color: transparent;border-right-color: #fe4641;}::-moz-selection{background-color: #fe4641;color: #FFFFFF;}::selection{background-color: #fe4641;color: #FFFFFF;}circle.circle_bar{stroke: #fe4641;}#reading-position-indicator{box-shadow: 0 0 10px rgba( 254,70,65,0.7);}#logo.text-logo a:hover,body .entry a:hover,.dark-skin body .entry a:hover,.comment-list .comment-content a:hover,.block-head-4.magazine2 .site-footer .tabs li a:hover,q a:hover,blockquote a:hover{color: #cc140f;}.button:hover,input[type='submit']:hover,.generic-button a:hover,.generic-button button:hover,a.post-cat:hover,.site-footer .button:hover,.site-footer [type='submit']:hover,.search-in-main-nav.autocomplete-suggestions a.button:hover,.search-in-top-nav.autocomplete-suggestions a.button:hover,.theme-header .header-nav .comp-sub-menu a.checkout-button:hover{background-color: #cc140f;color: #FFFFFF;}.theme-header .header-nav .comp-sub-menu a.checkout-button:not(:hover),body .entry a.button{color: #FFFFFF;}#story-index.is-compact .story-index-content{background-color: #fe4641;}#story-index.is-compact .story-index-content a,#story-index.is-compact .story-index-content .is-current{color: #FFFFFF;}#tie-body .mag-box-title h3 a,#tie-body .block-more-button{color: #fe4641;}#tie-body .mag-box-title h3 a:hover,#tie-body .block-more-button:hover{color: #cc140f;}#tie-body .the-global-title,#tie-body .comment-reply-title,#tie-body .related.products > h2,#tie-body .up-sells > h2,#tie-body .cross-sells > h2,#tie-body .cart_totals > h2,#tie-body .bbp-form legend{border-color: #fe4641;color: #fe4641;}#tie-body #footer .widget-title:after{background-color: #fe4641;}.brand-title,a:hover,.tie-popup-search-submit,#logo.text-logo a,.theme-header nav .components #search-submit:hover,.theme-header .header-nav .components > li:hover > a,.theme-header .header-nav .components li a:hover,.main-menu ul.cats-vertical li a.is-active,.main-menu ul.cats-vertical li a:hover,.main-nav li.mega-menu .post-meta a:hover,.main-nav li.mega-menu .post-box-title a:hover,.search-in-main-nav.autocomplete-suggestions a:hover,#main-nav .menu ul:not(.cats-horizontal) li:hover > a,#main-nav .menu ul li.current-menu-item:not(.mega-link-column) > a,.top-nav .menu li:hover > a,.top-nav .menu > .tie-current-menu > a,.search-in-top-nav.autocomplete-suggestions .post-title a:hover,div.mag-box .mag-box-options .mag-box-filter-links a.active,.mag-box-filter-links .flexMenu-viewMore:hover > a,.stars-rating-active,body .tabs.tabs .active > a,.video-play-icon,.spinner-circle:after,#go-to-content:hover,.comment-list .comment-author .fn,.commentlist .comment-author .fn,blockquote::before,blockquote cite,blockquote.quote-simple p,.multiple-post-pages a:hover,#story-index li .is-current,.latest-tweets-widget .twitter-icon-wrap span,.wide-slider-nav-wrapper .slide,.wide-next-prev-slider-wrapper .tie-slider-nav li:hover span,.review-final-score h3,#mobile-menu-icon:hover .menu-text,body .entry a,.dark-skin body .entry a,.entry .post-bottom-meta a:hover,.comment-list .comment-content a,q a,blockquote a,.widget.tie-weather-widget .icon-basecloud-bg:after,.site-footer a:hover,.site-footer .stars-rating-active,.site-footer .twitter-icon-wrap span,.site-info a:hover{color: #fe4641;}#instagram-link a:hover{color: #fe4641 !important;border-color: #fe4641 !important;}#theme-header #main-nav .spinner-circle:after{color: #fe4641;}[type='submit'],.button,.generic-button a,.generic-button button,.theme-header .header-nav .comp-sub-menu a.button.guest-btn:hover,.theme-header .header-nav .comp-sub-menu a.checkout-button,nav.main-nav .menu > li.tie-current-menu > a,nav.main-nav .menu > li:hover > a,.main-menu .mega-links-head:after,.main-nav .mega-menu.mega-cat .cats-horizontal li a.is-active,#mobile-menu-icon:hover .nav-icon,#mobile-menu-icon:hover .nav-icon:before,#mobile-menu-icon:hover .nav-icon:after,.search-in-main-nav.autocomplete-suggestions a.button,.search-in-top-nav.autocomplete-suggestions a.button,.spinner > div,.post-cat,.pages-numbers li.current span,.multiple-post-pages > span,#tie-wrapper .mejs-container .mejs-controls,.mag-box-filter-links a:hover,.slider-arrow-nav a:not(.pagination-disabled):hover,.comment-list .reply a:hover,.commentlist .reply a:hover,#reading-position-indicator,#story-index-icon,.videos-block .playlist-title,.review-percentage .review-item span span,.tie-slick-dots li.slick-active button,.tie-slick-dots li button:hover,.digital-rating-static,.timeline-widget li a:hover .date:before,#wp-calendar #today,.posts-list-counter li.widget-post-list:before,.cat-counter a + span,.tie-slider-nav li span:hover,.fullwidth-area .widget_tag_cloud .tagcloud a:hover,.magazine2:not(.block-head-4) .dark-widgetized-area ul.tabs a:hover,.magazine2:not(.block-head-4) .dark-widgetized-area ul.tabs .active a,.magazine1 .dark-widgetized-area ul.tabs a:hover,.magazine1 .dark-widgetized-area ul.tabs .active a,.block-head-4.magazine2 .dark-widgetized-area .tabs.tabs .active a,.block-head-4.magazine2 .dark-widgetized-area .tabs > .active a:before,.block-head-4.magazine2 .dark-widgetized-area .tabs > .active a:after,.demo_store,.demo #logo:after,.demo #sticky-logo:after,.widget.tie-weather-widget,span.video-close-btn:hover,#go-to-top,.latest-tweets-widget .slider-links .button:not(:hover){background-color: #fe4641;color: #FFFFFF;}.tie-weather-widget .widget-title .the-subtitle,.block-head-4.magazine2 #footer .tabs .active a:hover{color: #FFFFFF;}pre,code,.pages-numbers li.current span,.theme-header .header-nav .comp-sub-menu a.button.guest-btn:hover,.multiple-post-pages > span,.post-content-slideshow .tie-slider-nav li span:hover,#tie-body .tie-slider-nav li > span:hover,.slider-arrow-nav a:not(.pagination-disabled):hover,.main-nav .mega-menu.mega-cat .cats-horizontal li a.is-active,.main-nav .mega-menu.mega-cat .cats-horizontal li a:hover,.main-menu .menu > li > .menu-sub-content{border-color: #fe4641;}.main-menu .menu > li.tie-current-menu{border-bottom-color: #fe4641;}.top-nav .menu li.tie-current-menu > a:before,.top-nav .menu li.menu-item-has-children:hover > a:before{border-top-color: #fe4641;}.main-nav .main-menu .menu > li.tie-current-menu > a:before,.main-nav .main-menu .menu > li:hover > a:before{border-top-color: #FFFFFF;}header.main-nav-light .main-nav .menu-item-has-children li:hover > a:before,header.main-nav-light .main-nav .mega-menu li:hover > a:before{border-left-color: #fe4641;}.rtl header.main-nav-light .main-nav .menu-item-has-children li:hover > a:before,.rtl header.main-nav-light .main-nav .mega-menu li:hover > a:before{border-right-color: #fe4641;border-left-color: transparent;}.top-nav ul.menu li .menu-item-has-children:hover > a:before{border-top-color: transparent;border-left-color: #fe4641;}.rtl .top-nav ul.menu li .menu-item-has-children:hover > a:before{border-left-color: transparent;border-right-color: #fe4641;}::-moz-selection{background-color: #fe4641;color: #FFFFFF;}::selection{background-color: #fe4641;color: #FFFFFF;}circle.circle_bar{stroke: #fe4641;}#reading-position-indicator{box-shadow: 0 0 10px rgba( 254,70,65,0.7);}#logo.text-logo a:hover,body .entry a:hover,.dark-skin body .entry a:hover,.comment-list .comment-content a:hover,.block-head-4.magazine2 .site-footer .tabs li a:hover,q a:hover,blockquote a:hover{color: #cc140f;}.button:hover,input[type='submit']:hover,.generic-button a:hover,.generic-button button:hover,a.post-cat:hover,.site-footer .button:hover,.site-footer [type='submit']:hover,.search-in-main-nav.autocomplete-suggestions a.button:hover,.search-in-top-nav.autocomplete-suggestions a.button:hover,.theme-header .header-nav .comp-sub-menu a.checkout-button:hover{background-color: #cc140f;color: #FFFFFF;}.theme-header .header-nav .comp-sub-menu a.checkout-button:not(:hover),body .entry a.button{color: #FFFFFF;}#story-index.is-compact .story-index-content{background-color: #fe4641;}#story-index.is-compact .story-index-content a,#story-index.is-compact .story-index-content .is-current{color: #FFFFFF;}#tie-body .mag-box-title h3 a,#tie-body .block-more-button{color: #fe4641;}#tie-body .mag-box-title h3 a:hover,#tie-body .block-more-button:hover{color: #cc140f;}#tie-body .the-global-title,#tie-body .comment-reply-title,#tie-body .related.products > h2,#tie-body .up-sells > h2,#tie-body .cross-sells > h2,#tie-body .cart_totals > h2,#tie-body .bbp-form legend{border-color: #fe4641;color: #fe4641;}#tie-body #footer .widget-title:after{background-color: #fe4641;}#content a:hover{text-decoration: underline !important;}#top-nav,#top-nav .sub-menu,#top-nav .comp-sub-menu,#top-nav .ticker-content,#top-nav .ticker-swipe,.top-nav-boxed #top-nav .topbar-wrapper,.search-in-top-nav.autocomplete-suggestions,#top-nav .guest-btn:not(:hover){background-color : #333333;}#top-nav *,.search-in-top-nav.autocomplete-suggestions{border-color: rgba( 255,255,255,0.08);}#top-nav .icon-basecloud-bg:after{color: #333333;}#top-nav a:not(:hover),#top-nav input,#top-nav #search-submit,#top-nav .fa-spinner,#top-nav .dropdown-social-icons li a span,#top-nav .components > li .social-link:not(:hover) span,.search-in-top-nav.autocomplete-suggestions a{color: #ffffff;}#top-nav .menu-item-has-children > a:before{border-top-color: #ffffff;}#top-nav li .menu-item-has-children > a:before{border-top-color: transparent;border-left-color: #ffffff;}.rtl #top-nav .menu li .menu-item-has-children > a:before{border-left-color: transparent;border-right-color: #ffffff;}#top-nav input::-moz-placeholder{color: #ffffff;}#top-nav input:-moz-placeholder{color: #ffffff;}#top-nav input:-ms-input-placeholder{color: #ffffff;}#top-nav input::-webkit-input-placeholder{color: #ffffff;}#top-nav .comp-sub-menu .button:hover,#top-nav .checkout-button,.search-in-top-nav.autocomplete-suggestions .button{background-color: #fe4641;}#top-nav a:hover,#top-nav .menu li:hover > a,#top-nav .menu > .tie-current-menu > a,#top-nav .components > li:hover > a,#top-nav .components #search-submit:hover,.search-in-top-nav.autocomplete-suggestions .post-title a:hover{color: #fe4641;}#top-nav .comp-sub-menu .button:hover{border-color: #fe4641;}#top-nav .tie-current-menu > a:before,#top-nav .menu .menu-item-has-children:hover > a:before{border-top-color: #fe4641;}#top-nav .menu li .menu-item-has-children:hover > a:before{border-top-color: transparent;border-left-color: #fe4641;}.rtl #top-nav .menu li .menu-item-has-children:hover > a:before{border-left-color: transparent;border-right-color: #fe4641;}#top-nav .comp-sub-menu .button:hover,#top-nav .comp-sub-menu .checkout-button,.search-in-top-nav.autocomplete-suggestions .button{color: #FFFFFF;}#top-nav .comp-sub-menu .checkout-button:hover,.search-in-top-nav.autocomplete-suggestions .button:hover{background-color: #e02823;}#top-nav,#top-nav .comp-sub-menu,#top-nav .tie-weather-widget{color: #aaaaaa;}.search-in-top-nav.autocomplete-suggestions .post-meta,.search-in-top-nav.autocomplete-suggestions .post-meta a:not(:hover){color: rgba( 170,170,170,0.7 );}#top-nav .weather-icon .icon-cloud,#top-nav .weather-icon .icon-basecloud-bg,#top-nav .weather-icon .icon-cloud-behind{color: #aaaaaa !important;}#main-nav,#main-nav .menu-sub-content,#main-nav .comp-sub-menu,#main-nav .guest-btn:not(:hover),#main-nav ul.cats-vertical li a.is-active,#main-nav ul.cats-vertical li a:hover.search-in-main-nav.autocomplete-suggestions{background-color: #ffffff;}#main-nav{border-width: 0;}#theme-header #main-nav:not(.fixed-nav){bottom: 0;}#main-nav .icon-basecloud-bg:after{color: #ffffff;}#main-nav *,.search-in-main-nav.autocomplete-suggestions{border-color: rgba(0,0,0,0.07);}.main-nav-boxed #main-nav .main-menu-wrapper{border-width: 0;}#main-nav .menu li.menu-item-has-children > a:before,#main-nav .main-menu .mega-menu > a:before{border-top-color: #34495e;}#main-nav .menu li .menu-item-has-children > a:before,#main-nav .mega-menu .menu-item-has-children > a:before{border-top-color: transparent;border-left-color: #34495e;}.rtl #main-nav .menu li .menu-item-has-children > a:before,.rtl #main-nav .mega-menu .menu-item-has-children > a:before{border-left-color: transparent;border-right-color: #34495e;}#main-nav a:not(:hover),#main-nav a.social-link:not(:hover) span,#main-nav .dropdown-social-icons li a span,.search-in-main-nav.autocomplete-suggestions a{color: #34495e;}#main-nav .comp-sub-menu .button:hover,#main-nav .menu > li.tie-current-menu,#main-nav .menu > li > .menu-sub-content,#main-nav .cats-horizontal a.is-active,#main-nav .cats-horizontal a:hover{border-color: #fe4641;}#main-nav .menu > li.tie-current-menu > a,#main-nav .menu > li:hover > a,#main-nav .mega-links-head:after,#main-nav .comp-sub-menu .button:hover,#main-nav .comp-sub-menu .checkout-button,#main-nav .cats-horizontal a.is-active,#main-nav .cats-horizontal a:hover,.search-in-main-nav.autocomplete-suggestions .button,#main-nav .spinner > div{background-color: #fe4641;}#main-nav .menu ul li:hover > a,#main-nav .menu ul li.current-menu-item:not(.mega-link-column) > a,#main-nav .components a:hover,#main-nav .components > li:hover > a,#main-nav #search-submit:hover,#main-nav .cats-vertical a.is-active,#main-nav .cats-vertical a:hover,#main-nav .mega-menu .post-meta a:hover,#main-nav .mega-menu .post-box-title a:hover,.search-in-main-nav.autocomplete-suggestions a:hover,#main-nav .spinner-circle:after{color: #fe4641;}#main-nav .menu > li.tie-current-menu > a,#main-nav .menu > li:hover > a,#main-nav .components .button:hover,#main-nav .comp-sub-menu .checkout-button,.theme-header #main-nav .mega-menu .cats-horizontal a.is-active,.theme-header #main-nav .mega-menu .cats-horizontal a:hover,.search-in-main-nav.autocomplete-suggestions a.button{color: #FFFFFF;}#main-nav .menu > li.tie-current-menu > a:before,#main-nav .menu > li:hover > a:before{border-top-color: #FFFFFF;}.main-nav-light #main-nav .menu-item-has-children li:hover > a:before,.main-nav-light #main-nav .mega-menu li:hover > a:before{border-left-color: #fe4641;}.rtl .main-nav-light #main-nav .menu-item-has-children li:hover > a:before,.rtl .main-nav-light #main-nav .mega-menu li:hover > a:before{border-right-color: #fe4641;border-left-color: transparent;}.search-in-main-nav.autocomplete-suggestions .button:hover,#main-nav .comp-sub-menu .checkout-button:hover{background-color: #e02823;}#main-nav,#main-nav input,#main-nav #search-submit,#main-nav .fa-spinner,#main-nav .comp-sub-menu,#main-nav .tie-weather-widget{color: #f6f6f6;}#main-nav input::-moz-placeholder{color: #f6f6f6;}#main-nav input:-moz-placeholder{color: #f6f6f6;}#main-nav input:-ms-input-placeholder{color: #f6f6f6;}#main-nav input::-webkit-input-placeholder{color: #f6f6f6;}#main-nav .mega-menu .post-meta,#main-nav .mega-menu .post-meta a,.search-in-main-nav.autocomplete-suggestions .post-meta{color: rgba(246,246,246,0.6);}#main-nav .weather-icon .icon-cloud,#main-nav .weather-icon .icon-basecloud-bg,#main-nav .weather-icon .icon-cloud-behind{color: #f6f6f6 !important;}#footer{background-color: #252525;}#site-info{background-color: #181818;}#footer .posts-list-counter .posts-list-items li.widget-post-list:before{border-color: #252525;}#footer .timeline-widget a .date:before{border-color: rgba(37,37,37,0.8);}#footer .footer-boxed-widget-area,#footer textarea,#footer input:not([type=submit]),#footer select,#footer code,#footer kbd,#footer pre,#footer samp,#footer .show-more-button,#footer .slider-links .tie-slider-nav span,#footer #wp-calendar,#footer #wp-calendar tbody td,#footer #wp-calendar thead th,#footer .widget.buddypress .item-options a{border-color: rgba(255,255,255,0.1);}#footer .social-statistics-widget .white-bg li.social-icons-item a,#footer .widget_tag_cloud .tagcloud a,#footer .latest-tweets-widget .slider-links .tie-slider-nav span,#footer .widget_layered_nav_filters a{border-color: rgba(255,255,255,0.1);}#footer .social-statistics-widget .white-bg li:before{background: rgba(255,255,255,0.1);}.site-footer #wp-calendar tbody td{background: rgba(255,255,255,0.02);}#footer .white-bg .social-icons-item a span.followers span,#footer .circle-three-cols .social-icons-item a .followers-num,#footer .circle-three-cols .social-icons-item a .followers-name{color: rgba(255,255,255,0.8);}#footer .timeline-widget ul:before,#footer .timeline-widget a:not(:hover) .date:before{background-color: #070707;}#footer .widget-title,#footer .widget-title a:not(:hover){color: #ffffff;}#footer,#footer textarea,#footer input:not([type='submit']),#footer select,#footer #wp-calendar tbody,#footer .tie-slider-nav li span:not(:hover),#footer .widget_categories li a:before,#footer .widget_product_categories li a:before,#footer .widget_layered_nav li a:before,#footer .widget_archive li a:before,#footer .widget_nav_menu li a:before,#footer .widget_meta li a:before,#footer .widget_pages li a:before,#footer .widget_recent_entries li a:before,#footer .widget_display_forums li a:before,#footer .widget_display_views li a:before,#footer .widget_rss li a:before,#footer .widget_display_stats dt:before,#footer .subscribe-widget-content h3,#footer .about-author .social-icons a:not(:hover) span{color: #aaaaaa;}#footer post-widget-body .meta-item,#footer .post-meta,#footer .stream-title,#footer.dark-skin .timeline-widget .date,#footer .wp-caption .wp-caption-text,#footer .rss-date{color: rgba(170,170,170,0.7);}#footer input::-moz-placeholder{color: #aaaaaa;}#footer input:-moz-placeholder{color: #aaaaaa;}#footer input:-ms-input-placeholder{color: #aaaaaa;}#footer input::-webkit-input-placeholder{color: #aaaaaa;}#footer .site-info a:not(:hover){color: #fe4641;}@media (min-width: 1200px){.container{width: auto;}}@media (min-width: 992px){.container,.boxed-layout #tie-wrapper,.boxed-layout .fixed-nav,.wide-next-prev-slider-wrapper .slider-main-container{max-width: 80%;}.boxed-layout .container{max-width: 100%;}}
+</style>
+<script type="text/javascript" src="https://klfoodie.com/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
+<script type="text/javascript" id="say-what-js-js-extra">
+/* <![CDATA[ */
+var say_what_data = {"replacements":[]};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://klfoodie.com/wp-content/plugins/say-what/assets/build/frontend.js?ver=fd31684c45e4d85aeb4e" id="say-what-js-js"></script>
+<script type="text/javascript" src="https://klfoodie.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://klfoodie.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://klfoodie.com/wp-content/plugins/pixelyoursite/dist/scripts/jquery.bind-first-0.2.3.min.js?ver=6.8.2" id="jquery-bind-first-js"></script>
+<script type="text/javascript" src="https://klfoodie.com/wp-content/plugins/pixelyoursite/dist/scripts/js.cookie-2.1.3.min.js?ver=2.1.3" id="js-cookie-pys-js"></script>
+<script type="text/javascript" src="https://klfoodie.com/wp-content/plugins/pixelyoursite/dist/scripts/tld.min.js?ver=2.3.1" id="js-tld-js"></script>
+<script type="text/javascript" id="pys-js-extra">
+/* <![CDATA[ */
+var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"static","ajaxFire":false,"name":"PageView","pixelIds":["546973548823310"],"eventID":"e38f5dcb-ecd6-4db9-8467-f182643ef407","params":{"page_title":"New Home","post_type":"page","post_id":67755,"plugin":"PixelYourSite","user_role":"guest","event_url":"klfoodie.com\/"},"e_id":"init_event","ids":[],"hasTimeWindow":false,"timeWindow":0,"woo_order":"","edd_order":""}]}},"dynamicEvents":[],"triggerEvents":[],"triggerEventTypes":[],"facebook":{"pixelIds":["546973548823310"],"advancedMatching":[],"advancedMatchingEnabled":false,"removeMetadata":false,"wooVariableAsSimple":false,"serverApiEnabled":false,"wooCRSendFromServer":false,"send_external_id":null,"enabled_medical":false,"do_not_track_medical_param":["event_url","post_title","page_title","landing_page","content_name","categories","category_name","tags"],"meta_ldu":false},"debug":"","siteUrl":"https:\/\/klfoodie.com","ajaxUrl":"https:\/\/klfoodie.com\/wp-admin\/admin-ajax.php","ajax_event":"f4ea5ef7e6","enable_remove_download_url_param":"1","cookie_duration":"7","last_visit_duration":"60","enable_success_send_form":"","ajaxForServerEvent":"1","ajaxForServerStaticEvent":"1","send_external_id":"1","external_id_expire":"180","track_cookie_for_subdomains":"1","google_consent_mode":"1","gdpr":{"ajax_enabled":true,"all_disabled_by_api":false,"facebook_disabled_by_api":false,"analytics_disabled_by_api":false,"google_ads_disabled_by_api":false,"pinterest_disabled_by_api":false,"bing_disabled_by_api":false,"externalID_disabled_by_api":false,"facebook_prior_consent_enabled":true,"analytics_prior_consent_enabled":true,"google_ads_prior_consent_enabled":null,"pinterest_prior_consent_enabled":true,"bing_prior_consent_enabled":true,"cookiebot_integration_enabled":false,"cookiebot_facebook_consent_category":"marketing","cookiebot_analytics_consent_category":"statistics","cookiebot_tiktok_consent_category":"marketing","cookiebot_google_ads_consent_category":"marketing","cookiebot_pinterest_consent_category":"marketing","cookiebot_bing_consent_category":"marketing","consent_magic_integration_enabled":false,"real_cookie_banner_integration_enabled":false,"cookie_notice_integration_enabled":false,"cookie_law_info_integration_enabled":false,"analytics_storage":{"enabled":true,"value":"granted","filter":false},"ad_storage":{"enabled":true,"value":"granted","filter":false},"ad_user_data":{"enabled":true,"value":"granted","filter":false},"ad_personalization":{"enabled":true,"value":"granted","filter":false}},"cookie":{"disabled_all_cookie":false,"disabled_start_session_cookie":false,"disabled_advanced_form_data_cookie":false,"disabled_landing_page_cookie":false,"disabled_first_visit_cookie":false,"disabled_trafficsource_cookie":false,"disabled_utmTerms_cookie":false,"disabled_utmId_cookie":false},"tracking_analytics":{"TrafficSource":"direct","TrafficLanding":"undefined","TrafficUtms":[],"TrafficUtmsId":[]},"GATags":{"ga_datalayer_type":"default","ga_datalayer_name":"dataLayerPYS"},"woo":{"enabled":false},"edd":{"enabled":false},"cache_bypass":"1757946627"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://klfoodie.com/wp-content/plugins/pixelyoursite/dist/scripts/public.js?ver=11.1.0" id="pys-js"></script>
+<link rel="https://api.w.org/" href="https://klfoodie.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://klfoodie.com/wp-json/wp/v2/pages/67755" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://klfoodie.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.8.2" />
+<link rel='shortlink' href='https://wp.me/P9pw18-hCP' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://klfoodie.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fklfoodie.com%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://klfoodie.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fklfoodie.com%2F&#038;format=xml" />
+		<meta property="fb:pages" content="112274292745476" />
+		<style type="text/css">
+.feedzy-rss-link-icon:after {
+	content: url("https://klfoodie.com/wp-content/plugins/feedzy-rss-feeds/img/external-link.png");
+	margin-left: 3px;
+}
+</style>
+		<meta name="generator" content="Site Kit by Google 1.160.1" /><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829759-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109829759-1');
+</script>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-4743763503059082",
+          enable_page_level_ads: true
+     });
+</script>
+
+<meta property="fb:pages" content="112274292745476" />
+
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/bd12b68891359146e62499c05/5628d7769b7cb3a777f10c988.js");</script>
+
+
+
+<script type="text/javascript" src="https://xhr.invl.co/magic/2398/auto.js"></script>
+
+<meta name="agd-partner-manual-verification" />
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//klfoodie.com/?wordfence_lh=1&hid=31499867D9151E83BD2615098333964C');
+</script>	<style>img#wpstats{display:none}</style>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="theme-color" content="#fe4641" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="icon" href="https://cdn.klfoodie.com/2023/01/kl-foodies.png" sizes="32x32" />
+<link rel="icon" href="https://cdn.klfoodie.com/2023/01/kl-foodies.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://cdn.klfoodie.com/2023/01/kl-foodies.png" />
+<meta name="msapplication-TileImage" content="https://cdn.klfoodie.com/2023/01/kl-foodies.png" />
+		<style type="text/css" id="wp-custom-css">
+			.dable-widget {
+    display: none;
+}
+
+.single-post .dable-widget {
+    display: block !important;
+}		</style>
+		<style>
+.ai-viewports                 {--ai: 1;}
+.ai-viewport-3                { display: none !important;}
+.ai-viewport-2                { display: none !important;}
+.ai-viewport-1                { display: inherit !important;}
+.ai-viewport-0                { display: none !important;}
+@media (min-width: 768px) and (max-width: 979px) {
+.ai-viewport-1                { display: none !important;}
+.ai-viewport-2                { display: inherit !important;}
+}
+@media (max-width: 767px) {
+.ai-viewport-1                { display: none !important;}
+.ai-viewport-3                { display: inherit !important;}
+}
+</style>
+<script type="application/javascript" src="//anymind360.com/js/10199/ats.js"></script>
+
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+    googletag.defineOutOfPageSlot('/43893936/KLF_OutofPage', 'div-gpt-ad-1683023148072-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
+</script></head>
 
 <body data-rsssl=1 id="tie-body" class="home wp-singular page-template-default page page-id-67755 wp-theme-jannah boxed-layout is-percent-width wrapper-has-shadow block-head-2 magazine2 is-thumb-overlay-disabled is-desktop is-header-layout-1 has-header-ad has-header-below-ad has-builder hide_banner_below_header hide_breaking_news hide_share_post_bottom hide_post_authorbio hide_post_nav hide_back_top_button aa-prefix-klfoo-">
+
 <div id="rfp-ODU0OjIyNjEx"><ins data-rfp-display-adspot-id="ODU0OjIyNjEx" style="display:none"></ins></div>
 <script src="https://js.rfp.fout.jp/rfp-display.js"></script>
 <script type="text/javascript">RFP.Display.Default.run()</script>
+
 <div class="background-overlay">
-<div id="tie-container" class="site tie-container">		
-<div id="tie-wrapper">		
-<header id="theme-header" class="theme-header header-layout-1 main-nav-light main-nav-default-light main-nav-below has-stream-item top-nav-active top-nav-light top-nav-default-light top-nav-above is-stretch-header has-normal-width-logo mobile-header-default">
-	
-<nav id="top-nav"  class="has-date top-nav header-nav" aria-label="Secondary Navigation">
-<div class="container">
-<div class="topbar-wrapper">		
-<div class="topbar-today-date tie-icon">Saturday ,  13  September 2025</div>
-<div class="tie-alignleft">
-</div>
-<div class="tie-alignright">
-</div>
-</div>
-</div>
-</nav>
-<div class="main-nav-wrapper">
-	<nav id="main-nav" data-skin="search-in-main-nav" class="main-nav header-nav live-search-parent" style="line-height:120px" aria-label="Primary Navigation">
-		<div class="container">
-			<div class="main-menu-wrapper">
-						<div class="header-layout-1-logo" style="width:350px">
-							
-		<div id="logo" class="image-logo" >
-			<a title="KL Foodie" href="https://klfoodie.com/">
-				
-				<picture class="tie-logo-default tie-logo-picture">
-					<source class="tie-logo-source-default tie-logo-source" srcset="https://cdn.klfoodie.com/2023/01/kl-foodie-1.png">
-					<img class="tie-logo-img-default tie-logo-img" src="https://cdn.klfoodie.com/2023/01/kl-foodie-1.png" alt="KL Foodie" width="350" height="80" style="max-height:80px; width: auto;" />
-				</picture>
-			<h1 class="h1-off">KL Foodie</h1>			</a>
-		</div>
-								</div>
-						<div id="mobile-header-components-area_2" class="mobile-header-components"><ul class="components"><li class="mobile-component_menu custom-menu-link"><a href="#" id="mobile-menu-icon" class=""><span class="tie-mobile-menu-icon nav-icon is-layout-3"></span><span class="screen-reader-text">Menu</span></a></li></ul></div>
-				<div id="menu-components-wrap">		
-		<div id="sticky-logo" class="image-logo">
 
-			
-			<a title="KL Foodie" href="https://klfoodie.com/">
-				
-				<picture class="tie-logo-default tie-logo-picture">
-					<source class="tie-logo-source-default tie-logo-source" srcset="https://cdn.klfoodie.com/2023/01/kl-foodie-1.png">
-					<img class="tie-logo-img-default tie-logo-img" src="https://cdn.klfoodie.com/2023/01/kl-foodie-1.png" alt="KL Foodie"  />
-				</picture>
-						</a>
-		</div>
-		<div class="flex-placeholder"></div>
-					<div class="main-menu main-menu-wrap tie-alignleft">
-						
-						<div id="main-nav-menu" class="main-menu header-menu"><ul id="menu-primary" class="menu" role="menubar"><li id="menu-item-304" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-304"><a href="https://klfoodie.com/category/food/">Food</a></li>
-<li id="menu-item-305" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-305"><a href="https://klfoodie.com/category/cafe/">Cafe</a></li>
-<li id="menu-item-2458" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2458"><a href="https://klfoodie.com/category/things-to-do/">Things to do</a></li>
-<li id="menu-item-2459" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2459"><a href="https://klfoodie.com/category/events/">Events</a></li>
-</ul></div>					</div>
+	<div id="tie-container" class="site tie-container">
 
-					<ul class="components">		<li class="search-compact-icon menu-item custom-menu-link">
-			<a href="#" class="tie-search-trigger">
-				<span class="tie-icon-search tie-search-icon" aria-hidden="true"></span>
-				<span class="screen-reader-text">Search for</span>
-			</a>
-		</li>
-		 <li class="social-icons-item"><a class="social-link telegram-social-icon" rel="external noopener nofollow" target="_blank" href="https://t.me//foodieorg"><span class="tie-social-icon tie-icon-paper-plane"></span><span class="screen-reader-text">Telegram</span></a></li><li class="social-icons-item"><a class="social-link instagram-social-icon" rel="external noopener nofollow" target="_blank" href="http://www.instagram.com/kl.foodie"><span class="tie-social-icon tie-icon-instagram"></span><span class="screen-reader-text">Instagram</span></a></li><li class="social-icons-item"><a class="social-link youtube-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.youtube.com/c/foodie"><span class="tie-social-icon tie-icon-youtube"></span><span class="screen-reader-text">YouTube</span></a></li><li class="social-icons-item"><a class="social-link twitter-social-icon" rel="external noopener nofollow" target="_blank" href="https://twitter.com/klfoodie"><span class="tie-social-icon tie-icon-twitter"></span><span class="screen-reader-text">Twitter</span></a></li><li class="social-icons-item"><a class="social-link facebook-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.facebook.com/klfoodie"><span class="tie-social-icon tie-icon-facebook"></span><span class="screen-reader-text">Facebook</span></a></li> </ul><!-- Components -->
-				</div>
-			</div>
-		</div>
-	</nav>
-</div>
-</header>
+		
+		<div id="tie-wrapper">
+    @include('welcome.navtop')
+
 <div class="stream-item stream-item-top-wrapper"><div class="stream-item-top"></div></div><div class="stream-item stream-item-below-header"><div id="billboardSpace" style="text-align:center; padding-top: 10px; padding-bottom: 10px;">
 	<div id="billboardSpaceLabel" style="padding-top: 5px;font-size: small; color: #888;">Advertisement</div>
 	<div id='div-gpt-ad-1683022485054-0' style='min-width: 728px; min-height: 90px;'>
@@ -428,144 +268,61 @@
 
 <div id="tiepost-67755-section-7296" class="section-wrapper container normal-width without-background">
 	<div class="section-item is-first-section sidebar-right has-sidebar" style="" >
-
-		
-				<div class="container-normal">
-					<div class="tie-row main-content-row">
-						<div class="main-content tie-col-md-8 tie-col-xs-12" role="main">
-
-				<div id="tie-block_2325" class="mag-box big-posts-box" data-current="1">
-				
-					<div class="container-wrapper">
-
-						
-		<div class="mag-box-title the-global-title">
+        <div class="container-normal">
+            <div class="tie-row main-content-row">
+                <div class="main-content tie-col-md-8 tie-col-xs-12" role="main">
+        <div id="tie-block_2325" class="mag-box big-posts-box" data-current="1">
+            <div class="container-wrapper">
+	    <div class="mag-box-title the-global-title">
 			<h3>
 				This Just In 🔥			</h3>
-
-			</div>
-						<div class="mag-box-container clearfix">
-
-							<ul class="posts-items posts-list-container">
-<li class="post-item  post-84129 post type-post status-publish format-standard has-post-thumbnail category-lifestyle tag-klang-valley tag-kuala-lumpur tag-petaling-jaya tag-rice-cooker tag-tefal tie-standard">
-
-	
-			<a aria-label="Nasi Pasti Tak Basi! Tefal’s Delirice Max Serves Up Fresh, Fluffy Rice for 24 Hours" href="https://klfoodie.com/nasi-pasti-tak-basi-tefals-delirice-max-serves-up-fresh-fluffy-rice-for-24-hours/" class="post-thumb"><span class="post-cat-wrap"><span class="post-cat tie-cat-660">Lifestyle</span></span><img width="390" height="220" src="https://cdn.klfoodie.com/2025/09/MDEC-Hotel-Cover-1-2-390x220.png" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt="" decoding="async" fetchpriority="high" data-attachment-id="84155" data-permalink="https://klfoodie.com/nasi-pasti-tak-basi-tefals-delirice-max-serves-up-fresh-fluffy-rice-for-24-hours/mdec-hotel-cover-1-15/" data-orig-file="https://cdn.klfoodie.com/2025/09/MDEC-Hotel-Cover-1-2.png" data-orig-size="1200,628" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="MDEC Hotel Cover (1)" data-image-description="" data-image-caption="" data-medium-file="https://cdn.klfoodie.com/2025/09/MDEC-Hotel-Cover-1-2-300x157.png" data-large-file="https://cdn.klfoodie.com/2025/09/MDEC-Hotel-Cover-1-2-1024x536.png" /></a>
-	<div class="post-details">
-
-		<div class="post-meta clearfix"><span class="author-meta single-author no-avatars"><span class="meta-item meta-author-wrapper meta-author-49"><span class="meta-author"><a href="https://klfoodie.com/author/kathleen/" class="author-name tie-icon" title="Kathleen Gan">Kathleen Gan</a></span></span></span><span class="date meta-item tie-icon">September 13, 2025</span><div class="tie-alignright"></div></div><!-- .post-meta -->
-		<h2 class="post-title"><a href="https://klfoodie.com/nasi-pasti-tak-basi-tefals-delirice-max-serves-up-fresh-fluffy-rice-for-24-hours/">Nasi Pasti Tak Basi! Tefal’s Delirice Max Serves Up Fresh, Fluffy Rice for 24 Hours</a></h2>
-
-			</div>
-</li>
-
-<li class="post-item  post-84131 post type-post status-publish format-standard has-post-thumbnail category-lifestyle tag-cocktails tag-klang-valley tag-kuala-lumpur tag-petaling-jaya tag-sunway-resort-hotel tie-standard">
-
-	
-			<a aria-label="Celebrate A Vibrant Negroni Week At Gordon Ramsay Bar &#038; Grill" href="https://klfoodie.com/celebrate-a-vibrant-negroni-week-at-gordon-ramsay-bar-grill/" class="post-thumb"><span class="post-cat-wrap"><span class="post-cat tie-cat-660">Lifestyle</span></span><img width="390" height="220" src="https://cdn.klfoodie.com/2025/09/MDEC-Hotel-Cover-1-1-390x220.png" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt="" decoding="async" data-attachment-id="84133" data-permalink="https://klfoodie.com/celebrate-a-vibrant-negroni-week-at-gordon-ramsay-bar-grill/mdec-hotel-cover-1-14/" data-orig-file="https://cdn.klfoodie.com/2025/09/MDEC-Hotel-Cover-1-1.png" data-orig-size="1200,628" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="MDEC Hotel Cover (1)" data-image-description="" data-image-caption="" data-medium-file="https://cdn.klfoodie.com/2025/09/MDEC-Hotel-Cover-1-1-300x157.png" data-large-file="https://cdn.klfoodie.com/2025/09/MDEC-Hotel-Cover-1-1-1024x536.png" /></a>
-	<div class="post-details">
-
-		<div class="post-meta clearfix"><span class="author-meta single-author no-avatars"><span class="meta-item meta-author-wrapper meta-author-49"><span class="meta-author"><a href="https://klfoodie.com/author/kathleen/" class="author-name tie-icon" title="Kathleen Gan">Kathleen Gan</a></span></span></span><span class="date meta-item tie-icon">September 11, 2025</span><div class="tie-alignright"></div></div><!-- .post-meta -->
-		<h2 class="post-title"><a href="https://klfoodie.com/celebrate-a-vibrant-negroni-week-at-gordon-ramsay-bar-grill/">Celebrate A Vibrant Negroni Week At Gordon Ramsay Bar &#038; Grill</a></h2>
-
-			</div>
-</li>
-
-<li class="post-item  post-84120 post type-post status-publish format-standard has-post-thumbnail category-lifestyle tag-klang-valley tag-kuala-lumpur tag-langkawi tag-petaling-jaya tag-unicef tie-standard">
-			<a aria-label="Malaysia Kicks Off ASEAN Children &#038; Youth Climate Summit 2025, Putting Children’s Rights at the Heart of Climate Action" href="https://klfoodie.com/malaysia-kicks-off-asean-children-youth-climate-summit-2025-putting-childrens-rights-at-the-heart-of-climate-action/" class="post-thumb"><span class="post-cat-wrap"><span class="post-cat tie-cat-660">Lifestyle</span></span><img width="390" height="220" src="https://cdn.klfoodie.com/2025/09/MDEC-Hotel-Cover-1-390x220.png" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt="" decoding="async" data-attachment-id="84121" data-permalink="https://klfoodie.com/malaysia-kicks-off-asean-children-youth-climate-summit-2025-putting-childrens-rights-at-the-heart-of-climate-action/mdec-hotel-cover-1-13/" data-orig-file="https://cdn.klfoodie.com/2025/09/MDEC-Hotel-Cover-1.png" data-orig-size="1200,628" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="MDEC Hotel Cover (1)" data-image-description="" data-image-caption="" data-medium-file="https://cdn.klfoodie.com/2025/09/MDEC-Hotel-Cover-1-300x157.png" data-large-file="https://cdn.klfoodie.com/2025/09/MDEC-Hotel-Cover-1-1024x536.png" /></a>
-	<div class="post-details">
-
-		<div class="post-meta clearfix"><span class="author-meta single-author no-avatars"><span class="meta-item meta-author-wrapper meta-author-49"><span class="meta-author"><a href="https://klfoodie.com/author/kathleen/" class="author-name tie-icon" title="Kathleen Gan">Kathleen Gan</a></span></span></span><span class="date meta-item tie-icon">September 4, 2025</span><div class="tie-alignright"></div></div><!-- .post-meta -->
-		<h2 class="post-title"><a href="https://klfoodie.com/malaysia-kicks-off-asean-children-youth-climate-summit-2025-putting-childrens-rights-at-the-heart-of-climate-action/">Malaysia Kicks Off ASEAN Children &#038; Youth Climate Summit 2025, Putting Children’s Rights at the Heart of Climate Action</a></h2>
-			</div>
-</li>
-</ul><div class="clearfix"></div>
-						</div>
-
-
-						<a class="block-pagination next-posts show-more-button" data-text="Show More">Show More</a>
-					</div>
-
-				
-			</div>
-
-			
-					<script>var js_tie_block_2325 = {"order":"latest","source":"id","exclude_posts":"74031, 74033, 74035, 74039, 74037, 84117","number":"20","pagi":"show-more","post_meta":"true","breaking_effect":"reveal","sub_style":"big","style":"default","title_length":"","excerpt_length":"","media_overlay":"","read_more_text":""};</script>
-
-					
 		</div>
-			
-					<aside class="sidebar tie-col-md-4 tie-col-xs-12 normal-side is-sticky" aria-label="Primary Sidebar">
-						<div class="theiaStickySidebar">
-							<div id="posts-list-widget-9" class="container-wrapper widget posts-list"><div class="widget-title the-global-title"><div class="the-subtitle">Trending</div></div><div class="widget-posts-list-container" ><ul class="posts-list-items widget-posts-wrapper">
-<li class="widget-single-post-item widget-post-list tie-standard">
+		<div class="mag-box-container clearfix">
+		<ul class="posts-items posts-list-container">
+        @foreach($projects as $project)
+            <li class="post-item  post-84129 post type-post status-publish format-standard has-post-thumbnail category-lifestyle tag-klang-valley tag-kuala-lumpur tag-petaling-jaya tag-rice-cooker tag-tefal tie-standard">
+                <a aria-label="Nasi Pasti Tak Basi! Tefal’s Delirice Max Serves Up Fresh, Fluffy Rice for 24 Hours" href="{{ url('/' . $project->id) }}" class="post-thumb"><span class="post-cat-wrap"><span class="post-cat tie-cat-660">{{$project->category_name}}</span></span><img width="390" height="220" src="https://cdn.klfoodie.com/2025/09/MDEC-Hotel-Cover-1-2-390x220.png" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt="" decoding="async" fetchpriority="high" data-attachment-id="84155" data-permalink="https://klfoodie.com/nasi-pasti-tak-basi-tefals-delirice-max-serves-up-fresh-fluffy-rice-for-24-hours/mdec-hotel-cover-1-15/" data-orig-file="https://cdn.klfoodie.com/2025/09/MDEC-Hotel-Cover-1-2.png" data-orig-size="1200,628" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="MDEC Hotel Cover (1)" data-image-description="" data-image-caption="" data-medium-file="https://cdn.klfoodie.com/2025/09/MDEC-Hotel-Cover-1-2-300x157.png" data-large-file="https://cdn.klfoodie.com/2025/09/MDEC-Hotel-Cover-1-2-1024x536.png" /></a>
+                    <div class="post-details">
+                        <div class="post-meta clearfix"><span class="author-meta single-author no-avatars"><span class="meta-item meta-author-wrapper meta-author-49"><span class="meta-author"><a href="https://klfoodie.com/author/kathleen/" class="author-name tie-icon" title="{{{$project->author}}}">{{ \Carbon\Carbon::parse($project->publish_time)->format('Y-m-d') }}</a></span></span></span><span class="date meta-item tie-icon">{{ $project->publish_time }}</span><div class="tie-alignright">
+                        </div>
+                    </div><!-- .post-meta -->
+                    <h2 class="post-title"><a href="{{ url('/' . $project->id) }}">{{ $project->title }}</a></h2>
+                </div>
+            </li>
+        @endforeach
+        </ul>
+            <div class="clearfix"></div>
+                </div>
+                <a class="block-pagination next-posts show-more-button" data-text="Show More">Show More</a>
+            </div>
+		</div>
+		<script>var js_tie_block_2325 = {"order":"latest","source":"id","exclude_posts":"74031, 74033, 74035, 74039, 74037, 84117","number":"20","pagi":"show-more","post_meta":"true","breaking_effect":"reveal","sub_style":"big","style":"default","title_length":"","excerpt_length":"","media_overlay":"","read_more_text":""};</script>
+		</div>
+        <aside class="sidebar tie-col-md-4 tie-col-xs-12 normal-side is-sticky" aria-label="Primary Sidebar">
+        <div class="theiaStickySidebar">
+        <div id="posts-list-widget-9" class="container-wrapper widget posts-list"><div class="widget-title the-global-title"><div class="the-subtitle">Trending</div></div><div class="widget-posts-list-container" >
+			<ul class="posts-list-items widget-posts-wrapper">
 
-			<div class="post-widget-thumbnail">
-
-			
-			<a aria-label="Malaysia’s #1 Pickleball Lifestyle Festival Fueled By Dutch Lady UHT Fresh Milk" href="https://klfoodie.com/malaysias-1-pickleball-lifestyle-festival-fueled-by-dutch-lady-uht-fresh-milk/" class="post-thumb"><img width="220" height="150" src="https://cdn.klfoodie.com/2025/08/000-Feature-Image-6-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" data-attachment-id="84109" data-permalink="https://klfoodie.com/malaysias-1-pickleball-lifestyle-festival-fueled-by-dutch-lady-uht-fresh-milk/000-feature-image-6/" data-orig-file="https://cdn.klfoodie.com/2025/08/000-Feature-Image-6.jpg" data-orig-size="1042,628" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="000 Feature Image (6)" data-image-description="" data-image-caption="" data-medium-file="https://cdn.klfoodie.com/2025/08/000-Feature-Image-6-300x181.jpg" data-large-file="https://cdn.klfoodie.com/2025/08/000-Feature-Image-6-1024x617.jpg" /></a>		</div><!-- post-alignleft /-->
-	
-	<div class="post-widget-body ">
-		<a class="post-title the-subtitle" href="https://klfoodie.com/malaysias-1-pickleball-lifestyle-festival-fueled-by-dutch-lady-uht-fresh-milk/">Malaysia’s #1 Pickleball Lifestyle Festival Fueled By Dutch Lady UHT Fresh Milk</a>
-
-		<div class="post-meta">
-			<span class="date meta-item tie-icon">August 28, 2025</span>		</div>
+        @foreach($randomProjects as $project)
+            <li class="widget-single-post-item widget-post-list tie-standard">
+                <div class="post-widget-thumbnail">
+                    <a aria-label="Malaysia’s #1 Pickleball Lifestyle Festival Fueled By Dutch Lady UHT Fresh Milk" href="{{ url('/' . $project->id) }}" class="post-thumb"><img width="220" height="150" src="https://cdn.klfoodie.com/2025/08/000-Feature-Image-6-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" data-attachment-id="84109" data-permalink="{{ url('/' . $project->id) }}000-feature-image-6/" data-orig-file="https://cdn.klfoodie.com/2025/08/000-Feature-Image-6.jpg" data-orig-size="1042,628" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="000 Feature Image (6)" data-image-description="" data-image-caption="" data-medium-file="https://cdn.klfoodie.com/2025/08/000-Feature-Image-6-300x181.jpg" data-large-file="https://cdn.klfoodie.com/2025/08/000-Feature-Image-6-1024x617.jpg" /></a>		</div><!-- post-alignleft /-->
+                <div class="post-widget-body ">
+                    <a class="post-title the-subtitle" href="{{ url('/' . $project->id) }}">{{ \Illuminate\Support\Str::words($project->title, 10, '...') }}</a>
+                <div class="post-meta">
+                    <span class="date meta-item tie-icon">{{ $project->publish_time }}</span></div>
+                </div>
+            </li>
+        @endforeach
+        </ul>
+            </div><div class="clearfix"></div></div><div id="stream-item-widget-6" class="container-wrapper widget stream-item-widget"><div class="stream-item-widget-content"><div id="div_KLF_HP_Sidebar"></div></div><div class="clearfix"></div></div><!-- .widget /-->						</div><!-- .theiaStickySidebar /-->
+		    </aside>
+            </div>
+	    </div>
 	</div>
-</li>
-
-<li class="widget-single-post-item widget-post-list tie-standard">
-
-			<div class="post-widget-thumbnail">
-
-			
-			<a aria-label="20 Supper Spots In KL &#038; PJ To Satisfy Your Late Night Cravings (2024 Guide)" href="https://klfoodie.com/supper-kl-pj-2024/" class="post-thumb"><img width="220" height="150" src="https://cdn.klfoodie.com/2023/02/IMG_3786-1-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" data-attachment-id="68615" data-permalink="https://klfoodie.com/supper-kl-pj-2024/img_3786-2/" data-orig-file="https://cdn.klfoodie.com/2023/02/IMG_3786-1.jpg" data-orig-size="2446,1280" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1677510432&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="IMG_3786" data-image-description="" data-image-caption="" data-medium-file="https://cdn.klfoodie.com/2023/02/IMG_3786-1-300x157.jpg" data-large-file="https://cdn.klfoodie.com/2023/02/IMG_3786-1-1024x536.jpg" /></a>		</div><!-- post-alignleft /-->
-	
-	<div class="post-widget-body ">
-		<a class="post-title the-subtitle" href="https://klfoodie.com/supper-kl-pj-2024/">20 Supper Spots In KL &#038; PJ To Satisfy Your Late Night Cravings (2024 Guide)</a>
-
-		<div class="post-meta">
-			<span class="date meta-item tie-icon">February 27, 2023</span>		</div>
-	</div>
-</li>
-</ul></div><div class="clearfix"></div></div><div id="stream-item-widget-6" class="container-wrapper widget stream-item-widget"><div class="stream-item-widget-content"><div id="div_KLF_HP_Sidebar"></div></div><div class="clearfix"></div></div><!-- .widget /-->						</div><!-- .theiaStickySidebar /-->
-					</aside>
-				
-			
-					</div>
-				</div>
-				</div>
 </div>
 
-	
-<footer id="footer" class="site-footer dark-skin dark-widgetized-area">
-
-	
-			<div id="footer-widgets-container">
-				<div class="container">
-									</div>
-			</div>
-			
-			<div id="site-info" class="site-info site-info-layout-2">
-				<div class="container">
-					<div class="tie-row">
-						<div class="tie-col-md-12">
-
-							<div class="copyright-text copyright-text-first">&copy; <a href="https://goodfoodiemedia.com" target="_blank" rel="nofollow noopener">Good Foodie Media Sdn Bhd 201801026102 (1288123-V)</a> Copyright 2025, All Rights Reserved</div><div class="footer-menu"><ul id="menu-secondary" class="menu"><li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48"><a href="https://klfoodie.com/about-us/">About Us</a></li>
-<li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a href="https://klfoodie.com/contact/">Contact Us</a></li>
-<li id="menu-item-235" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-235"><a href="https://klfoodie.com/sitemap_index.xml">Site Map</a></li>
-<li id="menu-item-46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46"><a href="https://klfoodie.com/terms-and-conditions/">Terms</a></li>
-<li id="menu-item-47" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47"><a href="https://klfoodie.com/privacy-policy/">Privacy Policy</a></li>
-<li id="menu-item-42226" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42226"><a href="https://foodie.my/foodie-is-hiring-for-2021/">Careers</a></li>
-</ul></div><ul class="social-icons"><li class="social-icons-item"><a class="social-link facebook-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.facebook.com/klfoodie"><span class="tie-social-icon tie-icon-facebook"></span><span class="screen-reader-text">Facebook</span></a></li><li class="social-icons-item"><a class="social-link twitter-social-icon" rel="external noopener nofollow" target="_blank" href="https://twitter.com/klfoodie"><span class="tie-social-icon tie-icon-twitter"></span><span class="screen-reader-text">Twitter</span></a></li><li class="social-icons-item"><a class="social-link youtube-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.youtube.com/c/foodie"><span class="tie-social-icon tie-icon-youtube"></span><span class="screen-reader-text">YouTube</span></a></li><li class="social-icons-item"><a class="social-link instagram-social-icon" rel="external noopener nofollow" target="_blank" href="http://www.instagram.com/kl.foodie"><span class="tie-social-icon tie-icon-instagram"></span><span class="screen-reader-text">Instagram</span></a></li><li class="social-icons-item"><a class="social-link telegram-social-icon" rel="external noopener nofollow" target="_blank" href="https://t.me//foodieorg"><span class="tie-social-icon tie-icon-paper-plane"></span><span class="screen-reader-text">Telegram</span></a></li></ul> 
-
-						</div>
-					</div>
-				</div>
-			</div>
-			
-</footer>
-
-
+    @include('welcome.footer')
 		<a id="go-to-top" class="go-to-top-button" href="#go-to-tie-body">
 			<span class="tie-icon-angle-up"></span>
 			<span class="screen-reader-text">Back to top button</span>

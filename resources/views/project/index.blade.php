@@ -51,16 +51,16 @@
                             @foreach($projects as $num => $row)
                             <tr style="background-color: {{ $num % 2 == 0 ? '#0e1726' : '#0d1a31ff' }};">
                                 <td class="text-center"> {{$num+1}} </td>
-                                <td style="max-width: 500px; white-space: normal; word-wrap: break-word;">
+                                <td style="max-width: 300px; white-space: normal; word-wrap: break-word;">
                                     {{ \Illuminate\Support\Str::words(strip_tags($row->page_seo), 20, '...') }}
                                 </td>
-                                <td style="max-width: 500px; white-space: normal; word-wrap: break-word;">
+                                <td style="max-width: 400px; white-space: normal; word-wrap: break-word;">
                                     {{ \Illuminate\Support\Str::words(strip_tags($row->title), 20, '...') }}
                                 </td>
-                                <td style="max-width: 500px; white-space: normal; word-wrap: break-word;">
+                                <td style="max-width: 400px; white-space: normal; word-wrap: break-word;">
                                     {{ \Illuminate\Support\Str::words(strip_tags($row->sub_title), 20, '...') }}
                                 </td>
-                                <td style="max-width: 500px; white-space: normal; word-wrap: break-word;">
+                                <td style="max-width: 400px; white-space: normal; word-wrap: break-word;">
                                     {{ \Illuminate\Support\Str::words(strip_tags($row->description), 50, '...') }}
                                 </td>
                                 <td>{{$row->author??''}}</td>

@@ -35,15 +35,27 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'page_seo' => 'required|string',
-            'title' => 'required|string',
-            'sub_title' => 'required|string',
-            'description' => 'required|string',
-            'author' => 'required|string|max:255',
-            'publish_time' => 'required|date',
-            'status' => 'required|string|max:255',
-            'category_id' => 'required|exists:categories,id',
+            'page_seo'      => 'required|string',
+            'project_image' => 'nullable|image|mimes:jpg,jpeg,png,gif,webp',
+            'title'         => 'required|string',
+            'sub_title'     => 'required|string',
+            'description'   => 'required|string',
+            'author'        => 'required|string|max:255',
+            'author_image'  => 'nullable|image|mimes:jpg,jpeg,png,gif,webp',
+            'publish_time'  => 'required|date',
+            'status'        => 'required|string|max:255',
+            'category_id'   => 'required|exists:categories,id',
         ]);
+
+        if ($request->hasFile('project_image')) {
+            $validated['project_image'] = $request->file('project_image')->store('public-images', 'public');
+            $validated['project_image'] = asset('storage/' . $validated['project_image']);
+        }
+
+        if ($request->hasFile('author_image')) {
+            $validated['author_image'] = $request->file('author_image')->store('public-images', 'public');
+            $validated['author_image'] = asset('storage/' . $validated['author_image']);
+        }
 
         Project::create($validated);
 
@@ -59,15 +71,27 @@ class ProjectController extends Controller
     public function update(Request $request, Project $project)
     {
         $validated = $request->validate([
-            'page_seo' => 'required|string',
-            'title' => 'required|string',
-            'sub_title' => 'required|string',
-            'description' => 'required|string',
-            'author' => 'required|string|max:255',
-            'publish_time' => 'required|date',
-            'status' => 'required|string|max:255',
-            'category_id' => 'required|exists:categories,id',
+            'page_seo'      => 'required|string',
+            'project_image' => 'nullable|image|mimes:jpg,jpeg,png,gif,webp',
+            'title'         => 'required|string',
+            'sub_title'     => 'required|string',
+            'description'   => 'required|string',
+            'author'        => 'required|string|max:255',
+            'author_image'  => 'nullable|image|mimes:jpg,jpeg,png,gif,webp',
+            'publish_time'  => 'required|date',
+            'status'        => 'required|string|max:255',
+            'category_id'   => 'required|exists:categories,id',
         ]);
+
+        if ($request->hasFile('project_image')) {
+            $validated['project_image'] = $request->file('project_image')->store('public-images', 'public');
+            $validated['project_image'] = asset('storage/' . $validated['project_image']);
+        }
+
+        if ($request->hasFile('author_image')) {
+            $validated['author_image'] = $request->file('author_image')->store('public-images', 'public');
+            $validated['author_image'] = asset('storage/' . $validated['author_image']);
+        }
 
         $project->update($validated);
 

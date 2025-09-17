@@ -65,6 +65,20 @@
 
                             <div class="col-lg-12 col-12">
                                 <div class="form-group">
+                                    <label>Project Image</label>
+                                    <input type="file" name="project_image" class="form-control" accept="image/*" onchange="previewImage(event)">
+
+                                    <div class="mt-2">
+                                        <img id="imagePreview" src="{{ $project->project_image ?? '' }}" 
+                                            alt="Project Image" 
+                                            width="100" 
+                                            @if(empty($project->project_image)) style="display:none;" @endif>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-12">
+                                <div class="form-group">
                                     <label>Project Title</label>
                                     <textarea id="title" name="title" class="form-control" rows="2" placeholder="Enter project title...">{{ $project->title ?? '' }}</textarea>
                                 </div>
@@ -81,6 +95,20 @@
                                 <div class="form-group">
                                     <label>Description</label>
                                     <textarea id="description" name="description" class="form-control summernote" rows="10" placeholder="Enter description...">{{ $project->description ?? '' }}</textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-12">
+                                <div class="form-group">
+                                    <label>Author Image</label>
+                                    <input type="file" name="author_image" class="form-control" accept="image/*" onchange="previewImage(event)">
+
+                                    <div class="mt-2">
+                                        <img id="imagePreview" src="{{ $project->author_image ?? '' }}" 
+                                            alt="Author Image" 
+                                            width="100" 
+                                            @if(empty($project->author_image)) style="display:none;" @endif>
+                                    </div>
                                 </div>
                             </div>
 

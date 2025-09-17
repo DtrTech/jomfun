@@ -19,6 +19,8 @@ class Project extends Model
         'author',
         'publish_time',
         'status',
+        'project_image',
+        'author_image',
     ];
 
     public function category()

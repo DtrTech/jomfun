@@ -20,8 +20,11 @@ Auth::routes();
 // });
 
 Route::post('/track-event', [App\Http\Controllers\WelcomeController::class, 'trackEvent'])->name('track.event');
-
 Route::get('/', [App\Http\Controllers\WelcomeController::class, 'welcome']);
+Route::get('/category/{category_name}', [App\Http\Controllers\WelcomeController::class, 'welcomeCategory']);
+Route::get('/{id}', [App\Http\Controllers\WelcomeController::class, 'welcomeDescription']);
+
+
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/project', [App\Http\Controllers\HomeController::class, 'index'])->name('project');
