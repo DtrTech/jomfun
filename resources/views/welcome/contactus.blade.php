@@ -290,23 +290,29 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 		<div itemprop="articleBody" class="entry-content entry clearfix">
 
 			
-			<p>If you’ll like to get in touch, drop us a message and we’ll do our best to get back within 1 day. We can get over a hundred requests a day so if your email goes unanswered, it means we won’t be able to help provide coverage.</p>
-<p>If you’ll like to recommend us a place to feature, let us know via our <a href="http://www.fb.com/klfoodie">Facebook’s message</a>. You must have no commercial relationship with the business you are recommending.</p>
-<p><strong>For general enquiries<br />
-</strong>Email: <a href="mailto:kl@foodie.my">kl@foodie.my</a><br />
-Telephone: <a href="tel:0138182078">+60138182078</a></p>
-<p><strong>For advertisement enquiries<br />
-</strong>Email: <a href="mailto:kl@foodie.my">kl@foodie.my</a></p>
-<p><strong><a href="https://foodie.my/foodie-is-hiring-for-2021/">We&#8217;re Hiring</a></strong></p>
-<div class="padvs">
-<p><strong>Address<br />
-</strong>13, Solok Birch, 10250 Georgetown Penang, Malaysia.</p>
-</div>
-<div class="padvs">
-<p><strong>Press<br />
-</strong><a href="https://pinnyang.com">Nicholas Lim Pinn Yang</a><br />
-Email: <a href="mailto:hello@foodie.my">hello@foodie.my</a></p>
-</div>
+			<p>If you’d like to get in touch, drop us a message and we’ll do our best to respond within 1 day. We receive many requests daily, so if your email goes unanswered, it means we may not be able to assist at the moment.</p>
+
+            <p>If you’d like to recommend us an event, activity, or place to feature, let us know via our <a href="">Facebook message</a>. Please note: you must have no commercial relationship with the event or business you’re recommending.</p>
+
+            <p><strong>For general enquiries<br /></strong>
+            Email: <a href="mailto:hello@jomfun.my">hello@jomfun.my</a><br />
+            Telephone: <a href="tel:+60123456789">+6012-345 6789</a></p>
+
+            <p><strong>For advertising enquiries<br /></strong>
+            Email: <a href="mailto:ads@jomfun.my">ads@jomfun.my</a></p>
+
+            <p><strong><a href="">We’re Hiring</a></strong></p>
+
+            <div class="padvs">
+            <p><strong>Address<br /></strong>
+            123, Jalan Tun Razak, 50400 Kuala Lumpur, Malaysia.</p>
+            </div>
+
+            <div class="padvs">
+            <p><strong>Press<br /></strong>
+            <a href="">JomFun Media Team</a><br />
+            Email: <a href="mailto:press@jomfun.my">press@jomfun.my</a></p>
+            </div>
 
 			
 		</div><!-- .entry-content /-->

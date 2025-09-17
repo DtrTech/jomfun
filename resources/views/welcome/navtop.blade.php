@@ -25,7 +25,7 @@
 						<div class="header-layout-1-logo" style="width:350px">
 							
 		<div id="logo" class="image-logo" >
-			<a title="JomFun" href="https://klfoodie.com/">
+			<a title="JomFun" href="{{ url('/') }}">
 				
 				<picture class="tie-logo-default tie-logo-picture">
 					<source class="tie-logo-source-default tie-logo-source" srcset="https://cdn.klfoodie.com/2023/01/kl-foodie-1.png">
