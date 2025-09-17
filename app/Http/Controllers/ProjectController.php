@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
 {
@@ -35,7 +36,7 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'page_seo'      => 'required|string',
+            'page_seo'      => 'nullable|string',
             'project_image' => 'nullable|image|mimes:jpg,jpeg,png,gif,webp',
             'title'         => 'required|string',
             'sub_title'     => 'required|string',
@@ -48,13 +49,13 @@ class ProjectController extends Controller
         ]);
 
         if ($request->hasFile('project_image')) {
-            $validated['project_image'] = $request->file('project_image')->store('public-images', 'public');
-            $validated['project_image'] = asset('storage/' . $validated['project_image']);
+            $path = $request->file('project_image')->store('public-images', 'public');
+            $validated['project_image'] = Storage::url($path);
         }
 
         if ($request->hasFile('author_image')) {
-            $validated['author_image'] = $request->file('author_image')->store('public-images', 'public');
-            $validated['author_image'] = asset('storage/' . $validated['author_image']);
+            $path = $request->file('author_image')->store('public-images', 'public');
+            $validated['author_image'] = Storage::url($path);
         }
 
         Project::create($validated);
@@ -71,7 +72,7 @@ class ProjectController extends Controller
     public function update(Request $request, Project $project)
     {
         $validated = $request->validate([
-            'page_seo'      => 'required|string',
+            'page_seo'      => 'nullable|string',
             'project_image' => 'nullable|image|mimes:jpg,jpeg,png,gif,webp',
             'title'         => 'required|string',
             'sub_title'     => 'required|string',
@@ -84,13 +85,13 @@ class ProjectController extends Controller
         ]);
 
         if ($request->hasFile('project_image')) {
-            $validated['project_image'] = $request->file('project_image')->store('public-images', 'public');
-            $validated['project_image'] = asset('storage/' . $validated['project_image']);
+            $path = $request->file('project_image')->store('public-images', 'public');
+            $validated['project_image'] = Storage::url($path);
         }
 
         if ($request->hasFile('author_image')) {
-            $validated['author_image'] = $request->file('author_image')->store('public-images', 'public');
-            $validated['author_image'] = asset('storage/' . $validated['author_image']);
+            $path = $request->file('author_image')->store('public-images', 'public');
+            $validated['author_image'] = Storage::url($path);
         }
 
         $project->update($validated);

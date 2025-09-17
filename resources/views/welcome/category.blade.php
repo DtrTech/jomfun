@@ -313,65 +313,7 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 	</div><!-- .main-content /-->
 
 
-	<aside class="sidebar tie-col-md-4 tie-col-xs-12 normal-side is-sticky" aria-label="Primary Sidebar">
-		<div class="theiaStickySidebar">
-			<div id="block-6" class="container-wrapper widget widget_block"><div id="CPSidebarSpace" style="text-align:center;padding-top: 10px;padding-bottom: 10px;">
-	<div id="CPSidebarSpaceLabel" style="padding-top: 5px;font-size: small; color: #888; ">Advertisement</div>
-	<!-- /43893936/KLF_CP_Sidebar -->
-	<div id="div-gpt-ad-1683022563577-0" style="min-width: 160px; min-height: 250px;">
-		<script>
-			if(screen.width > 500){
-				googletag.cmd.push(function() { 
-					googletag.defineSlot('/43893936/KLF_CP_Sidebar', [[160, 600], [336, 280], [300, 250], [300, 600]], 'div-gpt-ad-1683022563577-0').addService(googletag.pubads());
-					googletag.display('div-gpt-ad-1683022563577-0'); 
-				});
-			}else{
-				document.getElementById('CPSidebarSpace').style.visibility = 'hidden';
-				document.getElementById('CPSidebarSpace').style.paddingTop = '0px';
-				document.getElementById('CPSidebarSpace').style.paddingBottom = '0px';
-				document.getElementById('CPSidebarSpaceLabel').style.paddingTop = "0px";
-				document.getElementById('CPSidebarSpaceLabel').style.maxHeight = '0px';
-				document.getElementById('div-gpt-ad-1683022563577-0').style.minWidth = '0px';
-				document.getElementById('div-gpt-ad-1683022563577-0').style.minHeight = '0px';
-			}
-		</script>
-	</div>
-	</div><div class="clearfix"></div></div><!-- .widget /--><div id="posts-list-widget-2" class="container-wrapper widget posts-list"><div class="widget-title the-global-title"><div class="the-subtitle">Most Popular</div></div><div class="widget-posts-list-container posts-list-counter" >
-		<ul class="posts-list-items widget-posts-wrapper">
-		@foreach($randomProjects as $project)
-			<li class="widget-single-post-item widget-post-list tie-standard">
-				<div class="post-widget-thumbnail">
-					<a aria-label="Malaysia’s #1 Pickleball Lifestyle Festival Fueled By Dutch Lady UHT Fresh Milk" href="{{ url('/' . $project->id) }}" class="post-thumb"><img width="220" height="150" src="https://cdn.klfoodie.com/2025/08/000-Feature-Image-6-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" data-attachment-id="84109" data-permalink="{{ url('/' . $project->id) }}" data-orig-file="https://cdn.klfoodie.com/2025/08/000-Feature-Image-6.jpg" data-orig-size="1042,628" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="000 Feature Image (6)" data-image-description="" data-image-caption="" data-medium-file="https://cdn.klfoodie.com/2025/08/000-Feature-Image-6-300x181.jpg" data-large-file="https://cdn.klfoodie.com/2025/08/000-Feature-Image-6-1024x617.jpg" /></a>		</div><!-- post-alignleft /-->
-				<div class="post-widget-body ">
-					<a class="post-title the-subtitle" href="{{ url('/' . $project->id) }}">{{ \Illuminate\Support\Str::words($project->title, 10, '...') }}</a>
-				<div class="post-meta">
-					<span class="date meta-item tie-icon">{{ $project->publish_time }}</span></div>
-				</div>
-			</li>
-		@endforeach
-	</ul></div><div class="clearfix"></div></div><!-- .widget /--><div id="custom_html-3" class="widget_text container-wrapper widget widget_custom_html"><div class="textwidget custom-html-widget"><div id="APBottomSidebarSpace" style="text-align:center;padding-top: 10px;padding-bottom: 10px;">
-	<div id="APBottomSidebarSpaceLabel" style="padding-top: 5px;font-size: small; color: #888; ">Advertisement</div>
-	<!-- /43893936/KLF_AP_BottomSidebar -->
-	<div id='div-gpt-ad-1683022648296-0' style='min-width: 300px; min-height: 250px;'>
-		<script>
-			if(screen.width > 500){
-				googletag.cmd.push(function() {
-					googletag.defineSlot('/43893936/KLF_AP_BottomSidebar', [[160, 600], [336, 280], [300, 250], [300, 600]], 'div-gpt-ad-1683022648296-0').addService(googletag.pubads());
-					googletag.display('div-gpt-ad-1683022648296-0');
-				});
-			}else{
-				document.getElementById('APBottomSidebarSpace').style.visibility = 'hidden';
-				document.getElementById('APBottomSidebarSpace').style.paddingTop = '0px';
-				document.getElementById('APBottomSidebarSpace').style.paddingBottom = '0px';
-				document.getElementById('APBottomSidebarSpaceLabel').style.paddingTop = "0px";
-				document.getElementById('APBottomSidebarSpaceLabel').style.maxHeight = '0px';
-				document.getElementById('div-gpt-ad-1683022648296-0').style.minWidth = '0px';
-				document.getElementById('div-gpt-ad-1683022648296-0').style.minHeight = '0px';
-			}
-		</script>
-	</div>
-</div></div><div class="clearfix"></div></div><!-- .widget /--><div id="custom_html-4" class="widget_text container-wrapper widget widget_custom_html"><div class="textwidget custom-html-widget"></div><div class="clearfix"></div></div><!-- .widget /-->		</div><!-- .theiaStickySidebar /-->
-	</aside><!-- .sidebar /-->
+	@include('welcome.sidebar')
 	</div><!-- .main-content-row /--></div><!-- #content /-->
 
     @include('welcome.footer')

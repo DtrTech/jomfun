@@ -1,21 +1,19 @@
+
 <!DOCTYPE html>
-<html lang="en-US" data-skin="light">
+<html lang="en-US" class="" data-skin="light">
 <head>
-    <?php
-    $setup = DB::table('setups')->first();
-    $seo_header = $setup ? $setup->seo_header : '';
-    ?>
-
-    <meta charset="UTF-8" />
-    <link rel="profile" href="https://gmpg.org/xfn/11" />
-    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-    <style>
-        img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }
-    </style>
-
-    {!! $seo_header !!}
-    
-    <script type="text/javascript"></script>
+	<meta charset="UTF-8" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/klfoodie.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.2"}};
+/*! This file is auto-generated */
+!function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
 </script>
 <!-- klfoodie.com is managing ads with Advanced Ads 2.0.11 – https://wpadvancedads.com/ --><script id="klfoo-ready">
 			window.advanced_ads_ready=function(e,a){a=a||"complete";var d=function(e){return"interactive"===a?"loading"!==e:"complete"===e};d(document.readyState)?e():document.addEventListener("readystatechange",(function(a){d(a.target.readyState)&&e()}),{once:"interactive"===a})},window.advanced_ads_ready_queue=window.advanced_ads_ready_queue||[];		</script>
@@ -70,7 +68,9 @@
 <link rel='stylesheet' id='tie-css-helpers-css' href='https://klfoodie.com/wp-content/themes/jannah/assets/css/helpers.min.css?ver=5.4.5' type='text/css' media='all' />
 <link rel='stylesheet' id='tie-fontawesome5-css' href='https://klfoodie.com/wp-content/themes/jannah/assets/css/fontawesome.css?ver=5.4.5' type='text/css' media='all' />
 <link rel='stylesheet' id='tie-css-ilightbox-css' href='https://klfoodie.com/wp-content/themes/jannah/assets/ilightbox/dark-skin/skin.css?ver=5.4.5' type='text/css' media='all' />
-<style id='tie-css-ilightbox-inline-css' type='text/css'>
+<link rel='stylesheet' id='tie-css-single-css' href='https://klfoodie.com/wp-content/themes/jannah/assets/css/single.min.css?ver=5.4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-css-print-css' href='https://klfoodie.com/wp-content/themes/jannah/assets/css/print.css?ver=5.4.5' type='text/css' media='print' />
+<style id='tie-css-print-inline-css' type='text/css'>
 body{font-family: Arial,Helvetica,sans-serif;}.wf-active .logo-text,.wf-active h1,.wf-active h2,.wf-active h3,.wf-active h4,.wf-active h5,.wf-active h6,.wf-active .the-subtitle{font-family: 'Roboto Condensed';}.wf-active #main-nav .main-menu > ul > li > a{font-family: 'Roboto';}#main-nav .main-menu > ul > li > a{font-size: 14px;}#the-post .entry-content,#the-post .entry-content p{font-size: 20px;}.brand-title,a:hover,.tie-popup-search-submit,#logo.text-logo a,.theme-header nav .components #search-submit:hover,.theme-header .header-nav .components > li:hover > a,.theme-header .header-nav .components li a:hover,.main-menu ul.cats-vertical li a.is-active,.main-menu ul.cats-vertical li a:hover,.main-nav li.mega-menu .post-meta a:hover,.main-nav li.mega-menu .post-box-title a:hover,.search-in-main-nav.autocomplete-suggestions a:hover,#main-nav .menu ul:not(.cats-horizontal) li:hover > a,#main-nav .menu ul li.current-menu-item:not(.mega-link-column) > a,.top-nav .menu li:hover > a,.top-nav .menu > .tie-current-menu > a,.search-in-top-nav.autocomplete-suggestions .post-title a:hover,div.mag-box .mag-box-options .mag-box-filter-links a.active,.mag-box-filter-links .flexMenu-viewMore:hover > a,.stars-rating-active,body .tabs.tabs .active > a,.video-play-icon,.spinner-circle:after,#go-to-content:hover,.comment-list .comment-author .fn,.commentlist .comment-author .fn,blockquote::before,blockquote cite,blockquote.quote-simple p,.multiple-post-pages a:hover,#story-index li .is-current,.latest-tweets-widget .twitter-icon-wrap span,.wide-slider-nav-wrapper .slide,.wide-next-prev-slider-wrapper .tie-slider-nav li:hover span,.review-final-score h3,#mobile-menu-icon:hover .menu-text,body .entry a,.dark-skin body .entry a,.entry .post-bottom-meta a:hover,.comment-list .comment-content a,q a,blockquote a,.widget.tie-weather-widget .icon-basecloud-bg:after,.site-footer a:hover,.site-footer .stars-rating-active,.site-footer .twitter-icon-wrap span,.site-info a:hover{color: #fe4641;}#instagram-link a:hover{color: #fe4641 !important;border-color: #fe4641 !important;}#theme-header #main-nav .spinner-circle:after{color: #fe4641;}[type='submit'],.button,.generic-button a,.generic-button button,.theme-header .header-nav .comp-sub-menu a.button.guest-btn:hover,.theme-header .header-nav .comp-sub-menu a.checkout-button,nav.main-nav .menu > li.tie-current-menu > a,nav.main-nav .menu > li:hover > a,.main-menu .mega-links-head:after,.main-nav .mega-menu.mega-cat .cats-horizontal li a.is-active,#mobile-menu-icon:hover .nav-icon,#mobile-menu-icon:hover .nav-icon:before,#mobile-menu-icon:hover .nav-icon:after,.search-in-main-nav.autocomplete-suggestions a.button,.search-in-top-nav.autocomplete-suggestions a.button,.spinner > div,.post-cat,.pages-numbers li.current span,.multiple-post-pages > span,#tie-wrapper .mejs-container .mejs-controls,.mag-box-filter-links a:hover,.slider-arrow-nav a:not(.pagination-disabled):hover,.comment-list .reply a:hover,.commentlist .reply a:hover,#reading-position-indicator,#story-index-icon,.videos-block .playlist-title,.review-percentage .review-item span span,.tie-slick-dots li.slick-active button,.tie-slick-dots li button:hover,.digital-rating-static,.timeline-widget li a:hover .date:before,#wp-calendar #today,.posts-list-counter li.widget-post-list:before,.cat-counter a + span,.tie-slider-nav li span:hover,.fullwidth-area .widget_tag_cloud .tagcloud a:hover,.magazine2:not(.block-head-4) .dark-widgetized-area ul.tabs a:hover,.magazine2:not(.block-head-4) .dark-widgetized-area ul.tabs .active a,.magazine1 .dark-widgetized-area ul.tabs a:hover,.magazine1 .dark-widgetized-area ul.tabs .active a,.block-head-4.magazine2 .dark-widgetized-area .tabs.tabs .active a,.block-head-4.magazine2 .dark-widgetized-area .tabs > .active a:before,.block-head-4.magazine2 .dark-widgetized-area .tabs > .active a:after,.demo_store,.demo #logo:after,.demo #sticky-logo:after,.widget.tie-weather-widget,span.video-close-btn:hover,#go-to-top,.latest-tweets-widget .slider-links .button:not(:hover){background-color: #fe4641;color: #FFFFFF;}.tie-weather-widget .widget-title .the-subtitle,.block-head-4.magazine2 #footer .tabs .active a:hover{color: #FFFFFF;}pre,code,.pages-numbers li.current span,.theme-header .header-nav .comp-sub-menu a.button.guest-btn:hover,.multiple-post-pages > span,.post-content-slideshow .tie-slider-nav li span:hover,#tie-body .tie-slider-nav li > span:hover,.slider-arrow-nav a:not(.pagination-disabled):hover,.main-nav .mega-menu.mega-cat .cats-horizontal li a.is-active,.main-nav .mega-menu.mega-cat .cats-horizontal li a:hover,.main-menu .menu > li > .menu-sub-content{border-color: #fe4641;}.main-menu .menu > li.tie-current-menu{border-bottom-color: #fe4641;}.top-nav .menu li.tie-current-menu > a:before,.top-nav .menu li.menu-item-has-children:hover > a:before{border-top-color: #fe4641;}.main-nav .main-menu .menu > li.tie-current-menu > a:before,.main-nav .main-menu .menu > li:hover > a:before{border-top-color: #FFFFFF;}header.main-nav-light .main-nav .menu-item-has-children li:hover > a:before,header.main-nav-light .main-nav .mega-menu li:hover > a:before{border-left-color: #fe4641;}.rtl header.main-nav-light .main-nav .menu-item-has-children li:hover > a:before,.rtl header.main-nav-light .main-nav .mega-menu li:hover > a:before{border-right-color: #fe4641;border-left-color: transparent;}.top-nav ul.menu li .menu-item-has-children:hover > a:before{border-top-color: transparent;border-left-color: #fe4641;}.rtl .top-nav ul.menu li .menu-item-has-children:hover > a:before{border-left-color: transparent;border-right-color: #fe4641;}::-moz-selection{background-color: #fe4641;color: #FFFFFF;}::selection{background-color: #fe4641;color: #FFFFFF;}circle.circle_bar{stroke: #fe4641;}#reading-position-indicator{box-shadow: 0 0 10px rgba( 254,70,65,0.7);}#logo.text-logo a:hover,body .entry a:hover,.dark-skin body .entry a:hover,.comment-list .comment-content a:hover,.block-head-4.magazine2 .site-footer .tabs li a:hover,q a:hover,blockquote a:hover{color: #cc140f;}.button:hover,input[type='submit']:hover,.generic-button a:hover,.generic-button button:hover,a.post-cat:hover,.site-footer .button:hover,.site-footer [type='submit']:hover,.search-in-main-nav.autocomplete-suggestions a.button:hover,.search-in-top-nav.autocomplete-suggestions a.button:hover,.theme-header .header-nav .comp-sub-menu a.checkout-button:hover{background-color: #cc140f;color: #FFFFFF;}.theme-header .header-nav .comp-sub-menu a.checkout-button:not(:hover),body .entry a.button{color: #FFFFFF;}#story-index.is-compact .story-index-content{background-color: #fe4641;}#story-index.is-compact .story-index-content a,#story-index.is-compact .story-index-content .is-current{color: #FFFFFF;}#tie-body .mag-box-title h3 a,#tie-body .block-more-button{color: #fe4641;}#tie-body .mag-box-title h3 a:hover,#tie-body .block-more-button:hover{color: #cc140f;}#tie-body .the-global-title,#tie-body .comment-reply-title,#tie-body .related.products > h2,#tie-body .up-sells > h2,#tie-body .cross-sells > h2,#tie-body .cart_totals > h2,#tie-body .bbp-form legend{border-color: #fe4641;color: #fe4641;}#tie-body #footer .widget-title:after{background-color: #fe4641;}.brand-title,a:hover,.tie-popup-search-submit,#logo.text-logo a,.theme-header nav .components #search-submit:hover,.theme-header .header-nav .components > li:hover > a,.theme-header .header-nav .components li a:hover,.main-menu ul.cats-vertical li a.is-active,.main-menu ul.cats-vertical li a:hover,.main-nav li.mega-menu .post-meta a:hover,.main-nav li.mega-menu .post-box-title a:hover,.search-in-main-nav.autocomplete-suggestions a:hover,#main-nav .menu ul:not(.cats-horizontal) li:hover > a,#main-nav .menu ul li.current-menu-item:not(.mega-link-column) > a,.top-nav .menu li:hover > a,.top-nav .menu > .tie-current-menu > a,.search-in-top-nav.autocomplete-suggestions .post-title a:hover,div.mag-box .mag-box-options .mag-box-filter-links a.active,.mag-box-filter-links .flexMenu-viewMore:hover > a,.stars-rating-active,body .tabs.tabs .active > a,.video-play-icon,.spinner-circle:after,#go-to-content:hover,.comment-list .comment-author .fn,.commentlist .comment-author .fn,blockquote::before,blockquote cite,blockquote.quote-simple p,.multiple-post-pages a:hover,#story-index li .is-current,.latest-tweets-widget .twitter-icon-wrap span,.wide-slider-nav-wrapper .slide,.wide-next-prev-slider-wrapper .tie-slider-nav li:hover span,.review-final-score h3,#mobile-menu-icon:hover .menu-text,body .entry a,.dark-skin body .entry a,.entry .post-bottom-meta a:hover,.comment-list .comment-content a,q a,blockquote a,.widget.tie-weather-widget .icon-basecloud-bg:after,.site-footer a:hover,.site-footer .stars-rating-active,.site-footer .twitter-icon-wrap span,.site-info a:hover{color: #fe4641;}#instagram-link a:hover{color: #fe4641 !important;border-color: #fe4641 !important;}#theme-header #main-nav .spinner-circle:after{color: #fe4641;}[type='submit'],.button,.generic-button a,.generic-button button,.theme-header .header-nav .comp-sub-menu a.button.guest-btn:hover,.theme-header .header-nav .comp-sub-menu a.checkout-button,nav.main-nav .menu > li.tie-current-menu > a,nav.main-nav .menu > li:hover > a,.main-menu .mega-links-head:after,.main-nav .mega-menu.mega-cat .cats-horizontal li a.is-active,#mobile-menu-icon:hover .nav-icon,#mobile-menu-icon:hover .nav-icon:before,#mobile-menu-icon:hover .nav-icon:after,.search-in-main-nav.autocomplete-suggestions a.button,.search-in-top-nav.autocomplete-suggestions a.button,.spinner > div,.post-cat,.pages-numbers li.current span,.multiple-post-pages > span,#tie-wrapper .mejs-container .mejs-controls,.mag-box-filter-links a:hover,.slider-arrow-nav a:not(.pagination-disabled):hover,.comment-list .reply a:hover,.commentlist .reply a:hover,#reading-position-indicator,#story-index-icon,.videos-block .playlist-title,.review-percentage .review-item span span,.tie-slick-dots li.slick-active button,.tie-slick-dots li button:hover,.digital-rating-static,.timeline-widget li a:hover .date:before,#wp-calendar #today,.posts-list-counter li.widget-post-list:before,.cat-counter a + span,.tie-slider-nav li span:hover,.fullwidth-area .widget_tag_cloud .tagcloud a:hover,.magazine2:not(.block-head-4) .dark-widgetized-area ul.tabs a:hover,.magazine2:not(.block-head-4) .dark-widgetized-area ul.tabs .active a,.magazine1 .dark-widgetized-area ul.tabs a:hover,.magazine1 .dark-widgetized-area ul.tabs .active a,.block-head-4.magazine2 .dark-widgetized-area .tabs.tabs .active a,.block-head-4.magazine2 .dark-widgetized-area .tabs > .active a:before,.block-head-4.magazine2 .dark-widgetized-area .tabs > .active a:after,.demo_store,.demo #logo:after,.demo #sticky-logo:after,.widget.tie-weather-widget,span.video-close-btn:hover,#go-to-top,.latest-tweets-widget .slider-links .button:not(:hover){background-color: #fe4641;color: #FFFFFF;}.tie-weather-widget .widget-title .the-subtitle,.block-head-4.magazine2 #footer .tabs .active a:hover{color: #FFFFFF;}pre,code,.pages-numbers li.current span,.theme-header .header-nav .comp-sub-menu a.button.guest-btn:hover,.multiple-post-pages > span,.post-content-slideshow .tie-slider-nav li span:hover,#tie-body .tie-slider-nav li > span:hover,.slider-arrow-nav a:not(.pagination-disabled):hover,.main-nav .mega-menu.mega-cat .cats-horizontal li a.is-active,.main-nav .mega-menu.mega-cat .cats-horizontal li a:hover,.main-menu .menu > li > .menu-sub-content{border-color: #fe4641;}.main-menu .menu > li.tie-current-menu{border-bottom-color: #fe4641;}.top-nav .menu li.tie-current-menu > a:before,.top-nav .menu li.menu-item-has-children:hover > a:before{border-top-color: #fe4641;}.main-nav .main-menu .menu > li.tie-current-menu > a:before,.main-nav .main-menu .menu > li:hover > a:before{border-top-color: #FFFFFF;}header.main-nav-light .main-nav .menu-item-has-children li:hover > a:before,header.main-nav-light .main-nav .mega-menu li:hover > a:before{border-left-color: #fe4641;}.rtl header.main-nav-light .main-nav .menu-item-has-children li:hover > a:before,.rtl header.main-nav-light .main-nav .mega-menu li:hover > a:before{border-right-color: #fe4641;border-left-color: transparent;}.top-nav ul.menu li .menu-item-has-children:hover > a:before{border-top-color: transparent;border-left-color: #fe4641;}.rtl .top-nav ul.menu li .menu-item-has-children:hover > a:before{border-left-color: transparent;border-right-color: #fe4641;}::-moz-selection{background-color: #fe4641;color: #FFFFFF;}::selection{background-color: #fe4641;color: #FFFFFF;}circle.circle_bar{stroke: #fe4641;}#reading-position-indicator{box-shadow: 0 0 10px rgba( 254,70,65,0.7);}#logo.text-logo a:hover,body .entry a:hover,.dark-skin body .entry a:hover,.comment-list .comment-content a:hover,.block-head-4.magazine2 .site-footer .tabs li a:hover,q a:hover,blockquote a:hover{color: #cc140f;}.button:hover,input[type='submit']:hover,.generic-button a:hover,.generic-button button:hover,a.post-cat:hover,.site-footer .button:hover,.site-footer [type='submit']:hover,.search-in-main-nav.autocomplete-suggestions a.button:hover,.search-in-top-nav.autocomplete-suggestions a.button:hover,.theme-header .header-nav .comp-sub-menu a.checkout-button:hover{background-color: #cc140f;color: #FFFFFF;}.theme-header .header-nav .comp-sub-menu a.checkout-button:not(:hover),body .entry a.button{color: #FFFFFF;}#story-index.is-compact .story-index-content{background-color: #fe4641;}#story-index.is-compact .story-index-content a,#story-index.is-compact .story-index-content .is-current{color: #FFFFFF;}#tie-body .mag-box-title h3 a,#tie-body .block-more-button{color: #fe4641;}#tie-body .mag-box-title h3 a:hover,#tie-body .block-more-button:hover{color: #cc140f;}#tie-body .the-global-title,#tie-body .comment-reply-title,#tie-body .related.products > h2,#tie-body .up-sells > h2,#tie-body .cross-sells > h2,#tie-body .cart_totals > h2,#tie-body .bbp-form legend{border-color: #fe4641;color: #fe4641;}#tie-body #footer .widget-title:after{background-color: #fe4641;}#content a:hover{text-decoration: underline !important;}#top-nav,#top-nav .sub-menu,#top-nav .comp-sub-menu,#top-nav .ticker-content,#top-nav .ticker-swipe,.top-nav-boxed #top-nav .topbar-wrapper,.search-in-top-nav.autocomplete-suggestions,#top-nav .guest-btn:not(:hover){background-color : #333333;}#top-nav *,.search-in-top-nav.autocomplete-suggestions{border-color: rgba( 255,255,255,0.08);}#top-nav .icon-basecloud-bg:after{color: #333333;}#top-nav a:not(:hover),#top-nav input,#top-nav #search-submit,#top-nav .fa-spinner,#top-nav .dropdown-social-icons li a span,#top-nav .components > li .social-link:not(:hover) span,.search-in-top-nav.autocomplete-suggestions a{color: #ffffff;}#top-nav .menu-item-has-children > a:before{border-top-color: #ffffff;}#top-nav li .menu-item-has-children > a:before{border-top-color: transparent;border-left-color: #ffffff;}.rtl #top-nav .menu li .menu-item-has-children > a:before{border-left-color: transparent;border-right-color: #ffffff;}#top-nav input::-moz-placeholder{color: #ffffff;}#top-nav input:-moz-placeholder{color: #ffffff;}#top-nav input:-ms-input-placeholder{color: #ffffff;}#top-nav input::-webkit-input-placeholder{color: #ffffff;}#top-nav .comp-sub-menu .button:hover,#top-nav .checkout-button,.search-in-top-nav.autocomplete-suggestions .button{background-color: #fe4641;}#top-nav a:hover,#top-nav .menu li:hover > a,#top-nav .menu > .tie-current-menu > a,#top-nav .components > li:hover > a,#top-nav .components #search-submit:hover,.search-in-top-nav.autocomplete-suggestions .post-title a:hover{color: #fe4641;}#top-nav .comp-sub-menu .button:hover{border-color: #fe4641;}#top-nav .tie-current-menu > a:before,#top-nav .menu .menu-item-has-children:hover > a:before{border-top-color: #fe4641;}#top-nav .menu li .menu-item-has-children:hover > a:before{border-top-color: transparent;border-left-color: #fe4641;}.rtl #top-nav .menu li .menu-item-has-children:hover > a:before{border-left-color: transparent;border-right-color: #fe4641;}#top-nav .comp-sub-menu .button:hover,#top-nav .comp-sub-menu .checkout-button,.search-in-top-nav.autocomplete-suggestions .button{color: #FFFFFF;}#top-nav .comp-sub-menu .checkout-button:hover,.search-in-top-nav.autocomplete-suggestions .button:hover{background-color: #e02823;}#top-nav,#top-nav .comp-sub-menu,#top-nav .tie-weather-widget{color: #aaaaaa;}.search-in-top-nav.autocomplete-suggestions .post-meta,.search-in-top-nav.autocomplete-suggestions .post-meta a:not(:hover){color: rgba( 170,170,170,0.7 );}#top-nav .weather-icon .icon-cloud,#top-nav .weather-icon .icon-basecloud-bg,#top-nav .weather-icon .icon-cloud-behind{color: #aaaaaa !important;}#main-nav,#main-nav .menu-sub-content,#main-nav .comp-sub-menu,#main-nav .guest-btn:not(:hover),#main-nav ul.cats-vertical li a.is-active,#main-nav ul.cats-vertical li a:hover.search-in-main-nav.autocomplete-suggestions{background-color: #ffffff;}#main-nav{border-width: 0;}#theme-header #main-nav:not(.fixed-nav){bottom: 0;}#main-nav .icon-basecloud-bg:after{color: #ffffff;}#main-nav *,.search-in-main-nav.autocomplete-suggestions{border-color: rgba(0,0,0,0.07);}.main-nav-boxed #main-nav .main-menu-wrapper{border-width: 0;}#main-nav .menu li.menu-item-has-children > a:before,#main-nav .main-menu .mega-menu > a:before{border-top-color: #34495e;}#main-nav .menu li .menu-item-has-children > a:before,#main-nav .mega-menu .menu-item-has-children > a:before{border-top-color: transparent;border-left-color: #34495e;}.rtl #main-nav .menu li .menu-item-has-children > a:before,.rtl #main-nav .mega-menu .menu-item-has-children > a:before{border-left-color: transparent;border-right-color: #34495e;}#main-nav a:not(:hover),#main-nav a.social-link:not(:hover) span,#main-nav .dropdown-social-icons li a span,.search-in-main-nav.autocomplete-suggestions a{color: #34495e;}#main-nav .comp-sub-menu .button:hover,#main-nav .menu > li.tie-current-menu,#main-nav .menu > li > .menu-sub-content,#main-nav .cats-horizontal a.is-active,#main-nav .cats-horizontal a:hover{border-color: #fe4641;}#main-nav .menu > li.tie-current-menu > a,#main-nav .menu > li:hover > a,#main-nav .mega-links-head:after,#main-nav .comp-sub-menu .button:hover,#main-nav .comp-sub-menu .checkout-button,#main-nav .cats-horizontal a.is-active,#main-nav .cats-horizontal a:hover,.search-in-main-nav.autocomplete-suggestions .button,#main-nav .spinner > div{background-color: #fe4641;}#main-nav .menu ul li:hover > a,#main-nav .menu ul li.current-menu-item:not(.mega-link-column) > a,#main-nav .components a:hover,#main-nav .components > li:hover > a,#main-nav #search-submit:hover,#main-nav .cats-vertical a.is-active,#main-nav .cats-vertical a:hover,#main-nav .mega-menu .post-meta a:hover,#main-nav .mega-menu .post-box-title a:hover,.search-in-main-nav.autocomplete-suggestions a:hover,#main-nav .spinner-circle:after{color: #fe4641;}#main-nav .menu > li.tie-current-menu > a,#main-nav .menu > li:hover > a,#main-nav .components .button:hover,#main-nav .comp-sub-menu .checkout-button,.theme-header #main-nav .mega-menu .cats-horizontal a.is-active,.theme-header #main-nav .mega-menu .cats-horizontal a:hover,.search-in-main-nav.autocomplete-suggestions a.button{color: #FFFFFF;}#main-nav .menu > li.tie-current-menu > a:before,#main-nav .menu > li:hover > a:before{border-top-color: #FFFFFF;}.main-nav-light #main-nav .menu-item-has-children li:hover > a:before,.main-nav-light #main-nav .mega-menu li:hover > a:before{border-left-color: #fe4641;}.rtl .main-nav-light #main-nav .menu-item-has-children li:hover > a:before,.rtl .main-nav-light #main-nav .mega-menu li:hover > a:before{border-right-color: #fe4641;border-left-color: transparent;}.search-in-main-nav.autocomplete-suggestions .button:hover,#main-nav .comp-sub-menu .checkout-button:hover{background-color: #e02823;}#main-nav,#main-nav input,#main-nav #search-submit,#main-nav .fa-spinner,#main-nav .comp-sub-menu,#main-nav .tie-weather-widget{color: #f6f6f6;}#main-nav input::-moz-placeholder{color: #f6f6f6;}#main-nav input:-moz-placeholder{color: #f6f6f6;}#main-nav input:-ms-input-placeholder{color: #f6f6f6;}#main-nav input::-webkit-input-placeholder{color: #f6f6f6;}#main-nav .mega-menu .post-meta,#main-nav .mega-menu .post-meta a,.search-in-main-nav.autocomplete-suggestions .post-meta{color: rgba(246,246,246,0.6);}#main-nav .weather-icon .icon-cloud,#main-nav .weather-icon .icon-basecloud-bg,#main-nav .weather-icon .icon-cloud-behind{color: #f6f6f6 !important;}#footer{background-color: #252525;}#site-info{background-color: #181818;}#footer .posts-list-counter .posts-list-items li.widget-post-list:before{border-color: #252525;}#footer .timeline-widget a .date:before{border-color: rgba(37,37,37,0.8);}#footer .footer-boxed-widget-area,#footer textarea,#footer input:not([type=submit]),#footer select,#footer code,#footer kbd,#footer pre,#footer samp,#footer .show-more-button,#footer .slider-links .tie-slider-nav span,#footer #wp-calendar,#footer #wp-calendar tbody td,#footer #wp-calendar thead th,#footer .widget.buddypress .item-options a{border-color: rgba(255,255,255,0.1);}#footer .social-statistics-widget .white-bg li.social-icons-item a,#footer .widget_tag_cloud .tagcloud a,#footer .latest-tweets-widget .slider-links .tie-slider-nav span,#footer .widget_layered_nav_filters a{border-color: rgba(255,255,255,0.1);}#footer .social-statistics-widget .white-bg li:before{background: rgba(255,255,255,0.1);}.site-footer #wp-calendar tbody td{background: rgba(255,255,255,0.02);}#footer .white-bg .social-icons-item a span.followers span,#footer .circle-three-cols .social-icons-item a .followers-num,#footer .circle-three-cols .social-icons-item a .followers-name{color: rgba(255,255,255,0.8);}#footer .timeline-widget ul:before,#footer .timeline-widget a:not(:hover) .date:before{background-color: #070707;}#footer .widget-title,#footer .widget-title a:not(:hover){color: #ffffff;}#footer,#footer textarea,#footer input:not([type='submit']),#footer select,#footer #wp-calendar tbody,#footer .tie-slider-nav li span:not(:hover),#footer .widget_categories li a:before,#footer .widget_product_categories li a:before,#footer .widget_layered_nav li a:before,#footer .widget_archive li a:before,#footer .widget_nav_menu li a:before,#footer .widget_meta li a:before,#footer .widget_pages li a:before,#footer .widget_recent_entries li a:before,#footer .widget_display_forums li a:before,#footer .widget_display_views li a:before,#footer .widget_rss li a:before,#footer .widget_display_stats dt:before,#footer .subscribe-widget-content h3,#footer .about-author .social-icons a:not(:hover) span{color: #aaaaaa;}#footer post-widget-body .meta-item,#footer .post-meta,#footer .stream-title,#footer.dark-skin .timeline-widget .date,#footer .wp-caption .wp-caption-text,#footer .rss-date{color: rgba(170,170,170,0.7);}#footer input::-moz-placeholder{color: #aaaaaa;}#footer input:-moz-placeholder{color: #aaaaaa;}#footer input:-ms-input-placeholder{color: #aaaaaa;}#footer input::-webkit-input-placeholder{color: #aaaaaa;}#footer .site-info a:not(:hover){color: #fe4641;}@media (min-width: 1200px){.container{width: auto;}}@media (min-width: 992px){.container,.boxed-layout #tie-wrapper,.boxed-layout .fixed-nav,.wide-next-prev-slider-wrapper .slider-main-container{max-width: 80%;}.boxed-layout .container{max-width: 100%;}}
 </style>
 <script type="text/javascript" src="https://klfoodie.com/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
@@ -87,15 +87,15 @@ var say_what_data = {"replacements":[]};
 <script type="text/javascript" src="https://klfoodie.com/wp-content/plugins/pixelyoursite/dist/scripts/tld.min.js?ver=2.3.1" id="js-tld-js"></script>
 <script type="text/javascript" id="pys-js-extra">
 /* <![CDATA[ */
-var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"static","ajaxFire":false,"name":"PageView","pixelIds":["546973548823310"],"eventID":"e38f5dcb-ecd6-4db9-8467-f182643ef407","params":{"page_title":"New Home","post_type":"page","post_id":67755,"plugin":"PixelYourSite","user_role":"guest","event_url":"klfoodie.com\/"},"e_id":"init_event","ids":[],"hasTimeWindow":false,"timeWindow":0,"woo_order":"","edd_order":""}]}},"dynamicEvents":[],"triggerEvents":[],"triggerEventTypes":[],"facebook":{"pixelIds":["546973548823310"],"advancedMatching":[],"advancedMatchingEnabled":false,"removeMetadata":false,"wooVariableAsSimple":false,"serverApiEnabled":false,"wooCRSendFromServer":false,"send_external_id":null,"enabled_medical":false,"do_not_track_medical_param":["event_url","post_title","page_title","landing_page","content_name","categories","category_name","tags"],"meta_ldu":false},"debug":"","siteUrl":"https:\/\/klfoodie.com","ajaxUrl":"https:\/\/klfoodie.com\/wp-admin\/admin-ajax.php","ajax_event":"f4ea5ef7e6","enable_remove_download_url_param":"1","cookie_duration":"7","last_visit_duration":"60","enable_success_send_form":"","ajaxForServerEvent":"1","ajaxForServerStaticEvent":"1","send_external_id":"1","external_id_expire":"180","track_cookie_for_subdomains":"1","google_consent_mode":"1","gdpr":{"ajax_enabled":true,"all_disabled_by_api":false,"facebook_disabled_by_api":false,"analytics_disabled_by_api":false,"google_ads_disabled_by_api":false,"pinterest_disabled_by_api":false,"bing_disabled_by_api":false,"externalID_disabled_by_api":false,"facebook_prior_consent_enabled":true,"analytics_prior_consent_enabled":true,"google_ads_prior_consent_enabled":null,"pinterest_prior_consent_enabled":true,"bing_prior_consent_enabled":true,"cookiebot_integration_enabled":false,"cookiebot_facebook_consent_category":"marketing","cookiebot_analytics_consent_category":"statistics","cookiebot_tiktok_consent_category":"marketing","cookiebot_google_ads_consent_category":"marketing","cookiebot_pinterest_consent_category":"marketing","cookiebot_bing_consent_category":"marketing","consent_magic_integration_enabled":false,"real_cookie_banner_integration_enabled":false,"cookie_notice_integration_enabled":false,"cookie_law_info_integration_enabled":false,"analytics_storage":{"enabled":true,"value":"granted","filter":false},"ad_storage":{"enabled":true,"value":"granted","filter":false},"ad_user_data":{"enabled":true,"value":"granted","filter":false},"ad_personalization":{"enabled":true,"value":"granted","filter":false}},"cookie":{"disabled_all_cookie":false,"disabled_start_session_cookie":false,"disabled_advanced_form_data_cookie":false,"disabled_landing_page_cookie":false,"disabled_first_visit_cookie":false,"disabled_trafficsource_cookie":false,"disabled_utmTerms_cookie":false,"disabled_utmId_cookie":false},"tracking_analytics":{"TrafficSource":"direct","TrafficLanding":"undefined","TrafficUtms":[],"TrafficUtmsId":[]},"GATags":{"ga_datalayer_type":"default","ga_datalayer_name":"dataLayerPYS"},"woo":{"enabled":false},"edd":{"enabled":false},"cache_bypass":"1757946627"};
+var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"static","ajaxFire":false,"name":"PageView","pixelIds":["546973548823310"],"eventID":"8d4b48d6-5610-4eda-b1e7-cf8ccd50eb25","params":{"page_title":"Contact Us","post_type":"page","post_id":26,"plugin":"PixelYourSite","user_role":"guest","event_url":"klfoodie.com\/contact\/"},"e_id":"init_event","ids":[],"hasTimeWindow":false,"timeWindow":0,"woo_order":"","edd_order":""}]}},"dynamicEvents":[],"triggerEvents":[],"triggerEventTypes":[],"facebook":{"pixelIds":["546973548823310"],"advancedMatching":[],"advancedMatchingEnabled":false,"removeMetadata":false,"wooVariableAsSimple":false,"serverApiEnabled":false,"wooCRSendFromServer":false,"send_external_id":null,"enabled_medical":false,"do_not_track_medical_param":["event_url","post_title","page_title","landing_page","content_name","categories","category_name","tags"],"meta_ldu":false},"debug":"","siteUrl":"https:\/\/klfoodie.com","ajaxUrl":"https:\/\/klfoodie.com\/wp-admin\/admin-ajax.php","ajax_event":"670a83234b","enable_remove_download_url_param":"1","cookie_duration":"7","last_visit_duration":"60","enable_success_send_form":"","ajaxForServerEvent":"1","ajaxForServerStaticEvent":"1","send_external_id":"1","external_id_expire":"180","track_cookie_for_subdomains":"1","google_consent_mode":"1","gdpr":{"ajax_enabled":true,"all_disabled_by_api":false,"facebook_disabled_by_api":false,"analytics_disabled_by_api":false,"google_ads_disabled_by_api":false,"pinterest_disabled_by_api":false,"bing_disabled_by_api":false,"externalID_disabled_by_api":false,"facebook_prior_consent_enabled":true,"analytics_prior_consent_enabled":true,"google_ads_prior_consent_enabled":null,"pinterest_prior_consent_enabled":true,"bing_prior_consent_enabled":true,"cookiebot_integration_enabled":false,"cookiebot_facebook_consent_category":"marketing","cookiebot_analytics_consent_category":"statistics","cookiebot_tiktok_consent_category":"marketing","cookiebot_google_ads_consent_category":"marketing","cookiebot_pinterest_consent_category":"marketing","cookiebot_bing_consent_category":"marketing","consent_magic_integration_enabled":false,"real_cookie_banner_integration_enabled":false,"cookie_notice_integration_enabled":false,"cookie_law_info_integration_enabled":false,"analytics_storage":{"enabled":true,"value":"granted","filter":false},"ad_storage":{"enabled":true,"value":"granted","filter":false},"ad_user_data":{"enabled":true,"value":"granted","filter":false},"ad_personalization":{"enabled":true,"value":"granted","filter":false}},"cookie":{"disabled_all_cookie":false,"disabled_start_session_cookie":false,"disabled_advanced_form_data_cookie":false,"disabled_landing_page_cookie":false,"disabled_first_visit_cookie":false,"disabled_trafficsource_cookie":false,"disabled_utmTerms_cookie":false,"disabled_utmId_cookie":false},"tracking_analytics":{"TrafficSource":"google.com","TrafficLanding":"undefined","TrafficUtms":[],"TrafficUtmsId":[]},"GATags":{"ga_datalayer_type":"default","ga_datalayer_name":"dataLayerPYS"},"woo":{"enabled":false},"edd":{"enabled":false},"cache_bypass":"1757726140"};
 /* ]]> */
 </script>
 <script type="text/javascript" src="https://klfoodie.com/wp-content/plugins/pixelyoursite/dist/scripts/public.js?ver=11.1.0" id="pys-js"></script>
-<link rel="https://api.w.org/" href="https://klfoodie.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://klfoodie.com/wp-json/wp/v2/pages/67755" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://klfoodie.com/xmlrpc.php?rsd" />
+<link rel="https://api.w.org/" href="https://klfoodie.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://klfoodie.com/wp-json/wp/v2/pages/26" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://klfoodie.com/xmlrpc.php?rsd" />
 <meta name="generator" content="WordPress 6.8.2" />
-<link rel='shortlink' href='https://wp.me/P9pw18-hCP' />
-<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://klfoodie.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fklfoodie.com%2F" />
-<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://klfoodie.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fklfoodie.com%2F&#038;format=xml" />
+<link rel='shortlink' href='https://wp.me/P9pw18-q' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://klfoodie.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fklfoodie.com%2Fcontact%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://klfoodie.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fklfoodie.com%2Fcontact%2F&#038;format=xml" />
 		<meta property="fb:pages" content="112274292745476" />
 		<style type="text/css">
 .feedzy-rss-link-icon:after {
@@ -163,7 +163,7 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 	for (var i = 0; i < evts.length; i++) {
 		addEvent(evts[i], logHuman);
 	}
-})('//klfoodie.com/?wordfence_lh=1&hid=31499867D9151E83BD2615098333964C');
+})('//klfoodie.com/?wordfence_lh=1&hid=1CD3761E4934C4B6A6813F7BE0F0DC5A');
 </script>	<style>img#wpstats{display:none}</style>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="theme-color" content="#fe4641" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="icon" href="https://cdn.klfoodie.com/2023/01/kl-foodies.png" sizes="32x32" />
@@ -206,7 +206,7 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
   });
 </script></head>
 
-<body data-rsssl=1 id="tie-body" class="home wp-singular page-template-default page page-id-67755 wp-theme-jannah boxed-layout is-percent-width wrapper-has-shadow block-head-2 magazine2 is-thumb-overlay-disabled is-desktop is-header-layout-1 has-header-ad has-header-below-ad has-builder hide_banner_below_header hide_breaking_news hide_share_post_bottom hide_post_authorbio hide_post_nav hide_back_top_button aa-prefix-klfoo-">
+<body data-rsssl=1 id="tie-body" class="wp-singular page-template-default page page-id-26 wp-theme-jannah boxed-layout is-percent-width wrapper-has-shadow block-head-2 magazine2 is-thumb-overlay-disabled is-desktop is-header-layout-1 has-header-ad has-header-below-ad sidebar-right has-sidebar post-layout-1 has-mobile-share hide_banner_below_header hide_breaking_news hide_share_post_bottom hide_post_authorbio hide_post_nav hide_back_top_button aa-prefix-klfoo-">
 
 <div id="rfp-ODU0OjIyNjEx"><ins data-rfp-display-adspot-id="ODU0OjIyNjEx" style="display:none"></ins></div>
 <script src="https://js.rfp.fout.jp/rfp-display.js"></script>
@@ -218,10 +218,13 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 
 		
 		<div id="tie-wrapper">
-    @include('welcome.navtop')
 
-<div class="stream-item stream-item-top-wrapper"><div class="stream-item-top"></div></div><div class="stream-item stream-item-below-header"><div id="billboardSpace" style="text-align:center; padding-top: 10px; padding-bottom: 10px;">
+			
+@include('welcome.navtop')
+
+<div class="stream-item stream-item-top-wrapper"><div class="stream-item-top"></div></div><!-- .tie-col /--><div class="stream-item stream-item-below-header"><div id="billboardSpace" style="text-align:center; padding-top: 10px; padding-bottom: 10px;">
 	<div id="billboardSpaceLabel" style="padding-top: 5px;font-size: small; color: #888;">Advertisement</div>
+	<!-- /43893936/KLF_DesktopBillboard -->
 	<div id='div-gpt-ad-1683022485054-0' style='min-width: 728px; min-height: 90px;'>
 		<script>
 			if(screen.width < 500 || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
@@ -245,6 +248,7 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 
 <div id="leaderboardSpace" style="text-align:center; padding-top: 10px; padding-bottom: 10px;">
 	<div id="leaderboardSpaceLabel" style="padding-top: 5px;font-size: small; color: #888;">Advertisement</div>
+	<!-- /43893936/KLF_MobileLeaderboard -->
 	<div id='div-gpt-ad-1683022745852-0' style='min-width: 320px; min-height: 50px;'>
 	<script>
 		if(screen.width < 500 || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
@@ -264,55 +268,77 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 		}
 	  </script>
 	</div>
-</div></div>
+</div></div><div id="content" class="site-content container"><div id="main-content-row" class="tie-row main-content-row">
 
-<div id="tiepost-67755-section-7296" class="section-wrapper container normal-width without-background">
-	<div class="section-item is-first-section sidebar-right has-sidebar" style="" >
-        <div class="container-normal">
-            <div class="tie-row main-content-row">
-                <div class="main-content tie-col-md-8 tie-col-xs-12" role="main">
-        <div id="tie-block_2325" class="mag-box big-posts-box" data-current="1">
-            <div class="container-wrapper">
-	    <div class="mag-box-title the-global-title">
-			<h3>
-				This Just In 🔥			</h3>
-		</div>
-		<div class="mag-box-container clearfix">
-		<ul class="posts-items posts-list-container">
-        @foreach($projects as $project)
-            <li class="post-item  post-84129 post type-post status-publish format-standard has-post-thumbnail category-lifestyle tag-klang-valley tag-kuala-lumpur tag-petaling-jaya tag-rice-cooker tag-tefal tie-standard">
-                <a aria-label="Nasi Pasti Tak Basi! Tefal’s Delirice Max Serves Up Fresh, Fluffy Rice for 24 Hours" href="{{ url('/' . $project->id) }}" class="post-thumb"><span class="post-cat-wrap"><span class="post-cat tie-cat-660">{{$project->category_name}}</span></span>
-				<img width="390" height="220" src="{{ $project->project_image ? asset($project->project_image) : 'https://cdn.klfoodie.com/2025/08/MDEC-Hotel-Cover-3-1-390x220.png' }}" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt=""></a>
-                    <div class="post-details">
-                        <div class="post-meta clearfix"><span class="author-meta single-author no-avatars"><span class="meta-item meta-author-wrapper meta-author-49"><span class="meta-author"><a class="author-name tie-icon" title="{{{$project->author}}}">{{ $project->author }}</a></span></span></span><span class="date meta-item tie-icon">{{ $project->publish_time }}</span><div class="tie-alignright">
-                        </div>
-                    </div><!-- .post-meta -->
-                    <h2 class="post-title"><a href="{{ url('/' . $project->id) }}">{{ $project->title }}</a></h2>
-                </div>
-            </li>
-        @endforeach
-        </ul>
-            <div class="clearfix"></div>
-                </div>
-                <!-- <a class="block-pagination next-posts show-more-button" data-text="Show More">Show More</a> -->
-            </div>
-		</div>
-		<script>var js_tie_block_2325 = {"order":"latest","source":"id","exclude_posts":"74031, 74033, 74035, 74039, 74037, 84117","number":"20","pagi":"show-more","post_meta":"true","breaking_effect":"reveal","sub_style":"big","style":"default","title_length":"","excerpt_length":"","media_overlay":"","read_more_text":""};</script>
-		</div>
+<div class="main-content tie-col-md-8 tie-col-xs-12" role="main">
 
-    @include('welcome.sidebar')
-</div>
-	    </div>
-	</div>
-</div>
+	
+	<article id="the-post" class="container-wrapper post-content">
 
-    @include('welcome.footer')
+		
+	<header class="entry-header-outer">
+
+		<nav id="breadcrumb"><a href="https://klfoodie.com/"><span class="tie-icon-home" aria-hidden="true"></span> Home</a><em class="delimiter">/</em><span class="current">Privacy Policy</span></nav><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","@id":"#Breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Home","@id":"https:\/\/klfoodie.com\/"}}]}</script>
+		<div class="entry-header">
+			<h1 class="post-title entry-title">Privacy Policy</h1>
+		</div><!-- .entry-header /-->
+
+		
+	</header><!-- .entry-header-outer /-->
+
+	
+		<div itemprop="articleBody" class="entry-content entry clearfix">
+
+			
+			<p>&nbsp;</p>
+<p>Affiliate Disclosure, click <a href="https://klfoodie.com/affiliate-disclosure/"><em>here</em></a>.</p>
+<p><b>Privacy Policy for www.klfoodie.com</b></p>
+<p>If you require any more information or have any questions about our privacy policy, please feel free to contact us by email at helloklfoodie@gmail.com.</p>
+<p>At www.klfoodie.com, the privacy of our visitors is of extreme importance to us. This privacy policy document outlines the types of personal information is received and collected by www.klfoodie.com and how it is used.</p>
+<p><b>Log Files</b><br />
+Like many other Web sites, www.klfoodie.com makes use of log files. The information inside the log files includes internet protocol ( IP ) addresses, type of browser, Internet Service Provider ( ISP ), date/time stamp, referring/exit pages, and number of clicks to analyze trends, administer the site, track user’s movement around the site, and gather demographic information. IP addresses, and other such information are not linked to any information that is personally identifiable.</p>
+<p><b>Cookies and Web Beacons</b><br />
+www.klfoodie.com does use cookies to store information about visitors preferences, record user-specific information on which pages the user access or visit, customize Web page content based on visitors browser type or other information that the visitor sends via their browser.</p>
+<p><b>DoubleClick DART Cookie</b><br />
+.:: Google, as a third party vendor, uses cookies to serve ads on www.klfoodie.com.<br />
+.:: Google’s use of the DART cookie enables it to serve ads to users based on their visit to www.klfoodie.com and other sites on the Internet.<br />
+.:: Users may opt out of the use of the DART cookie by visiting the Google ad and content network privacy policy at the following URL – http://www.google.com/privacy_ads.html</p>
+<p>Some of our advertising partners may use cookies and web beacons on our site. Our advertising partners include ….<br />
+Google Adsense</p>
+<p>These third-party ad servers or ad networks use technology to the advertisements and links that appear on www.klfoodie.com send directly to your browsers. They automatically receive your IP address when this occurs. Other technologies ( such as cookies, JavaScript, or Web Beacons ) may also be used by the third-party ad networks to measure the effectiveness of their advertisements and / or to personalize the advertising content that you see.</p>
+<p>www.klfoodie.com has no access to or control over these cookies that are used by third-party advertisers.</p>
+<p>You should consult the respective privacy policies of these third-party ad servers for more detailed information on their practices as well as for instructions about how to opt-out of certain practices. www.klfoodie.com’s privacy policy does not apply to, and we cannot control the activities of, such other advertisers or web sites.</p>
+<p>If you wish to disable cookies, you may do so through your individual browser options. More detailed information about cookie management with specific web browsers can be found at the browsers’ respective websites.</p>
+<p>&nbsp;</p>
+<p>Full Privacy Policy, click <a href="https://goodfoodiemedia.com/index.php/privacy-policy/">here</a>.</p>
+
+			
+		</div><!-- .entry-content /-->
+
+		
+	</article><!-- #the-post /-->
+
+	<div class="stream-item stream-item-below-post"></div>
+	<div class="post-components">
+
+		
+	</div><!-- .post-components /-->
+
+	
+</div><!-- .main-content -->
+
+
+	@include('welcome.sidebar')
+	</div><!-- .main-content-row /--></div><!-- #content /-->
+@include('welcome.footer')
+
+
 		<a id="go-to-top" class="go-to-top-button" href="#go-to-tie-body">
 			<span class="tie-icon-angle-up"></span>
 			<span class="screen-reader-text">Back to top button</span>
 		</a>
 	
-		</div>
+		</div><!-- #tie-wrapper /-->
 
 		
 	<aside class=" side-aside normal-side dark-skin dark-widgetized-area appear-from-right" aria-label="Secondary Sidebar" style="visibility: hidden;">
@@ -320,7 +346,7 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 
 			<a href="#" class="close-side-aside remove big-btn light-btn">
 				<span class="screen-reader-text">Close</span>
-			</a>
+			</a><!-- .close-side-aside /-->
 
 
 			
@@ -328,20 +354,22 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 
 					
 					<div id="mobile-menu" class="hide-menu-icons">
-											</div>
+											</div><!-- #mobile-menu /-->
 
 											<div id="mobile-social-icons" class="social-icons-widget solid-social-icons">
 							<ul><li class="social-icons-item"><a class="social-link facebook-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.facebook.com/klfoodie"><span class="tie-social-icon tie-icon-facebook"></span><span class="screen-reader-text">Facebook</span></a></li><li class="social-icons-item"><a class="social-link twitter-social-icon" rel="external noopener nofollow" target="_blank" href="https://twitter.com/klfoodie"><span class="tie-social-icon tie-icon-twitter"></span><span class="screen-reader-text">Twitter</span></a></li><li class="social-icons-item"><a class="social-link youtube-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.youtube.com/c/foodie"><span class="tie-social-icon tie-icon-youtube"></span><span class="screen-reader-text">YouTube</span></a></li><li class="social-icons-item"><a class="social-link instagram-social-icon" rel="external noopener nofollow" target="_blank" href="http://www.instagram.com/kl.foodie"><span class="tie-social-icon tie-icon-instagram"></span><span class="screen-reader-text">Instagram</span></a></li><li class="social-icons-item"><a class="social-link telegram-social-icon" rel="external noopener nofollow" target="_blank" href="https://t.me//foodieorg"><span class="tie-social-icon tie-icon-paper-plane"></span><span class="screen-reader-text">Telegram</span></a></li></ul> 
-						</div>
-				</div>
-		</div>
-	</aside>
+						</div><!-- #mobile-social-icons /-->
+						
+				</div><!-- #mobile-container /-->
+			
+
+			
+		</div><!-- .side-aside-wrapper /-->
+	</aside><!-- .side-aside /-->
 
 	
-	</div>
-</div>
-
-<div class='ai-viewports ai-viewport-1 ai-viewport-2 ai-insert-16-19994033' data-insertion-position='append' data-selector='#div_KLF_HP_Sidebar' data-code='PGRpdiBjbGFzcz0nY29kZS1ibG9jayBjb2RlLWJsb2NrLTE2JyBzdHlsZT0nbWFyZ2luOiA4cHggMDsgY2xlYXI6IGJvdGg7Jz4KPGRpdiBzdHlsZT0idGV4dC1hbGlnbjpjZW50ZXI7cGFkZGluZy10b3A6IDEwcHg7cGFkZGluZy1ib3R0b206IDEwcHg7Ij4KCTxkaXYgc3R5bGU9InBhZGRpbmctdG9wOiA1cHg7Zm9udC1zaXplOiBzbWFsbDsgY29sb3I6ICM4ODg7ICI+QWR2ZXJ0aXNlbWVudDwvZGl2PgoJPCEtLSAvNDM4OTM5MzYvS0xGX0hQX1NpZGViYXIgLS0+Cgk8ZGl2IGlkPSdkaXYtZ3B0LWFkLTE2ODMwMjI1MzQ0NTEtMCcgc3R5bGU9J21pbi13aWR0aDogMzAwcHg7IG1pbi1oZWlnaHQ6IDI1MHB4Oyc+CgkJPHNjcmlwdD4KCQkJaWYoc2NyZWVuLndpZHRoID4gNTAwKXsKCQkJCWdvb2dsZXRhZy5jbWQucHVzaChmdW5jdGlvbigpIHsKCQkJCQlnb29nbGV0YWcuZGVmaW5lU2xvdCgnLzQzODkzOTM2L0tMRl9IUF9TaWRlYmFyJywgW1szMDAsIDI1MF0sIFszMzYsIDI4MF1dLCAnZGl2LWdwdC1hZC0xNjgzMDIyNTM0NDUxLTAnKS5hZGRTZXJ2aWNlKGdvb2dsZXRhZy5wdWJhZHMoKSk7CgkJCQkJZ29vZ2xldGFnLmRpc3BsYXkoJ2Rpdi1ncHQtYWQtMTY4MzAyMjUzNDQ1MS0wJyk7IAoJCQkJfSk7CgkJCX0KCQk8L3NjcmlwdD4KCTwvZGl2Pgo8L2Rpdj48L2Rpdj4K' data-block='16'></div>
+	</div><!-- #tie-container /-->
+</div><!-- .background-overlay /-->
 
 <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/jannah\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
@@ -359,19 +387,19 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 						<span class="screen-reader-text">Search for</span>
 					</button>
 				</form>
-			</div>
-		</div>
-	</div>
-	<noscript><img height="1" width="1" style="display: none;" src="https://www.facebook.com/tr?id=546973548823310&ev=PageView&noscript=1&cd%5Bpage_title%5D=New+Home&cd%5Bpost_type%5D=page&cd%5Bpost_id%5D=67755&cd%5Bplugin%5D=PixelYourSite&cd%5Buser_role%5D=guest&cd%5Bevent_url%5D=klfoodie.com%2F" alt=""></noscript>
+			</div><!-- .pop-up-live-search /-->
+		</div><!-- .popup-search-wrap-inner /-->
+	</div><!-- .tie-popup-search-wrap /-->
+	<noscript><img height="1" width="1" style="display: none;" src="https://www.facebook.com/tr?id=546973548823310&ev=PageView&noscript=1&cd%5Bpage_title%5D=Contact+Us&cd%5Bpost_type%5D=page&cd%5Bpost_id%5D=26&cd%5Bplugin%5D=PixelYourSite&cd%5Buser_role%5D=guest&cd%5Bevent_url%5D=klfoodie.com%2Fcontact%2F" alt=""></noscript>
 <script type="text/javascript" src="https://klfoodie.com/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
 <script type="text/javascript" id="wp-i18n-js-after">
-
+/* <![CDATA[ */
 wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
-
+/* ]]> */
 </script>
 <script type="text/javascript" src="https://klfoodie.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1.1" id="swv-js"></script>
 <script type="text/javascript" id="contact-form-7-js-before">
-
+/* <![CDATA[ */
 var wpcf7 = {
     "api": {
         "root": "https:\/\/klfoodie.com\/wp-json\/",
@@ -379,31 +407,32 @@ var wpcf7 = {
     },
     "cached": 1
 };
-
+/* ]]> */
 </script>
 <script type="text/javascript" src="https://klfoodie.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.1" id="contact-form-7-js"></script>
 <script type="text/javascript" id="jetpack-facebook-embed-js-extra">
-
+/* <![CDATA[ */
 var jpfbembed = {"appid":"249643311490","locale":"en_US"};
-
+/* ]]> */
 </script>
 <script type="text/javascript" src="https://klfoodie.com/wp-content/plugins/jetpack/_inc/build/facebook-embed.min.js?ver=14.9.1" id="jetpack-facebook-embed-js"></script>
 <script type="text/javascript" src="https://klfoodie.com/wp-content/plugins/advanced-ads/admin/assets/js/advertisement.js?ver=2.0.11" id="advanced-ads-find-adblocker-js"></script>
 <script type="text/javascript" id="tie-scripts-js-extra">
-
+/* <![CDATA[ */
 var tie = {"is_rtl":"","ajaxurl":"https:\/\/klfoodie.com\/wp-admin\/admin-ajax.php","is_taqyeem_active":"","is_sticky_video":"","mobile_menu_top":"","mobile_menu_active":"area_2","mobile_menu_parent":"","lightbox_all":"true","lightbox_gallery":"true","lightbox_skin":"dark","lightbox_thumb":"horizontal","lightbox_arrows":"true","is_singular":"1","autoload_posts":"","reading_indicator":"","lazyload":"","select_share":"true","select_share_twitter":"","select_share_facebook":"","select_share_linkedin":"","select_share_email":"","facebook_app_id":"5303202981","twitter_username":"","responsive_tables":"true","ad_blocker_detector":"","sticky_behavior":"default","sticky_desktop":"true","sticky_mobile":"true","sticky_mobile_behavior":"default","ajax_loader":"<div class=\"loader-overlay\">\n\t\t\t\t<div class=\"spinner\">\n\t\t\t\t\t<div class=\"bounce1\"><\/div>\n\t\t\t\t\t<div class=\"bounce2\"><\/div>\n\t\t\t\t\t<div class=\"bounce3\"> <\/div>\n\t\t\t\t<\/div>\n\t\t\t<\/div>","type_to_search":"","lang_no_results":"Nothing Found","sticky_share_mobile":"true","sticky_share_post":""};
-
+/* ]]> */
 </script>
 <script type="text/javascript" src="https://klfoodie.com/wp-content/themes/jannah/assets/js/scripts.min.js?ver=5.4.5" id="tie-scripts-js"></script>
 <script type="text/javascript" src="https://klfoodie.com/wp-content/themes/jannah/assets/ilightbox/lightbox.js?ver=5.4.5" id="tie-js-ilightbox-js"></script>
 <script type="text/javascript" src="https://klfoodie.com/wp-content/themes/jannah/assets/js/desktop.min.js?ver=5.4.5" id="tie-js-desktop-js"></script>
 <script type="text/javascript" src="https://klfoodie.com/wp-content/themes/jannah/assets/js/live-search.js?ver=5.4.5" id="tie-js-livesearch-js"></script>
+<script type="text/javascript" src="https://klfoodie.com/wp-content/themes/jannah/assets/js/single.min.js?ver=5.4.5" id="tie-js-single-js"></script>
 <script type="text/javascript" id="jetpack-stats-js-before">
-
+/* <![CDATA[ */
 _stq = window._stq || [];
-_stq.push([ "view", JSON.parse("{\"v\":\"ext\",\"blog\":\"139068302\",\"post\":\"67755\",\"tz\":\"8\",\"srv\":\"klfoodie.com\",\"j\":\"1:14.9.1\"}") ]);
-_stq.push([ "clickTrackerInit", "139068302", "67755" ]);
-
+_stq.push([ "view", JSON.parse("{\"v\":\"ext\",\"blog\":\"139068302\",\"post\":\"26\",\"tz\":\"8\",\"srv\":\"klfoodie.com\",\"j\":\"1:14.9.1\"}") ]);
+_stq.push([ "clickTrackerInit", "139068302", "26" ]);
+/* ]]> */
 </script>
 <script type="text/javascript" src="https://stats.wp.com/e-202537.js" id="jetpack-stats-js" defer="defer" data-wp-strategy="defer"></script>
 <script>!function(){window.advanced_ads_ready_queue=window.advanced_ads_ready_queue||[],advanced_ads_ready_queue.push=window.advanced_ads_ready;for(var d=0,a=advanced_ads_ready_queue.length;d<a;d++)advanced_ads_ready(advanced_ads_ready_queue[d])}();</script><script>
@@ -421,22 +450,30 @@ _stq.push([ "clickTrackerInit", "139068302", "67755" ]);
 					var s = document.getElementsByTagName('script')[0];
 					s.parentNode.insertBefore(wf, s);
 				})();
-			</script>
+			</script><!-- /43893936/KLF_OutofPage -->
 <div id='div-gpt-ad-1683023148072-0'>
   <script>
     googletag.cmd.push(function() { googletag.display('div-gpt-ad-1683023148072-0'); });
   </script>
 </div>
 
+<!-- Innity Site Tag - KL Foodie Website -->
 <script type="text/javascript" charset="UTF-8">(function(w,d,s,i,c){var f=d.createElement(s);f.type="text/javascript";f.async=true;f.src="https://avd.innity.net/"+i+"/container_"+c+".js";var g=d.getElementsByTagName(s)[0];g.parentNode.insertBefore(f, g);})(window, document, "script", "1043", "64ca241647e7043801000000");</script>
-<script>
+<!-- End Innity Site Tag --><script>
 function b2a(a){var b,c=0,l=0,f="",g=[];if(!a)return a;do{var e=a.charCodeAt(c++);var h=a.charCodeAt(c++);var k=a.charCodeAt(c++);var d=e<<16|h<<8|k;e=63&d>>18;h=63&d>>12;k=63&d>>6;d&=63;g[l++]="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charAt(e)+"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charAt(h)+"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charAt(k)+"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charAt(d)}while(c<
 a.length);return f=g.join(""),b=a.length%3,(b?f.slice(0,b-3):f)+"===".slice(b||3)}function a2b(a){var b,c,l,f={},g=0,e=0,h="",k=String.fromCharCode,d=a.length;for(b=0;64>b;b++)f["ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".charAt(b)]=b;for(c=0;d>c;c++)for(b=f[a.charAt(c)],g=(g<<6)+b,e+=6;8<=e;)((l=255&g>>>(e-=8))||d-2>c)&&(h+=k(l));return h}b64e=function(a){return btoa(encodeURIComponent(a).replace(/%([0-9A-F]{2})/g,function(b,a){return String.fromCharCode("0x"+a)}))};
 b64d=function(a){return decodeURIComponent(atob(a).split("").map(function(a){return"%"+("00"+a.charCodeAt(0).toString(16)).slice(-2)}).join(""))};
-
+/* <![CDATA[ */
 ai_front = {"insertion_before":"BEFORE","insertion_after":"AFTER","insertion_prepend":"PREPEND CONTENT","insertion_append":"APPEND CONTENT","insertion_replace_content":"REPLACE CONTENT","insertion_replace_element":"REPLACE ELEMENT","visible":"VISIBLE","hidden":"HIDDEN","fallback":"FALLBACK","automatically_placed":"Automatically placed by AdSense Auto ads code","cancel":"Cancel","use":"Use","add":"Add","parent":"Parent","cancel_element_selection":"Cancel element selection","select_parent_element":"Select parent element","css_selector":"CSS selector","use_current_selector":"Use current selector","element":"ELEMENT","path":"PATH","selector":"SELECTOR"};
-
+/* ]]> */
 var ai_cookie_js=!0,ai_block_class_def="code-block";
+/*
+ js-cookie v3.0.5 | MIT  JavaScript Cookie v2.2.0
+ https://github.com/js-cookie/js-cookie
+
+ Copyright 2006, 2015 Klaus Hartl & Fagner Brack
+ Released under the MIT license
+*/
 if("undefined"!==typeof ai_cookie_js){(function(a,f){"object"===typeof exports&&"undefined"!==typeof module?module.exports=f():"function"===typeof define&&define.amd?define(f):(a="undefined"!==typeof globalThis?globalThis:a||self,function(){var b=a.Cookies,c=a.Cookies=f();c.noConflict=function(){a.Cookies=b;return c}}())})(this,function(){function a(b){for(var c=1;c<arguments.length;c++){var g=arguments[c],e;for(e in g)b[e]=g[e]}return b}function f(b,c){function g(e,d,h){if("undefined"!==typeof document){h=
 a({},c,h);"number"===typeof h.expires&&(h.expires=new Date(Date.now()+864E5*h.expires));h.expires&&(h.expires=h.expires.toUTCString());e=encodeURIComponent(e).replace(/%(2[346B]|5E|60|7C)/g,decodeURIComponent).replace(/[()]/g,escape);var l="",k;for(k in h)h[k]&&(l+="; "+k,!0!==h[k]&&(l+="="+h[k].split(";")[0]));return document.cookie=e+"="+b.write(d,e)+l}}return Object.create({set:g,get:function(e){if("undefined"!==typeof document&&(!arguments.length||e)){for(var d=document.cookie?document.cookie.split("; "):
 [],h={},l=0;l<d.length;l++){var k=d[l].split("="),p=k.slice(1).join("=");try{var n=decodeURIComponent(k[0]);h[n]=b.read(p,n);if(e===n)break}catch(q){}}return e?h[e]:h}},remove:function(e,d){g(e,"",a({},d,{expires:-1}))},withAttributes:function(e){return f(this.converter,a({},this.attributes,e))},withConverter:function(e){return f(a({},this.converter,e),this.attributes)}},{attributes:{value:Object.freeze(c)},converter:{value:Object.freeze(b)}})}return f({read:function(b){'"'===b[0]&&(b=b.slice(1,-1));
@@ -511,11 +548,7 @@ if("function"==typeof ai_load_blocks){document.addEventListener("cmplzEnableScri
 m("cmplz_consent_status");m("cmplz_preferences");m("cmplz_statistics-anonymous");m("cmplz_choice");m("cmplz_banner-status");m("cmplz_functional");m("cmplz_policy_id");m("cmplz_statistics");m("moove_gdpr_popup");m("real_cookie_banner-blog:1-tcf");m("real_cookie_banner-blog:1");e=document.querySelector("#ai-iab-tcf-status");null!=e&&(e.textContent="CONSENT COOKIES DELETED")})},5)});function da(b){setTimeout(function(){"function"==typeof ai_process_rotations_in_element&&ai_process_rotations_in_element(b);
 "function"==typeof ai_process_lists&&ai_process_lists();"function"==typeof ai_process_ip_addresses&&ai_process_ip_addresses();"function"==typeof ai_process_filter_hooks&&ai_process_filter_hooks();"function"==typeof ai_adb_process_blocks&&ai_adb_process_blocks(b);"function"==typeof ai_process_impressions&&1==ai_tracking_finished&&ai_process_impressions();"function"==typeof ai_install_click_trackers&&1==ai_tracking_finished&&ai_install_click_trackers();"function"==typeof ai_install_close_buttons&&ai_install_close_buttons(document)},
 5)}function ia(b){var e=b?b.split("?")[1]:window.location.search.slice(1);b={};if(e){e=e.split("#")[0];e=e.split("&");for(var n=0;n<e.length;n++){var z=e[n].split("="),C=void 0,x=z[0].replace(/\[\d*\]/,function(L){C=L.slice(1,-1);return""});z="undefined"===typeof z[1]?"":z[1];x=x.toLowerCase();z=z.toLowerCase();b[x]?("string"===typeof b[x]&&(b[x]=[b[x]]),"undefined"===typeof C?b[x].push(z):b[x][C]=z):b[x]=z}}return b}};
-ai_run_887406142348 = function(){
-ai_document_write=document.write;document.write=function(a){"interactive"==document.readyState?(console.error("document.write called after page load: ",a),"undefined"!=typeof ai_js_errors&&ai_js_errors.push(["document.write called after page load",a,0])):ai_document_write.call(document,a)};
-ai_insert_viewport_code ('ai-insert-16-19994033');
-};
-if (document.readyState === 'complete' || (document.readyState !== 'loading' && !document.documentElement.doScroll)) ai_run_887406142348 (); else document.addEventListener ('DOMContentLoaded', ai_run_887406142348);
+
 ai_js_code = true;
 </script>
 

@@ -21,7 +21,7 @@ class WelcomeController extends Controller
     public function welcome()
     {
         // Fetch projects from database, ordered by latest publish_time
-        $projects = Project::select('id', 'title', 'author', 'publish_time')
+        $projects = Project::select('id', 'title', 'author', 'publish_time', 'project_image', 'author_image')
             ->orderBy('publish_time', 'desc')
             ->limit(10)
             ->get()
@@ -127,5 +127,81 @@ class WelcomeController extends Controller
             });
 
         return view('welcome.description', compact('project', 'randomProjects', 'categories', 'id'));
+    }
+
+    public function welcomeAboutUs()
+    {
+        $categories = Category::select('id', 'category_name')
+            ->orderBy('id')
+            ->get();
+
+        $randomProjects = Project::inRandomOrder()
+            ->limit(5)
+            ->get()
+            ->map(function ($project) {
+                $project->publish_time = \Carbon\Carbon::parse($project->publish_time)->format('Y-m-d');
+                $project->title = \Illuminate\Support\Str::words($project->title, 20, '...');
+                $project->sub_title = \Illuminate\Support\Str::words($project->sub_title, 50, '...');
+                return $project;
+            });
+
+        return view('welcome.aboutus', compact('categories', 'randomProjects'));
+    }
+
+    public function welcomeContactUs()
+    {
+        $categories = Category::select('id', 'category_name')
+            ->orderBy('id')
+            ->get();
+
+        $randomProjects = Project::inRandomOrder()
+            ->limit(5)
+            ->get()
+            ->map(function ($project) {
+                $project->publish_time = \Carbon\Carbon::parse($project->publish_time)->format('Y-m-d');
+                $project->title = \Illuminate\Support\Str::words($project->title, 20, '...');
+                $project->sub_title = \Illuminate\Support\Str::words($project->sub_title, 50, '...');
+                return $project;
+            });
+
+        return view('welcome.contactus', compact('categories', 'randomProjects'));
+    }
+
+    public function welcomeTerm()
+    {
+        $categories = Category::select('id', 'category_name')
+            ->orderBy('id')
+            ->get();
+
+        $randomProjects = Project::inRandomOrder()
+            ->limit(5)
+            ->get()
+            ->map(function ($project) {
+                $project->publish_time = \Carbon\Carbon::parse($project->publish_time)->format('Y-m-d');
+                $project->title = \Illuminate\Support\Str::words($project->title, 20, '...');
+                $project->sub_title = \Illuminate\Support\Str::words($project->sub_title, 50, '...');
+                return $project;
+            });
+
+        return view('welcome.term', compact('categories', 'randomProjects'));
+    }
+
+    public function welcomePrivacy()
+    {
+        $categories = Category::select('id', 'category_name')
+            ->orderBy('id')
+            ->get();
+
+        $randomProjects = Project::inRandomOrder()
+            ->limit(5)
+            ->get()
+            ->map(function ($project) {
+                $project->publish_time = \Carbon\Carbon::parse($project->publish_time)->format('Y-m-d');
+                $project->title = \Illuminate\Support\Str::words($project->title, 20, '...');
+                $project->sub_title = \Illuminate\Support\Str::words($project->sub_title, 50, '...');
+                return $project;
+            });
+
+        return view('welcome.privacy', compact('categories', 'randomProjects'));
     }
 }
