@@ -21,7 +21,7 @@ class WelcomeController extends Controller
     public function welcome()
     {
         // Fetch projects from database, ordered by latest publish_time
-        $projects = Project::select('id', 'title', 'author', 'publish_time', 'project_image', 'author_image')
+        $projects = Project::select('id', 'title', 'author', 'publish_time', 'project_image', 'author_image', 'category_name')
             ->orderBy('publish_time', 'desc')
             ->limit(10)
             ->get()

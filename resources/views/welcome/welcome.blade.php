@@ -281,7 +281,7 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 		<ul class="posts-items posts-list-container">
         @foreach($projects as $project)
             <li class="post-item  post-84129 post type-post status-publish format-standard has-post-thumbnail category-lifestyle tag-klang-valley tag-kuala-lumpur tag-petaling-jaya tag-rice-cooker tag-tefal tie-standard">
-                <a aria-label="Nasi Pasti Tak Basi! Tefal’s Delirice Max Serves Up Fresh, Fluffy Rice for 24 Hours" href="{{ url('/' . $project->id) }}" class="post-thumb"><span class="post-cat-wrap"><span class="post-cat tie-cat-660">{{$project->category_name}}</span></span>
+                <a aria-label="Nasi Pasti Tak Basi! Tefal’s Delirice Max Serves Up Fresh, Fluffy Rice for 24 Hours" href="{{ url('/' . $project->id) }}" class="post-thumb"><span class="post-cat-wrap"><span class="post-cat tie-cat-660">{{ $project->category_name }}</span></span>
 				<img width="390" height="220" src="{{ $project->project_image ? asset($project->project_image) : 'https://cdn.klfoodie.com/2025/08/MDEC-Hotel-Cover-3-1-390x220.png' }}" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt=""></a>
                     <div class="post-details">
                         <div class="post-meta clearfix"><span class="author-meta single-author no-avatars"><span class="meta-item meta-author-wrapper meta-author-49"><span class="meta-author"><a class="author-name tie-icon" title="{{{$project->author}}}">{{ $project->author }}</a></span></span></span><span class="date meta-item tie-icon">{{ $project->publish_time }}</span><div class="tie-alignright">
