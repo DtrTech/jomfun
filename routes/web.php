@@ -30,6 +30,6 @@ Route::get('/aboutus', [App\Http\Controllers\WelcomeController::class, 'welcomeA
 Route::get('/contactus', [App\Http\Controllers\WelcomeController::class, 'welcomeContactUs']);
 Route::get('/term', [App\Http\Controllers\WelcomeController::class, 'welcomeTerm']);
 Route::get('/privacy', [App\Http\Controllers\WelcomeController::class, 'welcomePrivacy']);
-Route::get('/category/{category_name}', [App\Http\Controllers\WelcomeController::class, 'welcomeCategory']);
+Route::get('/category/{category_name}', [App\Http\Controllers\WelcomeController::class, 'welcomeCategory'])->where('category_name', '[a-z0-9-]+');;
 Route::get('/{id}', [App\Http\Controllers\WelcomeController::class, 'welcomeDescription']);
 
