@@ -266,78 +266,73 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 	</div>
 </div></div>
 
-<div id="tiepost-67755-section-7296" class="section-wrapper container normal-width without-background">
-	<div class="section-item is-first-section sidebar-right has-sidebar" style="" >
-        <div class="container-normal">
-            <div class="tie-row main-content-row">
-                <div class="main-content tie-col-md-8 tie-col-xs-12" role="main">
-        <div id="tie-block_2325" class="mag-box big-posts-box" data-current="1">
-            <div class="container-wrapper">
-	    <div class="mag-box-title the-global-title">
-			<h3>
-				This Just In 🔥			</h3>
-		</div>
-		<div class="mag-box-container clearfix">
-		<ul class="posts-items posts-list-container">
-        @foreach($projects as $project)
-            <li class="post-item  post-84129 post type-post status-publish format-standard has-post-thumbnail category-lifestyle tag-klang-valley tag-kuala-lumpur tag-petaling-jaya tag-rice-cooker tag-tefal tie-standard">
-                <a aria-label="Nasi Pasti Tak Basi! Tefal’s Delirice Max Serves Up Fresh, Fluffy Rice for 24 Hours" href="{{ url('/' . $project->id) }}" class="post-thumb"><span class="post-cat-wrap"><span class="post-cat tie-cat-660">{{ $project->category_name }}</span></span>
-				<img width="390" height="220" src="{{ $project->project_image ? asset($project->project_image) : 'https://cdn.klfoodie.com/2025/08/MDEC-Hotel-Cover-3-1-390x220.png' }}" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt=""></a>
-                    <div class="post-details">
-                        <div class="post-meta clearfix"><span class="author-meta single-author no-avatars"><span class="meta-item meta-author-wrapper meta-author-49"><span class="meta-author"><a class="author-name tie-icon" title="{{{$project->author}}}">{{ $project->author }}</a></span></span></span><span class="date meta-item tie-icon">{{ $project->publish_time }}</span><div class="tie-alignright">
-                        </div>
-                    </div><!-- .post-meta -->
-                    <h2 class="post-title"><a href="{{ url('/' . $project->id) }}">{{ $project->title }}</a></h2>
-                </div>
-            </li>
-        @endforeach
-        </ul>
-            <div class="clearfix"></div>
-                </div>
-                <!-- <a class="block-pagination next-posts show-more-button" data-text="Show More">Show More</a> -->
-            </div>
-		</div>
-		<script>var js_tie_block_2325 = {"order":"latest","source":"id","exclude_posts":"74031, 74033, 74035, 74039, 74037, 84117","number":"20","pagi":"show-more","post_meta":"true","breaking_effect":"reveal","sub_style":"big","style":"default","title_length":"","excerpt_length":"","media_overlay":"","read_more_text":""};</script>
-		</div>
+	<div id="tiepost-67755-section-7296" class="section-wrapper container normal-width without-background">
+		<div class="section-item is-first-section sidebar-right has-sidebar" style="" >
+			<div class="container-normal">
+				<div class="tie-row main-content-row">
+					<div class="main-content tie-col-md-8 tie-col-xs-12" role="main">
+						<div id="tie-block_2325" class="mag-box big-posts-box" data-current="1">
+							<div class="container-wrapper">
+								<div class="mag-box-title the-global-title">
+									<h3>This Just In 🔥</h3>
+								</div>
+								<div class="mag-box-container clearfix">
+									<ul class="posts-items posts-list-container">
+										@foreach($projects as $project)
+											<li class="post-item  post-84129 post type-post status-publish format-standard has-post-thumbnail category-lifestyle tag-klang-valley tag-kuala-lumpur tag-petaling-jaya tag-rice-cooker tag-tefal tie-standard">
+												<a aria-label="Nasi Pasti Tak Basi! Tefal’s Delirice Max Serves Up Fresh, Fluffy Rice for 24 Hours" href="{{ url('/' . $project->id) }}" class="post-thumb">
+													<span class="post-cat-wrap">
+														<span class="post-cat tie-cat-660">{{ $project->category_name }}</span>
+													</span>
+													<img width="390" height="220" src="{{ $project->project_image ? asset($project->project_image) : 'https://cdn.klfoodie.com/2025/08/MDEC-Hotel-Cover-3-1-390x220.png' }}" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt="">
+												</a>
+												<div class="post-details">
+													<div class="post-meta clearfix">
+														<span class="author-meta single-author no-avatars">
+															<span class="meta-item meta-author-wrapper meta-author-49">
+																<span class="meta-author">
+																	<i class="fas fa-user"></i> <!-- author icon -->
+																	<a class="" title="{{ $project->author }}">{{ $project->author }}</a>
+																</span>
+															</span>
+														</span>
 
-    @include('welcome.sidebar')
-</div>
-	    </div>
-	</div>
-</div>
-
-    @include('welcome.footer')
-		<a id="go-to-top" class="go-to-top-button" href="#go-to-tie-body">
-			<span class="tie-icon-angle-up"></span>
-			<span class="screen-reader-text">Back to top button</span>
-		</a>
-	
-		</div>
-
-		
-	<aside class=" side-aside normal-side dark-skin dark-widgetized-area appear-from-right" aria-label="Secondary Sidebar" style="visibility: hidden;">
-		<div data-height="100%" class="side-aside-wrapper has-custom-scroll">
-
-			<a href="#" class="close-side-aside remove big-btn light-btn">
-				<span class="screen-reader-text">Close</span>
-			</a>
-
-
-			
-				<div id="mobile-container">
-
-					
-					<div id="mobile-menu" class="hide-menu-icons">
-											</div>
-
-											<div id="mobile-social-icons" class="social-icons-widget solid-social-icons">
-							<ul><li class="social-icons-item"><a class="social-link facebook-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.facebook.com/klfoodie"><span class="tie-social-icon tie-icon-facebook"></span><span class="screen-reader-text">Facebook</span></a></li><li class="social-icons-item"><a class="social-link twitter-social-icon" rel="external noopener nofollow" target="_blank" href="https://twitter.com/klfoodie"><span class="tie-social-icon tie-icon-twitter"></span><span class="screen-reader-text">Twitter</span></a></li><li class="social-icons-item"><a class="social-link youtube-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.youtube.com/c/foodie"><span class="tie-social-icon tie-icon-youtube"></span><span class="screen-reader-text">YouTube</span></a></li><li class="social-icons-item"><a class="social-link instagram-social-icon" rel="external noopener nofollow" target="_blank" href="http://www.instagram.com/kl.foodie"><span class="tie-social-icon tie-icon-instagram"></span><span class="screen-reader-text">Instagram</span></a></li><li class="social-icons-item"><a class="social-link telegram-social-icon" rel="external noopener nofollow" target="_blank" href="https://t.me//foodieorg"><span class="tie-social-icon tie-icon-paper-plane"></span><span class="screen-reader-text">Telegram</span></a></li></ul> 
+														<span class="publish-time">
+															<i class="far fa-clock"></i> <!-- time icon -->
+															{{ $project->publish_time }}
+														</span>
+														<div class="tie-alignright"></div>
+													</div>
+													<h2 class="post-title"><a href="{{ url('/' . $project->id) }}">{{ $project->title }}</a></h2>
+												</div>
+											</li>
+										@endforeach
+									</ul>
+									<div class="clearfix"></div>
+								</div>
+								<!-- <a class="block-pagination next-posts show-more-button" data-text="Show More">Show More</a> -->
+							</div>
 						</div>
-				</div>
-		</div>
-	</aside>
+							<script>var js_tie_block_2325 = {"order":"latest","source":"id","exclude_posts":"74031, 74033, 74035, 74039, 74037, 84117","number":"20","pagi":"show-more","post_meta":"true","breaking_effect":"reveal","sub_style":"big","style":"default","title_length":"","excerpt_length":"","media_overlay":"","read_more_text":""};</script>
+					</div>
 
-	
+					@include('welcome.sidebar')
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	@include('welcome.footer')
+	<a id="go-to-top" class="go-to-top-button" href="#go-to-tie-body">
+		<span class="tie-icon-angle-up"></span>
+		<span class="screen-reader-text">Back to top button</span>
+	</a>
+
+</div>
+		
+	@include('welcome.secondary_sidebar')
+
 	</div>
 </div>
 

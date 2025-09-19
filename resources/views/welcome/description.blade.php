@@ -276,144 +276,197 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 	  </script>
 	</div>
 </div></div>
-			<div class="container fullwidth-entry-title-wrapper">
-				<div class="container-wrapper fullwidth-entry-title">
-<header class="entry-header-outer">
-	<nav id="breadcrumb"><a href="https://klfoodie.com/"><span class="tie-icon-home" aria-hidden="true"></span> Home</a><em class="delimiter">/</em><a href="https://klfoodie.com/category/food/">{{ $project->category_name }}</a><em class="delimiter">/</em><span class="current">{{ $project->title }}</span></nav><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","@id":"#Breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Home","@id":"https:\/\/klfoodie.com\/"}},{"@type":"ListItem","position":2,"item":{"name":"Food","@id":"https:\/\/klfoodie.com\/category\/food\/"}}]}</script>
-	<div class="entry-header">
-		<span class="post-cat-wrap"><a class="post-cat tie-cat-3" href="https://klfoodie.com/category/food/">{{ $project->category_name }}</a></span>
-		<h1 class="post-title entry-title">{{ $project->title }}</h1>
-			<h2 class="entry-sub-title">{{ $project->sub_title }}</h2>
-			<div id="single-post-meta" class="post-meta clearfix"><span class="author-meta single-author with-avatars"><span class="meta-item meta-author-wrapper meta-author-49">
-						<span class="meta-author-avatar">
-							<a href="https://klfoodie.com/author/kathleen/"><img alt='Photo of Kathleen Gan' src='https://secure.gravatar.com/avatar/17bbc2d36ab2cd21146949c7e05e9f1d50595287eeeb4c8f37faf69d727634e1?s=140&#038;r=g' srcset='https://secure.gravatar.com/avatar/17bbc2d36ab2cd21146949c7e05e9f1d50595287eeeb4c8f37faf69d727634e1?s=280&#038;r=g 2x' class='avatar avatar-140 photo' height='140' width='140' loading='lazy' decoding='async'/></a>
+
+	<div class="container fullwidth-entry-title-wrapper">
+		<div class="container-wrapper fullwidth-entry-title">
+		<header class="entry-header-outer">
+			<nav id="breadcrumb">
+				<a href="{{ url('/') }}">
+					<i class="fa fa-home"></i> Home
+				</a>
+				<em class="delimiter">/</em>
+				<a href="{{ url('category/' . $project->category_name) }}">{{ $project->category_name }}</a>
+				<em class="delimiter">/</em>
+				<span class="current">{{ $project->title }}</span>
+			</nav>
+			<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","@id":"#Breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Home","@id":"https:\/\/klfoodie.com\/"}},{"@type":"ListItem","position":2,"item":{"name":"Food","@id":"https:\/\/klfoodie.com\/category\/food\/"}}]}</script>
+			<div class="entry-header">
+				<span class="post-cat-wrap">
+					<a class="post-cat tie-cat-3" href="{{ url('category/' . $project->category_name) }}">{{ $project->category_name }}</a>
+				</span>
+				<h1 class="post-title entry-title">{{ $project->title }}</h1>
+				<h2 class="entry-sub-title">{{ $project->sub_title }}</h2>
+				<div id="single-post-meta" class="post-meta clearfix">
+					<span class="author-meta single-author with-avatars">
+						<span class="meta-item meta-author-wrapper meta-author-49">
+							<span class="meta-author-avatar">
+								<a href="">
+									<img alt='Photo of {{ $project->author }}' src="{{ $project->author_image ? asset($project->author_image) : 'https://secure.gravatar.com/avatar/17bbc2d36ab2cd21146949c7e05e9f1d50595287eeeb4c8f37faf69d727634e1?s=140&r=g' }}" srcset='https://secure.gravatar.com/avatar/17bbc2d36ab2cd21146949c7e05e9f1d50595287eeeb4c8f37faf69d727634e1?s=280&#038;r=g 2x' class='avatar avatar-140 photo' height='140' width='140' loading='lazy' decoding='async'/>
+								</a>
+							</span>
+							<span class="meta-author">
+								<a href="" class="author-name tie-icon" title="{{ $project->author }}">{{ $project->author }}</a>
+							</span>
 						</span>
-					<span class="meta-author"><a href="https://klfoodie.com/author/kathleen/" class="author-name tie-icon" title="Kathleen Gan">{{ $project->author }}</a></span></span></span><span class="date meta-item tie-icon">{{ $project->publish_time }}</span><div class="tie-alignright"><span class="meta-comment tie-icon meta-item fa-before">0</span><span class="meta-reading-time meta-item"><span class="tie-icon-bookmark" aria-hidden="true"></span> 3 minutes read</span> </div></div><!-- .post-meta -->	</div><!-- .entry-header /-->
-</header>
+					</span>
+					<span class="meta-item">
+						<i class="far fa-clock"></i> {{ \Carbon\Carbon::parse($project->publish_time)->format('Y-m-d') }}
+					</span>
+					<div class="tie-alignright">
+						<span class="meta-item">
+							<i class="far fa-comment"></i> 0
+						</span>
+						<span class="meta-item">
+							<i class="far fa-bookmark"></i> 3 minutes read
+						</span>
+					</div>
+				</div>	
+			</div>
+		</header>
+		</div>
+	</div>
 
+<div id="content" class="site-content container">
+	<div id="main-content-row" class="tie-row main-content-row">
+		<div class="main-content tie-col-md-8 tie-col-xs-12" role="main">
+			<article id="the-post" class="container-wrapper post-content tie-standard">
+				<div class='code-block code-block-8' style='margin: 8px 0; clear: both;'>
+					<p>{!! $project->description !!}</p>
+						<div class="post-bottom-meta post-bottom-tags post-tags-modern">
+							<div class="post-bottom-meta-title">
+								<span class="tie-icon-tags" aria-hidden="true"></span> Tags
+							</div>
+							<!-- <span class="tagcloud">
+								<a href="https://klfoodie.com/tag/adidas/" rel="tag">adidas</a> 
+								<a href="https://klfoodie.com/tag/dao/" rel="tag">dao</a> 
+								<a href="https://klfoodie.com/tag/klang-valley/" rel="tag">Klang Valley</a> 
+								<a href="https://klfoodie.com/tag/kuala-lumpur/" rel="tag">Kuala Lumpur</a> 
+								<a href="https://klfoodie.com/tag/petaling-jaya/" rel="tag">Petaling Jaya</a> 
+								<a href="https://klfoodie.com/tag/soya/" rel="tag">soya</a>
+							</span> -->
+						</div>
+				</div>
+				<div id="post-extra-info">
+					<div class="theiaStickySidebar">
+						<div id="single-post-meta" class="post-meta clearfix">
+							<span class="author-meta single-author with-avatars">
+								<span class="meta-item meta-author-wrapper meta-author-49">
+									<span class="meta-author-avatar">
+										<a href="https://klfoodie.com/author/kathleen/">
+											<img alt='Photo of {{ $project->author }}' src='https://secure.gravatar.com/avatar/17bbc2d36ab2cd21146949c7e05e9f1d50595287eeeb4c8f37faf69d727634e1?s=140&#038;r=g' srcset='https://secure.gravatar.com/avatar/17bbc2d36ab2cd21146949c7e05e9f1d50595287eeeb4c8f37faf69d727634e1?s=280&#038;r=g 2x' class='avatar avatar-140 photo' height='140' width='140' loading='lazy' decoding='async'/>
+										</a>
+									</span>
+									<span class="meta-author">
+										<a href="https://klfoodie.com/author/kathleen/" class="author-name tie-icon" title="{{ $project->author }}">{{ $project->author }}</a>
+									</span>
+								</span>
+							</span>
+							<span class="far fa-clock">August 26, 2025</span>
+							<div class="tie-alignright">
+								<span class="meta-comment tie-icon meta-item fa-before">0</span>
+								<span class="meta-reading-time meta-item">
+									<span class="tie-icon-bookmark" aria-hidden="true"></span> 3 minutes read
+								</span> 
+							</div>
+						</div>		
+					</div>
+				</div>
+				<div class="clearfix"></div>
 
+				<script id="tie-schema-json" type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Article","dateCreated":"2025-08-26T18:27:19+08:00","datePublished":"2025-08-26T18:27:19+08:00","dateModified":"2025-08-26T18:27:19+08:00","headline":"FIRST adidas &#038; d\u00e1o &#8220;You Had Us at d\u00e1o&#8221; Collaboration Now Happening At Selected adidas Stores","name":"FIRST adidas &#038; d\u00e1o &#8220;You Had Us at d\u00e1o&#8221; Collaboration Now Happening At Selected adidas Stores","keywords":"adidas,dao,Klang Valley,Kuala Lumpur,Petaling Jaya,soya","url":"https:\/\/klfoodie.com\/first-adidas-dao-you-had-us-at-dao-collaboration-now-happening-at-selected-adidas-stores\/","description":"PETALING JAYA, 26 August 2025 \u2014 Global sports brand adidas and local dessert darling d\u00e1o have joined forces for a sweet serving of originality and nostalgia, bringing to life the brands\u2019 first-ever co","copyrightYear":"2025","articleSection":"Food","articleBody":"PETALING JAYA, 26 August 2025 \u2014 Global sports brand adidas and local dessert darling d\u00e1o have joined forces for a sweet serving of originality and nostalgia, bringing to life the brands\u2019 first-ever collaboration through an unexpected collection themed \u201cYou Had Us at d\u00e1o.\u201d\r\nFirsts and Fresh Collabs\r\nCombining the world of sport and the local dessert scene, adidas and d\u00e1o bring consumers a collection that is lighthearted and functional, complete for the whole family. Providing both adult and kids apparel, as well as collectible accessories, the collection boasts adidas\u2019 signature sleek athleisure with a twist of d\u00e1o\u2019s quirky persona in its designs.\r\n\r\n\r\n\r\n\u201cThis is our first-ever partnership with a Malaysian F&amp;B brand, and I don\u2019t think we could\u2019ve asked for a better partner. ,\u201d said Preston Page, Country Manager of adidas Malaysia. \u201cIt\u2019s not every day that sport meets soy. When we first connected with d\u00e1o, we saw more than just a well-loved local dessert. We saw the shared values of joy, authenticity, and a strong local voice in d\u00e1o that brings people together, and we knew we were on the right track. \u201d\r\nWhere It All Began\r\nAn original tau fu fah brand by siblings Carmen, Joe, and Kelly Lau, d\u00e1o is known for its nostalgic charm and cutesy tone, bringing a modern twist on traditional local desserts. With a mission to share the rich heritage and exquisite flavours of their family recipe with dessert lovers, they established the business in 2018 to cultivate an appreciation for this unique style of soy-based desserts.\r\n\r\n\r\n\r\n\u201cTau fu fah was where we started as a dessert that we\u2019ve been eating all our lives,\u201d explained Kelly Lau, Marketing Manager of d\u00e1o. \u201cWe are a brand that embraces the heritage of local desserts, which is why we were so excited to work with adidas, the sportswear brand who stands on a legacy of rich heritage in sports, for this monumental collaboration. We might come from two very different worlds, but it\u2019s this common passion of preserving important heritage that has brought us together.\u201d\r\n\r\n\r\nFood = Emotions\r\nFood is Malaysia\u2019s love language, and adidas Malaysia recognises this. This campaign \u201cYou Had Us at d\u00e1o\u201d isn\u2019t just a cheeky tagline, but about that instant connection when seeing something familiar, fun, and authentic; that a Malaysian favourite can meet a global icon while still being full of local flavour. In a launch event earlier today at d\u00e1o Damansara Jaya, the event celebrated the unexpected but welcome meeting of two icons from different worlds, bringing together adidas Creators and dessert fans for a playful tribute to culture, roots, and Malaysian flavour.\r\n\r\n\r\n\r\n\r\nGuests were treated to a first look at the adidas x d\u00e1o capsule collection ahead of its public release on 20 August 2025, while enjoying curated d\u00e1o treats. Embracing both brands\u2019 love for creativity and authenticity, the launch served up a full sensory experience that hit the sweet spot.\r\n\r\nOn d\u00e1o Move\r\nRecreating d\u00e1o\u2019s iconic dessert cart to serve up apparel instead of tau fu fah, adidas provides a mobile pop-up for consumers to experience the collection for themselves, moving accordingly to the following adidas outlets:\r\n\r\n \t20 - 26 August | adidas Brand Concept Store, 1 Utama\r\n \t27 August - 2 September | adidas Home of Sports, Mid Valley Megamall\r\n \t3 - 9 September | adidas Performance Store, Pavilion Bukit Jalil\r\n\r\nWith a minimum purchase of two items from the collection, consumers will receive an exclusive plushie. Additionally, in a weekend-exclusive promotion in the said malls, consumers who purchase an item from the collection on the weekends from 23 August to 7 September will receive a free soymilk while stocks last. Be sure to catch the adidas x d\u00e1o collection from 20 August via www.adidas.com.my, the adidas mobile app, and at the following adidas stores:\r\n\r\n \tadidas Brand Center, Pavilion Kuala Lumpur\r\n \tadidas Brand Concept Store, 1 Utama\r\n \tadidas Home of Sports, Mid Valley Megamall\r\n \tadidas Home of Sports The Exchange TRX\r\n \tadidas Performance Store, Pavilion Bukit Jalil\r\n \tadidas Home of Sports, Setia City Mall\r\n \tadidas Performance Store, AEON Bukit Tinggi\r\n\r\nFollow the conversation at @adidasMY.\r\n\r\nOfficial website: www.adidas.com.my\r\n\r\nInstagram: @adidasMY\r\n\r\nSource: Press Release\u00a0","publisher":{"@id":"#Publisher","@type":"Organization","name":"KL Foodie","logo":{"@type":"ImageObject","url":"https:\/\/cdn.klfoodie.com\/2023\/01\/kl-foodie-1.png"},"sameAs":["https:\/\/www.facebook.com\/klfoodie","https:\/\/twitter.com\/klfoodie","https:\/\/www.youtube.com\/c\/foodie","www.instagram.com\/kl.foodie","https:\/\/t.me\/\/foodieorg"]},"sourceOrganization":{"@id":"#Publisher"},"copyrightHolder":{"@id":"#Publisher"},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/klfoodie.com\/first-adidas-dao-you-had-us-at-dao-collaboration-now-happening-at-selected-adidas-stores\/","breadcrumb":{"@id":"#Breadcrumb"}},"author":{"@type":"Person","name":"{{ $project->author }}","url":"https:\/\/klfoodie.com\/author\/kathleen\/"},"image":{"@type":"ImageObject","url":"https:\/\/cdn.klfoodie.com\/2025\/08\/MDEC-Hotel-Cover-1-3.png","width":1200,"height":628}}</script>
+				
+			</article>
+			<div class="stream-item stream-item-below-post"></div>
+				<div class="post-components">
+					<div id="comments" class="comments-area">
+						<div id="add-comment-block" class="container-wrapper">	
+							<div id="respond" class="comment-respond">
+								<h3 id="reply-title" class="comment-reply-title the-global-title">Leave a Reply 
+									<small>
+										<a rel="nofollow" id="cancel-comment-reply-link" href="/first-adidas-dao-you-had-us-at-dao-collaboration-now-happening-at-selected-adidas-stores/#respond" style="display:none;">Cancel reply</a>
+									</small>
+								</h3>
+								<form action="https://klfoodie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+									<p class="comment-notes">
+										<span id="email-notes">Your email address will not be published.</span> 
+										<span class="required-field-message">Required fields are marked 
+											<span class="required">*</span>
+										</span>
+									</p>
+									<p class="comment-form-comment">
+										<label for="comment">Comment 
+											<span class="required">*</span>
+										</label> 
+										<textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea>
+									</p>
+									<p class="comment-form-author">
+										<label for="author">Name 
+											<span class="required">*</span>
+										</label> 
+										<input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required />
+									</p>
+									<p class="comment-form-email">
+										<label for="email">Email 
+											<span class="required">*</span>
+										</label> 
+										<input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required />
+									</p>
+									<p class="comment-form-url">
+										<label for="url">Website</label> 
+										<input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url" />
+									</p>
+									<p class="comment-form-cookies-consent">
+										<input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> 
+										<label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label>
+									</p>
+									<p class="comment-subscription-form">
+										<input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> 
+										<label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label>
+									</p>
+									<p class="comment-subscription-form">
+										<input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> 
+										<label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label>
+									</p>
+									<p class="form-submit">
+										<input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> 
+										<input type='hidden' name='comment_post_ID' value='84070' id='comment_post_ID' />
+										<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+									</p>
+									<p style="display: none;">
+										<input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="2954ff1ed7" />
+									</p>
+									<p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_">
+										<label>&#916;
+											<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea>
+										</label>
+										<input type="hidden" id="ak_js_1" name="ak_js" value="126"/>
+										<script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script>
+									</p>
+								</form>	
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		<div id="content" class="site-content container"><div id="main-content-row" class="tie-row main-content-row">
 
-<div class="main-content tie-col-md-8 tie-col-xs-12" role="main">
+		@include('welcome.sidebar')
 
-	
-	<article id="the-post" class="container-wrapper post-content tie-standard">
-
-
-    <div class='code-block code-block-8' style='margin: 8px 0; clear: both;'>
-
-    <p>{!! $project->description !!}</p>
-
-			<div class="post-bottom-meta post-bottom-tags post-tags-modern"><div class="post-bottom-meta-title"><span class="tie-icon-tags" aria-hidden="true"></span> Tags</div><span class="tagcloud"><a href="https://klfoodie.com/tag/adidas/" rel="tag">adidas</a> <a href="https://klfoodie.com/tag/dao/" rel="tag">dao</a> <a href="https://klfoodie.com/tag/klang-valley/" rel="tag">Klang Valley</a> <a href="https://klfoodie.com/tag/kuala-lumpur/" rel="tag">Kuala Lumpur</a> <a href="https://klfoodie.com/tag/petaling-jaya/" rel="tag">Petaling Jaya</a> <a href="https://klfoodie.com/tag/soya/" rel="tag">soya</a></span></div>
-		</div><!-- .entry-content /-->
-
-				<div id="post-extra-info">
-			<div class="theiaStickySidebar">
-				<div id="single-post-meta" class="post-meta clearfix"><span class="author-meta single-author with-avatars"><span class="meta-item meta-author-wrapper meta-author-49">
-						<span class="meta-author-avatar">
-							<a href="https://klfoodie.com/author/kathleen/"><img alt='Photo of Kathleen Gan' src='https://secure.gravatar.com/avatar/17bbc2d36ab2cd21146949c7e05e9f1d50595287eeeb4c8f37faf69d727634e1?s=140&#038;r=g' srcset='https://secure.gravatar.com/avatar/17bbc2d36ab2cd21146949c7e05e9f1d50595287eeeb4c8f37faf69d727634e1?s=280&#038;r=g 2x' class='avatar avatar-140 photo' height='140' width='140' loading='lazy' decoding='async'/></a>
-						</span>
-					<span class="meta-author"><a href="https://klfoodie.com/author/kathleen/" class="author-name tie-icon" title="Kathleen Gan">Kathleen Gan</a></span></span></span><span class="date meta-item tie-icon">August 26, 2025</span><div class="tie-alignright"><span class="meta-comment tie-icon meta-item fa-before">0</span><span class="meta-reading-time meta-item"><span class="tie-icon-bookmark" aria-hidden="true"></span> 3 minutes read</span> </div></div><!-- .post-meta -->			</div>
 		</div>
-
-		<div class="clearfix"></div>
-		<script id="tie-schema-json" type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Article","dateCreated":"2025-08-26T18:27:19+08:00","datePublished":"2025-08-26T18:27:19+08:00","dateModified":"2025-08-26T18:27:19+08:00","headline":"FIRST adidas &#038; d\u00e1o &#8220;You Had Us at d\u00e1o&#8221; Collaboration Now Happening At Selected adidas Stores","name":"FIRST adidas &#038; d\u00e1o &#8220;You Had Us at d\u00e1o&#8221; Collaboration Now Happening At Selected adidas Stores","keywords":"adidas,dao,Klang Valley,Kuala Lumpur,Petaling Jaya,soya","url":"https:\/\/klfoodie.com\/first-adidas-dao-you-had-us-at-dao-collaboration-now-happening-at-selected-adidas-stores\/","description":"PETALING JAYA, 26 August 2025 \u2014 Global sports brand adidas and local dessert darling d\u00e1o have joined forces for a sweet serving of originality and nostalgia, bringing to life the brands\u2019 first-ever co","copyrightYear":"2025","articleSection":"Food","articleBody":"PETALING JAYA, 26 August 2025 \u2014 Global sports brand adidas and local dessert darling d\u00e1o have joined forces for a sweet serving of originality and nostalgia, bringing to life the brands\u2019 first-ever collaboration through an unexpected collection themed \u201cYou Had Us at d\u00e1o.\u201d\r\nFirsts and Fresh Collabs\r\nCombining the world of sport and the local dessert scene, adidas and d\u00e1o bring consumers a collection that is lighthearted and functional, complete for the whole family. Providing both adult and kids apparel, as well as collectible accessories, the collection boasts adidas\u2019 signature sleek athleisure with a twist of d\u00e1o\u2019s quirky persona in its designs.\r\n\r\n\r\n\r\n\u201cThis is our first-ever partnership with a Malaysian F&amp;B brand, and I don\u2019t think we could\u2019ve asked for a better partner. ,\u201d said Preston Page, Country Manager of adidas Malaysia. \u201cIt\u2019s not every day that sport meets soy. When we first connected with d\u00e1o, we saw more than just a well-loved local dessert. We saw the shared values of joy, authenticity, and a strong local voice in d\u00e1o that brings people together, and we knew we were on the right track. \u201d\r\nWhere It All Began\r\nAn original tau fu fah brand by siblings Carmen, Joe, and Kelly Lau, d\u00e1o is known for its nostalgic charm and cutesy tone, bringing a modern twist on traditional local desserts. With a mission to share the rich heritage and exquisite flavours of their family recipe with dessert lovers, they established the business in 2018 to cultivate an appreciation for this unique style of soy-based desserts.\r\n\r\n\r\n\r\n\u201cTau fu fah was where we started as a dessert that we\u2019ve been eating all our lives,\u201d explained Kelly Lau, Marketing Manager of d\u00e1o. \u201cWe are a brand that embraces the heritage of local desserts, which is why we were so excited to work with adidas, the sportswear brand who stands on a legacy of rich heritage in sports, for this monumental collaboration. We might come from two very different worlds, but it\u2019s this common passion of preserving important heritage that has brought us together.\u201d\r\n\r\n\r\nFood = Emotions\r\nFood is Malaysia\u2019s love language, and adidas Malaysia recognises this. This campaign \u201cYou Had Us at d\u00e1o\u201d isn\u2019t just a cheeky tagline, but about that instant connection when seeing something familiar, fun, and authentic; that a Malaysian favourite can meet a global icon while still being full of local flavour. In a launch event earlier today at d\u00e1o Damansara Jaya, the event celebrated the unexpected but welcome meeting of two icons from different worlds, bringing together adidas Creators and dessert fans for a playful tribute to culture, roots, and Malaysian flavour.\r\n\r\n\r\n\r\n\r\nGuests were treated to a first look at the adidas x d\u00e1o capsule collection ahead of its public release on 20 August 2025, while enjoying curated d\u00e1o treats. Embracing both brands\u2019 love for creativity and authenticity, the launch served up a full sensory experience that hit the sweet spot.\r\n\r\nOn d\u00e1o Move\r\nRecreating d\u00e1o\u2019s iconic dessert cart to serve up apparel instead of tau fu fah, adidas provides a mobile pop-up for consumers to experience the collection for themselves, moving accordingly to the following adidas outlets:\r\n\r\n \t20 - 26 August | adidas Brand Concept Store, 1 Utama\r\n \t27 August - 2 September | adidas Home of Sports, Mid Valley Megamall\r\n \t3 - 9 September | adidas Performance Store, Pavilion Bukit Jalil\r\n\r\nWith a minimum purchase of two items from the collection, consumers will receive an exclusive plushie. Additionally, in a weekend-exclusive promotion in the said malls, consumers who purchase an item from the collection on the weekends from 23 August to 7 September will receive a free soymilk while stocks last. Be sure to catch the adidas x d\u00e1o collection from 20 August via www.adidas.com.my, the adidas mobile app, and at the following adidas stores:\r\n\r\n \tadidas Brand Center, Pavilion Kuala Lumpur\r\n \tadidas Brand Concept Store, 1 Utama\r\n \tadidas Home of Sports, Mid Valley Megamall\r\n \tadidas Home of Sports The Exchange TRX\r\n \tadidas Performance Store, Pavilion Bukit Jalil\r\n \tadidas Home of Sports, Setia City Mall\r\n \tadidas Performance Store, AEON Bukit Tinggi\r\n\r\nFollow the conversation at @adidasMY.\r\n\r\nOfficial website: www.adidas.com.my\r\n\r\nInstagram: @adidasMY\r\n\r\nSource: Press Release\u00a0","publisher":{"@id":"#Publisher","@type":"Organization","name":"KL Foodie","logo":{"@type":"ImageObject","url":"https:\/\/cdn.klfoodie.com\/2023\/01\/kl-foodie-1.png"},"sameAs":["https:\/\/www.facebook.com\/klfoodie","https:\/\/twitter.com\/klfoodie","https:\/\/www.youtube.com\/c\/foodie","www.instagram.com\/kl.foodie","https:\/\/t.me\/\/foodieorg"]},"sourceOrganization":{"@id":"#Publisher"},"copyrightHolder":{"@id":"#Publisher"},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/klfoodie.com\/first-adidas-dao-you-had-us-at-dao-collaboration-now-happening-at-selected-adidas-stores\/","breadcrumb":{"@id":"#Breadcrumb"}},"author":{"@type":"Person","name":"Kathleen Gan","url":"https:\/\/klfoodie.com\/author\/kathleen\/"},"image":{"@type":"ImageObject","url":"https:\/\/cdn.klfoodie.com\/2025\/08\/MDEC-Hotel-Cover-1-3.png","width":1200,"height":628}}</script>
-		<div id="share-buttons-bottom" class="share-buttons share-buttons-bottom">
-			<div class="share-links  icons-text">
-				
-				<a href="https://www.facebook.com/sharer.php?u=https://klfoodie.com/first-adidas-dao-you-had-us-at-dao-collaboration-now-happening-at-selected-adidas-stores/" rel="external noopener nofollow" title="Facebook" target="_blank" class="facebook-share-btn  large-share-button" data-raw="https://www.facebook.com/sharer.php?u={post_link}">
-					<span class="share-btn-icon tie-icon-facebook"></span> <span class="social-text">Facebook</span>
-				</a>
-				<a href="https://twitter.com/intent/tweet?text=FIRST%20adidas%20%26%20d%C3%A1o%20%E2%80%9CYou%20Had%20Us%20at%20d%C3%A1o%E2%80%9D%20Collaboration%20Now%20Happening%20At%20Selected%20adidas%20Stores&#038;url=https://klfoodie.com/first-adidas-dao-you-had-us-at-dao-collaboration-now-happening-at-selected-adidas-stores/" rel="external noopener nofollow" title="Twitter" target="_blank" class="twitter-share-btn  large-share-button" data-raw="https://twitter.com/intent/tweet?text={post_title}&amp;url={post_link}">
-					<span class="share-btn-icon tie-icon-twitter"></span> <span class="social-text">Twitter</span>
-				</a>
-				<a href="https://pinterest.com/pin/create/button/?url=https://klfoodie.com/first-adidas-dao-you-had-us-at-dao-collaboration-now-happening-at-selected-adidas-stores/&#038;description=FIRST%20adidas%20%26%20d%C3%A1o%20%E2%80%9CYou%20Had%20Us%20at%20d%C3%A1o%E2%80%9D%20Collaboration%20Now%20Happening%20At%20Selected%20adidas%20Stores&#038;media=https://cdn.klfoodie.com/2025/08/MDEC-Hotel-Cover-1-3.png" rel="external noopener nofollow" title="Pinterest" target="_blank" class="pinterest-share-btn  large-share-button" data-raw="https://pinterest.com/pin/create/button/?url={post_link}&amp;description={post_title}&amp;media={post_img}">
-					<span class="share-btn-icon tie-icon-pinterest"></span> <span class="social-text">Pinterest</span>
-				</a>
-				<a href="https://api.whatsapp.com/send?text=FIRST%20adidas%20%26%20d%C3%A1o%20%E2%80%9CYou%20Had%20Us%20at%20d%C3%A1o%E2%80%9D%20Collaboration%20Now%20Happening%20At%20Selected%20adidas%20Stores%20https://klfoodie.com/first-adidas-dao-you-had-us-at-dao-collaboration-now-happening-at-selected-adidas-stores/" rel="external noopener nofollow" title="WhatsApp" target="_blank" class="whatsapp-share-btn  large-share-button" data-raw="https://api.whatsapp.com/send?text={post_title}%20{post_link}">
-					<span class="share-btn-icon tie-icon-whatsapp"></span> <span class="social-text">WhatsApp</span>
-				</a>
-				<a href="mailto:?subject=FIRST%20adidas%20%26%20d%C3%A1o%20%E2%80%9CYou%20Had%20Us%20at%20d%C3%A1o%E2%80%9D%20Collaboration%20Now%20Happening%20At%20Selected%20adidas%20Stores&#038;body=https://klfoodie.com/first-adidas-dao-you-had-us-at-dao-collaboration-now-happening-at-selected-adidas-stores/" rel="external noopener nofollow" title="Share via Email" target="_blank" class="email-share-btn  large-share-button" data-raw="mailto:?subject={post_title}&amp;body={post_link}">
-					<span class="share-btn-icon tie-icon-envelope"></span> <span class="social-text">Share via Email</span>
-				</a>
-				<a href="#" rel="external noopener nofollow" title="Print" target="_blank" class="print-share-btn  large-share-button" data-raw="#">
-					<span class="share-btn-icon tie-icon-print"></span> <span class="social-text">Print</span>
-				</a>			</div>
-		</div>
-
-		
-	</article>
-
-	<div class="stream-item stream-item-below-post"></div>
-	<div class="post-components">
-
-			<div id="comments" class="comments-area">
-
-		
-
-		<div id="add-comment-block" class="container-wrapper">	<div id="respond" class="comment-respond">
-		<h3 id="reply-title" class="comment-reply-title the-global-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/first-adidas-dao-you-had-us-at-dao-collaboration-now-happening-at-selected-adidas-stores/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://klfoodie.com/wp-comments-post.php" method="post" id="commentform" class="comment-form"><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p><p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required /></p>
-<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required /></p>
-<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url" /></p>
-<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
-<p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='84070' id='comment_post_ID' />
-<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
-</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="2954ff1ed7" /></p><p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="126"/><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form>	</div><!-- #respond -->
-	</div><!-- #add-comment-block /-->
-	</div><!-- .comments-area -->
-
-
-	</div><!-- .post-components /-->
-
-	
-</div><!-- .main-content -->
-
-
-	@include('welcome.sidebar')
-	</div><!-- .main-content-row /--></div><!-- #content /-->
+	</div>
 
     @include('welcome.footer')
     
-		<a id="go-to-top" class="go-to-top-button" href="#go-to-tie-body">
-			<span class="tie-icon-angle-up"></span>
-			<span class="screen-reader-text">Back to top button</span>
-		</a>
+	<a id="go-to-top" class="go-to-top-button" href="#go-to-tie-body">
+		<span class="tie-icon-angle-up"></span>
+		<span class="screen-reader-text">Back to top button</span>
+	</a>
+
+</div>
 	
-		</div><!-- #tie-wrapper /-->
+	@include('welcome.secondary_sidebar')
 
-		
-	<aside class=" side-aside normal-side dark-skin dark-widgetized-area appear-from-right" aria-label="Secondary Sidebar" style="visibility: hidden;">
-		<div data-height="100%" class="side-aside-wrapper has-custom-scroll">
-
-			<a href="#" class="close-side-aside remove big-btn light-btn">
-				<span class="screen-reader-text">Close</span>
-			</a><!-- .close-side-aside /-->
-
-
-			
-				<div id="mobile-container">
-
-					
-					<div id="mobile-menu" class="hide-menu-icons">
-											</div><!-- #mobile-menu /-->
-
-											<div id="mobile-social-icons" class="social-icons-widget solid-social-icons">
-							<ul><li class="social-icons-item"><a class="social-link facebook-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.facebook.com/klfoodie"><span class="tie-social-icon tie-icon-facebook"></span><span class="screen-reader-text">Facebook</span></a></li><li class="social-icons-item"><a class="social-link twitter-social-icon" rel="external noopener nofollow" target="_blank" href="https://twitter.com/klfoodie"><span class="tie-social-icon tie-icon-twitter"></span><span class="screen-reader-text">Twitter</span></a></li><li class="social-icons-item"><a class="social-link youtube-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.youtube.com/c/foodie"><span class="tie-social-icon tie-icon-youtube"></span><span class="screen-reader-text">YouTube</span></a></li><li class="social-icons-item"><a class="social-link instagram-social-icon" rel="external noopener nofollow" target="_blank" href="http://www.instagram.com/kl.foodie"><span class="tie-social-icon tie-icon-instagram"></span><span class="screen-reader-text">Instagram</span></a></li><li class="social-icons-item"><a class="social-link telegram-social-icon" rel="external noopener nofollow" target="_blank" href="https://t.me//foodieorg"><span class="tie-social-icon tie-icon-paper-plane"></span><span class="screen-reader-text">Telegram</span></a></li></ul> 
-						</div><!-- #mobile-social-icons /-->
-						
-				</div><!-- #mobile-container /-->
-			
-
-			
-		</div><!-- .side-aside-wrapper /-->
-	</aside><!-- .side-aside /-->
-
-	
-	</div><!-- #tie-container /-->
+</div><!-- #tie-container /-->
 </div><!-- .background-overlay /-->
-
 <div class='code-block code-block-17' style='margin: 8px 0; clear: both;'>
 <!-- /43893936/KLF_OutofPage_2 -->
 <div id='div-gpt-ad-1693363407286-0'>

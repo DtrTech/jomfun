@@ -81,7 +81,7 @@ class WelcomeController extends Controller
             ->orderBy('id')
             ->get();
         
-        $projects = Project::select('id', 'title', 'author', 'publish_time', 'sub_title')
+        $projects = Project::select('id', 'title', 'author', 'publish_time', 'sub_title', 'project_image')
             ->where('category_name', $category_name)
             ->orderBy('publish_time', 'desc')
             ->limit(10)
@@ -119,11 +119,11 @@ class WelcomeController extends Controller
         $randomProjects = Project::inRandomOrder()
             ->limit(5)
             ->get()
-            ->map(function ($p) {
-                $p->publish_time = \Carbon\Carbon::parse($p->publish_time)->format('Y-m-d');
-                $p->title = \Illuminate\Support\Str::words($p->title, 20, '...');
-                $p->sub_title = \Illuminate\Support\Str::words($p->sub_title, 50, '...');
-                return $p;
+            ->map(function ($project) {
+                $project->publish_time = \Carbon\Carbon::parse($project->publish_time)->format('Y-m-d');
+                $project->title = \Illuminate\Support\Str::words($project->title, 20, '...');
+                $project->sub_title = \Illuminate\Support\Str::words($project->sub_title, 50, '...');
+                return $project;
             });
 
         return view('welcome.description', compact('project', 'randomProjects', 'categories', 'id'));

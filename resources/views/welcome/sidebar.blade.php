@@ -15,7 +15,9 @@
 								<div class="post-widget-body ">
 									<a class="post-title the-subtitle" href="{{ url('/' . $project->id) }}">{{ \Illuminate\Support\Str::words($project->title, 10, '...') }}</a>
 									<div class="post-meta">
-									<span class="date meta-item tie-icon">{{ $project->publish_time }}</span>
+									<span class="meta-item">
+										<i class="far fa-clock"></i> {{ \Carbon\Carbon::parse($project->publish_time)->format('Y-m-d') }}
+									</span>
 								</div>
 							</div>
 						</li>

@@ -8,7 +8,7 @@
 			<div class="tie-row">
 				<div class="tie-col-md-12">
 					<div class="copyright-text copyright-text-first">&copy; 
-						<a href="https://goodfoodiemedia.com" target="_blank" rel="nofollow noopener">Good Foodie Media Sdn Bhd 201801026102 (1288123-V)</a> Copyright 2025, All Rights Reserved
+						<a href="" target="_blank" rel="nofollow noopener">JomFun Sdn Bhd 201801026102 (1288123-V)</a> Copyright 2025, All Rights Reserved
 					</div>
 					<div class="footer-menu">
 						<ul id="menu-secondary" class="menu">

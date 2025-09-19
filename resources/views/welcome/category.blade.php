@@ -270,85 +270,87 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 	  </script>
 	</div>
 </div></div><div id="content" class="site-content container"><div id="main-content-row" class="tie-row main-content-row">
+	
 	<div class="main-content tie-col-md-8 tie-col-xs-12" role="main">
-
-		
-			<header class="entry-header-outer container-wrapper">
-				<nav id="breadcrumb">
-                    <a href="{{ url('/') }}">
-                        <span class="tie-icon-home" aria-hidden="true"></span> Home
-                    </a>
-                    <em class="delimiter">/</em>
-                    <span class="current">{{ $category_name }}</span>
-                </nav>
-			<h1 class="page-title">{{ $category_name}}</h1>
+		<header class="entry-header-outer container-wrapper">
+			<nav id="breadcrumb">
+				<a href="{{ url('/') }}">
+					<span class="tie-icon-home" aria-hidden="true"></span> Home
+				</a>
+				<em class="delimiter">/</em>
+				<span class="current">{{ $category_name }}</span>
+			</nav>
+		<h1 class="page-title">{{ $category_name}}</h1>
 		<div class="mag-box wide-post-box">
 			<div class="container-wrapper">
 				<div class="mag-box-container clearfix">
 					<ul id="posts-container" data-layout="default" data-settings="{'uncropped_image':'jannah-image-post','category_meta':false,'post_meta':true,'excerpt':'true','excerpt_length':'20','read_more':'true','read_more_text':false,'media_overlay':false,'title_length':0,'is_full':false,'is_category':true}" class="posts-items">
 
-        @foreach($projects as $project)
-			<li class="post-item  post-84070 post type-post status-publish format-standard has-post-thumbnail category-food tag-adidas tag-dao tag-klang-valley tag-kuala-lumpur tag-petaling-jaya tag-soya tie-standard">
-				<a aria-label="FIRST adidas &#038; dáo &#8220;You Had Us at dáo&#8221; Collaboration Now Happening At Selected adidas Stores" href="https://klfoodie.com/first-adidas-dao-you-had-us-at-dao-collaboration-now-happening-at-selected-adidas-stores/" class="post-thumb"><img width="390" height="220" src="https://cdn.klfoodie.com/2025/08/MDEC-Hotel-Cover-1-3-390x220.png" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt="" decoding="async" fetchpriority="high" data-attachment-id="84072" data-permalink="https://klfoodie.com/first-adidas-dao-you-had-us-at-dao-collaboration-now-happening-at-selected-adidas-stores/mdec-hotel-cover-1-12/" data-orig-file="https://cdn.klfoodie.com/2025/08/MDEC-Hotel-Cover-1-3.png" data-orig-size="1200,628" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="MDEC Hotel Cover (1)" data-image-description="" data-image-caption="" data-medium-file="https://cdn.klfoodie.com/2025/08/MDEC-Hotel-Cover-1-3-300x157.png" data-large-file="https://cdn.klfoodie.com/2025/08/MDEC-Hotel-Cover-1-3-1024x536.png" /></a>
-					<div class="post-details">
-						<div class="post-meta clearfix"><span class="author-meta single-author no-avatars"><span class="meta-item meta-author-wrapper meta-author-49"><span class="meta-author"><a href="https://klfoodie.com/author/kathleen/" class="author-name tie-icon" title="Kathleen Gan">{{ $project->author }}</a></span></span></span><span class="date meta-item tie-icon">{{ $project->publish_time }}</span><div class="tie-alignright"><span class="meta-comment tie-icon meta-item fa-before">0</span></div></div><!-- .post-meta -->
-						<h2 class="post-title"><a href="{{ url('/' . $project->id) }}">{{ $project->title }}</a></h2>
-					<p class="post-excerpt">{{ $project->sub_title}}</p>
-				<a class="more-link button" href="{{ url('/' . $project->id) }}">Read More &raquo;</a>	</div>
-			</li>
-		@endforeach
-					</ul><!-- #posts-container /-->
+						@foreach($projects as $project)
+							<li class="post-item  post-84070 post type-post status-publish format-standard has-post-thumbnail category-food tag-adidas tag-dao tag-klang-valley tag-kuala-lumpur tag-petaling-jaya tag-soya tie-standard">
+								<a aria-label="FIRST adidas &#038; dáo &#8220;You Had Us at dáo&#8221; Collaboration Now Happening At Selected adidas Stores" href="https://klfoodie.com/first-adidas-dao-you-had-us-at-dao-collaboration-now-happening-at-selected-adidas-stores/" class="post-thumb">
+									<img width="390" height="220" src="{{ $project->project_image ? asset($project->project_image) : 'https://cdn.klfoodie.com/2025/08/MDEC-Hotel-Cover-3-1-390x220.png' }}" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt=""/>
+								</a>
+								<div class="post-details">
+									<div class="post-meta clearfix">
+										<span class="author-meta single-author no-avatars">
+											<span class="meta-item meta-author-wrapper meta-author-49">
+												<span class="meta-author">
+													<i class="fas fa-user"></i> <!-- author icon -->
+													<a class="" title="{{ $project->author }}">{{ $project->author }}</a>
+												</span>
+											</span>
+										</span>
+
+										<span class="publish-time">
+											<i class="far fa-clock"></i> <!-- time icon -->
+											{{ $project->publish_time }}
+										</span>
+										<div class="tie-alignright"></div>
+									</div>
+									<h2 class="post-title">
+										<a href="{{ url('/' . $project->id) }}">{{ $project->title }}</a>
+									</h2>
+									<p class="post-excerpt">{{ $project->sub_title}}</p>
+									<a class="more-link button" href="{{ url('/' . $project->id) }}">Read More &raquo;</a>	
+								</div>
+							</li>
+						@endforeach
+
+					</ul>
 					<div class="clearfix"></div>
-				</div><!-- .mag-box-container /-->
-			</div><!-- .container-wrapper /-->
-		</div><!-- .mag-box /-->
-	<div class="pages-nav">					<div class="pages-numbers pages-standard">
-						<span class="first-page first-last-pages">
-													</span>
-
-						<span class="last-page first-last-pages">
-							<a href="https://klfoodie.com/category/food/page/2/" ><span class="pagination-icon" aria-hidden="true"></span>Next page</a>						</span>
-					</div>
-					</div>
-	</div><!-- .main-content /-->
-
+				</div>
+			</div>
+		</div>
+		<div class="pages-nav">					
+			<div class="pages-numbers pages-standard">
+				<span class="first-page first-last-pages"></span>
+				<span class="last-page first-last-pages">
+					<a href="https://klfoodie.com/category/food/page/2/" >
+						<span class="pagination-icon" aria-hidden="true"></span> Next page
+					</a>
+				</span>
+			</div>
+		</div>
+	</div>
 
 	@include('welcome.sidebar')
-	</div><!-- .main-content-row /--></div><!-- #content /-->
+
+</div>
 
     @include('welcome.footer')
 
-		<a id="go-to-top" class="go-to-top-button" href="#go-to-tie-body">
-			<span class="tie-icon-angle-up"></span>
-			<span class="screen-reader-text">Back to top button</span>
-		</a>
+	<a id="go-to-top" class="go-to-top-button" href="#go-to-tie-body">
+		<span class="tie-icon-angle-up"></span>
+		<span class="screen-reader-text">Back to top button</span>
+	</a>
 	
-		</div><!-- #tie-wrapper /-->
+</div>
 
-		
-	<aside class=" side-aside normal-side dark-skin dark-widgetized-area appear-from-right" aria-label="Secondary Sidebar" style="visibility: hidden;">
-		<div data-height="100%" class="side-aside-wrapper has-custom-scroll">
+	@include('welcome.secondary_sidebar')
 
-			<a href="#" class="close-side-aside remove big-btn light-btn">
-				<span class="screen-reader-text">Close</span>
-			</a><!-- .close-side-aside /-->
-
-				<div id="mobile-container">
-
-					<div id="mobile-menu" class="hide-menu-icons">
-											</div><!-- #mobile-menu /-->
-
-											<div id="mobile-social-icons" class="social-icons-widget solid-social-icons">
-							<ul><li class="social-icons-item"><a class="social-link facebook-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.facebook.com/klfoodie"><span class="tie-social-icon tie-icon-facebook"></span><span class="screen-reader-text">Facebook</span></a></li><li class="social-icons-item"><a class="social-link twitter-social-icon" rel="external noopener nofollow" target="_blank" href="https://twitter.com/klfoodie"><span class="tie-social-icon tie-icon-twitter"></span><span class="screen-reader-text">Twitter</span></a></li><li class="social-icons-item"><a class="social-link youtube-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.youtube.com/c/foodie"><span class="tie-social-icon tie-icon-youtube"></span><span class="screen-reader-text">YouTube</span></a></li><li class="social-icons-item"><a class="social-link instagram-social-icon" rel="external noopener nofollow" target="_blank" href="http://www.instagram.com/kl.foodie"><span class="tie-social-icon tie-icon-instagram"></span><span class="screen-reader-text">Instagram</span></a></li><li class="social-icons-item"><a class="social-link telegram-social-icon" rel="external noopener nofollow" target="_blank" href="https://t.me//foodieorg"><span class="tie-social-icon tie-icon-paper-plane"></span><span class="screen-reader-text">Telegram</span></a></li></ul> 
-						</div><!-- #mobile-social-icons /-->
-						
-				</div><!-- #mobile-container /-->
-			
-		</div><!-- .side-aside-wrapper /-->
-	</aside><!-- .side-aside /-->
-
-	</div><!-- #tie-container /-->
-</div><!-- .background-overlay /-->
+</div>
+</div>
 
 <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/jannah\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}

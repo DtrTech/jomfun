@@ -3,8 +3,9 @@
 	<nav id="top-nav"  class="has-date top-nav header-nav" aria-label="Secondary Navigation">
 		<div class="container">
 			<div class="topbar-wrapper">
-				<div class="topbar-today-date tie-icon">
-					Monday ,  15  September 2025					
+				<div class="">
+					<i class="far fa-clock"></i>
+					{{ \Carbon\Carbon::now()->format('l , d F Y') }}
 				</div>
 				<div class="tie-alignleft"></div>
 				<div class="tie-alignright"></div>

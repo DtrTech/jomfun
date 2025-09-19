@@ -31,7 +31,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'page_seo' => 'required|string',
+            'page_seo' => 'nullable|string',
             'category_name' => 'required|string|max:255',
             'category_image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048',
         ]);
@@ -54,7 +54,7 @@ class CategoryController extends Controller
     public function update(Request $request, Category $category)
     {
         $validated = $request->validate([
-            'page_seo' => 'required|string',
+            'page_seo' => 'nullable|string',
             'category_name' => 'required|string|max:255',
             'category_image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048',
         ]);

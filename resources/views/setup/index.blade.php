@@ -46,7 +46,7 @@
                         <div class="col-lg-12 col-12 ">
                             <div class="form-group">
                                 <label for="seo_header">Header SEO</label>
-                                <textarea id="seo_header" name="seo_header" class="form-control" rows="10" placeholder="Enter head script...">{{ $setup->seo_header ?? '' }}</textarea>
+                                <textarea id="seo_header" name="seo_header" class="form-control" rows="20" placeholder="Enter head script...">{{ $setup->seo_header ?? '' }}</textarea>
                             </div>
                         </div>
 
