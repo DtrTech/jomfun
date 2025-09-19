@@ -59,3 +59,8 @@
 		</div>
 	</div>	
 </footer>
+
+<a id="go-to-top" class="go-to-top-button" href="#go-to-tie-body">
+	<span class="fas fa-arrow-up"></span>
+	<span class="screen-reader-text">Back to top button</span>
+</a>

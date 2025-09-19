@@ -48,6 +48,9 @@ class ProjectController extends Controller
             'category_id'   => 'required|exists:categories,id',
         ]);
 
+        $category = Category::find($validated['category_id']);
+        $validated['category_name'] = $category?->category_name;
+
         if ($request->hasFile('project_image')) {
             $path = $request->file('project_image')->store('public-images', 'public');
             $validated['project_image'] = Storage::url($path);
@@ -83,6 +86,9 @@ class ProjectController extends Controller
             'status'        => 'required|string|max:255',
             'category_id'   => 'required|exists:categories,id',
         ]);
+
+        $category = Category::find($validated['category_id']);
+        $validated['category_name'] = $category?->category_name;
 
         if ($request->hasFile('project_image')) {
             $path = $request->file('project_image')->store('public-images', 'public');

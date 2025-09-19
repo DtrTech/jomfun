@@ -21,8 +21,8 @@
 					<div id="logo" class="image-logo" >
 						<a title="JomFun" href="{{ url('/') }}">
 							<picture class="tie-logo-default tie-logo-picture">
-								<source class="tie-logo-source-default tie-logo-source" srcset="https://cdn..com/2023/01/kl-foodie-1.png">
-								<img class="tie-logo-img-default tie-logo-img" src="https://cdn..com/2023/01/kl-foodie-1.png" alt="JomFun" width="350" height="80" style="max-height:80px; width: auto;" />
+								<source class="tie-logo-source-default tie-logo-source" srcset="{{ asset('image/jomfun/jomfun.png') }}">
+								<img class="tie-logo-img-default tie-logo-img" src="{{ asset('image/jomfun/jomfun.png') }}" alt="JomFun" width="350" height="80" style="max-height:80px; width: auto;" />
 							</picture>
 							<h1 class="h1-off">JomFun</h1>			
 						</a>
@@ -41,10 +41,10 @@
 
 				<div id="menu-components-wrap">		
 					<div id="sticky-logo" class="image-logo">
-						<a title="JomFun" href="https://.com/">
+						<a title="JomFun" href="{{ url('/') }}">
 							<picture class="tie-logo-default tie-logo-picture">
-								<source class="tie-logo-source-default tie-logo-source" srcset="https://cdn..com/2023/01/kl-foodie-1.png">
-								<img class="tie-logo-img-default tie-logo-img" src="https://cdn..com/2023/01/kl-foodie-1.png" alt="JomFun"  />
+								<source class="tie-logo-source-default tie-logo-source" srcset="{{ asset('image/jomfun/jomfun.png') }}">
+								<img class="tie-logo-img-default tie-logo-img" src="{{ asset('image/jomfun/jomfun.png') }}" alt="JomFun"  />
 							</picture>
 						</a>
 					</div>
@@ -55,7 +55,7 @@
 							<ul id="menu-primary" class="menu" role="menubar">  
 								@foreach($categories as $category)  
 								<li id="menu-item-304" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-304">
-									<a href="{{ url('category/' . $category->category_name) }}">{{ $category->category_name }}</a>
+									<a href="{{ url('/category/' . strtolower($category->category_name)) }}">{{ $category->category_name }}</a>
 								</li>
 								@endforeach
 							</ul>
@@ -63,12 +63,12 @@
 					</div>
 
 					<ul class="components">		
-						<li class="search-compact-icon menu-item custom-menu-link">
+						<!-- <li class="search-compact-icon menu-item custom-menu-link">
 							<a href="#" class="tie-search-trigger">
 								<i class="fas fa-search"></i>
 								<span class="screen-reader-text">Search for</span>
 							</a>
-						</li>
+						</li> -->
 
 						<li class="social-icons-item">
 							<a class="social-link telegram-social-icon" rel="external noopener nofollow" target="_blank" href="https://t.me/">

@@ -31,5 +31,5 @@ Route::get('/contactus', [App\Http\Controllers\WelcomeController::class, 'welcom
 Route::get('/term', [App\Http\Controllers\WelcomeController::class, 'welcomeTerm']);
 Route::get('/privacy', [App\Http\Controllers\WelcomeController::class, 'welcomePrivacy']);
 Route::get('/category/{category_name}', [App\Http\Controllers\WelcomeController::class, 'welcomeCategory']);
-Route::get('/{id}', [App\Http\Controllers\WelcomeController::class, 'welcomeDescription']);
+Route::get('/{title}', [App\Http\Controllers\WelcomeController::class, 'welcomeDescription']);
 
