@@ -223,7 +223,7 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
     @include('welcome.navtop')
 
 <div class="stream-item stream-item-top-wrapper"><div class="stream-item-top"></div></div><!-- .tie-col /--><div class="stream-item stream-item-below-header"><div id="billboardSpace" style="text-align:center; padding-top: 10px; padding-bottom: 10px;">
-	<div id="billboardSpaceLabel" style="padding-top: 5px;font-size: small; color: #888;">Advertisement</div>
+	<!-- <div id="billboardSpaceLabel" style="padding-top: 5px;font-size: small; color: #888;">Advertisement</div> -->
 	<!-- /43893936/KLF_DesktopBillboard -->
 	<div id='div-gpt-ad-1683022485054-0' style='min-width: 728px; min-height: 90px;'>
 		<script>
@@ -247,7 +247,7 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 </div>
 
 <div id="leaderboardSpace" style="text-align:center; padding-top: 10px; padding-bottom: 10px;">
-	<div id="leaderboardSpaceLabel" style="padding-top: 5px;font-size: small; color: #888;">Advertisement</div>
+	<!-- <div id="leaderboardSpaceLabel" style="padding-top: 5px;font-size: small; color: #888;">Advertisement</div> -->
 	<!-- /43893936/KLF_MobileLeaderboard -->
 	<div id='div-gpt-ad-1683022745852-0' style='min-width: 320px; min-height: 50px;'>
 	<script>
@@ -272,116 +272,133 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 
 <div class="main-content tie-col-md-8 tie-col-xs-12" role="main">
 
-	
 	<article id="the-post" class="container-wrapper post-content">
 
-		
-	<header class="entry-header-outer">
+		<header class="entry-header-outer">
+			<nav id="breadcrumb">
+				<a href="{{ url('/') }}">
+						<i class="fa fa-home"></i> Home
+					</a>
+				<em class="delimiter">/</em>
+				<span class="current">About Us</span>
+			</nav>
+			<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","@id":"#Breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Home","@id":"https:\/\/klfoodie.com\/"}}]}</script>
+			<div class="entry-header">
+				<h1 class="post-title entry-title">About Us</h1>
+			</div><!-- .entry-header /-->
+		</header><!-- .entry-header-outer /-->
 
-		<nav id="breadcrumb"><a href="https://klfoodie.com/"><span class="tie-icon-home" aria-hidden="true"></span> Home</a><em class="delimiter">/</em><span class="current">About Us</span></nav><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","@id":"#Breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Home","@id":"https:\/\/klfoodie.com\/"}}]}</script>
-		<div class="entry-header">
-			<h1 class="post-title entry-title">About Us</h1>
-		</div><!-- .entry-header /-->
-
-		
-	</header><!-- .entry-header-outer /-->
-
-	
 		<div itemprop="articleBody" class="entry-content entry clearfix">
-
-			
 			<p>Hello fun-seekers, welcome to JomFun.</p>
             <p>JomFun is for people who love entertainment, lifestyle, and exciting events – that’s basically everyone!</p>
             <p>Started in 2025, JomFun showcases the best events, activities, and happenings across Malaysia. From concerts and festivals to travel experiences and local fun, we aim to bring you the latest and most exciting updates. Follow us to discover more unforgettable journeys!</p>
-
             <h3>Key Stats:</h3>
             <ul>
-            <li>Monthly Website Traffic: 500,000+</li>
-            <li>Facebook Followers: 150,000+</li>
-            <li>Instagram Followers: 80,000+</li>
-            <li>Event Listings: 1,200+ and growing</li>
-            <li>Partnered Brands & Organizers: 100+</li>
+				<li>Monthly Website Traffic: 500,000+</li>
+				<li>Facebook Followers: 150,000+</li>
+				<li>Instagram Followers: 80,000+</li>
+				<li>Event Listings: 1,200+ and growing</li>
+				<li>Partnered Brands & Organizers: 100+</li>
             </ul>
             <p>*Last updated Sept 2025.</p>
-
             <h3>We are on:</h3>
             <p>
-            Facebook – <a href="">JomFun</a><br />
-            Instagram – <a href="">@jom.fun</a>
+				Facebook - <a href="">JomFun</a>
+				<br/>
+				Instagram - <a href="">@jom.fun</a>
             </p>
-
-            <p><em><a href="">*JomFun</a> is part of <a href="#">Fun Media Sdn Bhd</a> (1234567-V)</em><br />
-            <strong>Fun Media</strong> company also manages:</p>
+            <p>
+				<em>
+					<a href="">*JomFun</a> is part of 
+					<a href="#">Fun Media Sdn Bhd</a> 
+					(1234567-V)
+				</em>
+				<br />
+            	<strong>Fun Media</strong> company also manages:
+			</p>
             <ul class="rteindent1">
-            <li><a href="#">EventBuzz Malaysia</a></li>
-            <li><a href="#">TravelSpot Asia</a></li>
-            <li><a href="#">EatPlayLove Malaysia</a></li>
-            <li><a href="#">Lifestyle Now</a></li>
+				<li><a href="#">EventBuzz Malaysia</a></li>
+				<li><a href="#">TravelSpot Asia</a></li>
+				<li><a href="#">EatPlayLove Malaysia</a></li>
+				<li><a href="#">Lifestyle Now</a></li>
             </ul>
-
             <h3>Contact:</h3>
             <p><b>Address: </b>123, Jalan Tun Razak, 50400 Kuala Lumpur, Malaysia</p>
+            <p>	For <strong>advertising</strong> inquiries:<br/>
+				Email: <a href="mailto:ads@jomfun.my">ads@jomfun.my</a><br/>
+				Tel: <a href="tel:+60123456789">+6012-345 6789 (Alex)</a>
+			</p>
+			<p>	For <strong>collaboration or other</strong> inquiries:<br/>
+				Email: <a href="mailto:hello@jomfun.my">hello@jomfun.my</a>
+			</p>
+            <p>	For <strong>career</strong> opportunities:<br/>
+            	Email: <a href="mailto:hr@jomfun.my">hr@jomfun.my</a>
+			</p>
+		</div>
 
-            <p>For <strong>advertising</strong> inquiries:<br />
-            Email: <a href="mailto:ads@jomfun.my">ads@jomfun.my</a><br />
-            Tel: <a href="tel:+60123456789">+6012-345 6789 (Alex)</a></p>
-
-            <p>For <strong>collaboration or other</strong> inquiries:<br />
-            Email: <a href="mailto:hello@jomfun.my">hello@jomfun.my</a></p>
-
-            <p>For <strong>career</strong> opportunities:<br />
-            Email: <a href="mailto:hr@jomfun.my">hr@jomfun.my</a></p>
-
-			
-		</div><!-- .entry-content /-->
-
-		
-	</article><!-- #the-post /-->
-
+	</article>
 	<div class="stream-item stream-item-below-post"></div>
 	<div class="post-components">
-
-		
-	</div><!-- .post-components /-->
-
 	
-</div><!-- .main-content -->
+	</div>
 
-</div><!-- .main-content-row /--></div><!-- #content /-->
+</div>
+
+</div>
+</div>
+
 @include('welcome.footer')
 	
-		</div><!-- #tie-wrapper /-->
+</div>
 
-		
 	<aside class=" side-aside normal-side dark-skin dark-widgetized-area appear-from-right" aria-label="Secondary Sidebar" style="visibility: hidden;">
 		<div data-height="100%" class="side-aside-wrapper has-custom-scroll">
-
 			<a href="#" class="close-side-aside remove big-btn light-btn">
 				<span class="screen-reader-text">Close</span>
-			</a><!-- .close-side-aside /-->
-
-
-			
+			</a>
 				<div id="mobile-container">
+					<div id="mobile-menu" class="hide-menu-icons"></div>
+					<div id="mobile-social-icons" class="social-icons-widget solid-social-icons">
+						<ul>
+							<li class="social-icons-item">
+								<a class="social-link facebook-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.facebook.com/klfoodie">
+									<span class="tie-social-icon tie-icon-facebook"></span>
+									<span class="screen-reader-text">Facebook</span>
+								</a>
+							</li>
+							<li class="social-icons-item">
+								<a class="social-link twitter-social-icon" rel="external noopener nofollow" target="_blank" href="https://twitter.com/klfoodie">
+									<span class="tie-social-icon tie-icon-twitter"></span>
+									<span class="screen-reader-text">Twitter</span>
+								</a>
+							</li>
+							<li class="social-icons-item">
+								<a class="social-link youtube-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.youtube.com/c/foodie">
+									<span class="tie-social-icon tie-icon-youtube"></span>
+									<span class="screen-reader-text">YouTube</span>
+								</a>
+							</li>
+							<li class="social-icons-item">
+								<a class="social-link instagram-social-icon" rel="external noopener nofollow" target="_blank" href="http://www.instagram.com/kl.foodie">
+									<span class="tie-social-icon tie-icon-instagram"></span>
+									<span class="screen-reader-text">Instagram</span>
+								</a>
+							</li>
+							<li class="social-icons-item">
+								<a class="social-link telegram-social-icon" rel="external noopener nofollow" target="_blank" href="https://t.me//foodieorg">
+									<span class="tie-social-icon tie-icon-paper-plane"></span>
+									<span class="screen-reader-text">Telegram</span>
+								</a>
+							</li>
+						</ul> 
+					</div>	
+				</div>
 
-					
-					<div id="mobile-menu" class="hide-menu-icons">
-											</div><!-- #mobile-menu /-->
+		</div>
+	</aside>
 
-											<div id="mobile-social-icons" class="social-icons-widget solid-social-icons">
-							<ul><li class="social-icons-item"><a class="social-link facebook-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.facebook.com/klfoodie"><span class="tie-social-icon tie-icon-facebook"></span><span class="screen-reader-text">Facebook</span></a></li><li class="social-icons-item"><a class="social-link twitter-social-icon" rel="external noopener nofollow" target="_blank" href="https://twitter.com/klfoodie"><span class="tie-social-icon tie-icon-twitter"></span><span class="screen-reader-text">Twitter</span></a></li><li class="social-icons-item"><a class="social-link youtube-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.youtube.com/c/foodie"><span class="tie-social-icon tie-icon-youtube"></span><span class="screen-reader-text">YouTube</span></a></li><li class="social-icons-item"><a class="social-link instagram-social-icon" rel="external noopener nofollow" target="_blank" href="http://www.instagram.com/kl.foodie"><span class="tie-social-icon tie-icon-instagram"></span><span class="screen-reader-text">Instagram</span></a></li><li class="social-icons-item"><a class="social-link telegram-social-icon" rel="external noopener nofollow" target="_blank" href="https://t.me//foodieorg"><span class="tie-social-icon tie-icon-paper-plane"></span><span class="screen-reader-text">Telegram</span></a></li></ul> 
-						</div><!-- #mobile-social-icons /-->
-						
-				</div><!-- #mobile-container /-->
-			
-
-			
-		</div><!-- .side-aside-wrapper /-->
-	</aside><!-- .side-aside /-->
-
-	
-	</div><!-- #tie-container /-->
-</div><!-- .background-overlay /-->
+	</div>
+</div>
 
 <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/jannah\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}

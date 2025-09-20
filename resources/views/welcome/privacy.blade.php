@@ -223,7 +223,7 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 @include('welcome.navtop')
 
 <div class="stream-item stream-item-top-wrapper"><div class="stream-item-top"></div></div><!-- .tie-col /--><div class="stream-item stream-item-below-header"><div id="billboardSpace" style="text-align:center; padding-top: 10px; padding-bottom: 10px;">
-	<div id="billboardSpaceLabel" style="padding-top: 5px;font-size: small; color: #888;">Advertisement</div>
+	<!-- <div id="billboardSpaceLabel" style="padding-top: 5px;font-size: small; color: #888;">Advertisement</div> -->
 	<!-- /43893936/KLF_DesktopBillboard -->
 	<div id='div-gpt-ad-1683022485054-0' style='min-width: 728px; min-height: 90px;'>
 		<script>
@@ -247,7 +247,7 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 </div>
 
 <div id="leaderboardSpace" style="text-align:center; padding-top: 10px; padding-bottom: 10px;">
-	<div id="leaderboardSpaceLabel" style="padding-top: 5px;font-size: small; color: #888;">Advertisement</div>
+	<!-- <div id="leaderboardSpaceLabel" style="padding-top: 5px;font-size: small; color: #888;">Advertisement</div> -->
 	<!-- /43893936/KLF_MobileLeaderboard -->
 	<div id='div-gpt-ad-1683022745852-0' style='min-width: 320px; min-height: 50px;'>
 	<script>
@@ -272,47 +272,43 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 
 <div class="main-content tie-col-md-8 tie-col-xs-12" role="main">
 
-	
 	<article id="the-post" class="container-wrapper post-content">
 
-		
 	<header class="entry-header-outer">
 
-		<nav id="breadcrumb"><a href="https://klfoodie.com/"><span class="tie-icon-home" aria-hidden="true"></span> Home</a><em class="delimiter">/</em><span class="current">Privacy Policy</span></nav><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","@id":"#Breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Home","@id":"https:\/\/klfoodie.com\/"}}]}</script>
+		<nav id="breadcrumb"><a href="{{ url('/') }}">
+					<i class="fa fa-home"></i> Home
+				</a><em class="delimiter">/</em><span class="current">Privacy Policy</span></nav><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","@id":"#Breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Home","@id":"https:\/\/klfoodie.com\/"}}]}</script>
 		<div class="entry-header">
 			<h1 class="post-title entry-title">Privacy Policy</h1>
 		</div><!-- .entry-header /-->
 
-		
 	</header><!-- .entry-header-outer /-->
 
-	
 		<div itemprop="articleBody" class="entry-content entry clearfix">
 
 			
 			<p>&nbsp;</p>
-<p>Affiliate Disclosure, click <a href="https://klfoodie.com/affiliate-disclosure/"><em>here</em></a>.</p>
-<p><b>Privacy Policy for www.klfoodie.com</b></p>
-<p>If you require any more information or have any questions about our privacy policy, please feel free to contact us by email at helloklfoodie@gmail.com.</p>
-<p>At www.klfoodie.com, the privacy of our visitors is of extreme importance to us. This privacy policy document outlines the types of personal information is received and collected by www.klfoodie.com and how it is used.</p>
-<p><b>Log Files</b><br />
-Like many other Web sites, www.klfoodie.com makes use of log files. The information inside the log files includes internet protocol ( IP ) addresses, type of browser, Internet Service Provider ( ISP ), date/time stamp, referring/exit pages, and number of clicks to analyze trends, administer the site, track user’s movement around the site, and gather demographic information. IP addresses, and other such information are not linked to any information that is personally identifiable.</p>
-<p><b>Cookies and Web Beacons</b><br />
-www.klfoodie.com does use cookies to store information about visitors preferences, record user-specific information on which pages the user access or visit, customize Web page content based on visitors browser type or other information that the visitor sends via their browser.</p>
-<p><b>DoubleClick DART Cookie</b><br />
-.:: Google, as a third party vendor, uses cookies to serve ads on www.klfoodie.com.<br />
-.:: Google’s use of the DART cookie enables it to serve ads to users based on their visit to www.klfoodie.com and other sites on the Internet.<br />
-.:: Users may opt out of the use of the DART cookie by visiting the Google ad and content network privacy policy at the following URL – http://www.google.com/privacy_ads.html</p>
-<p>Some of our advertising partners may use cookies and web beacons on our site. Our advertising partners include ….<br />
-Google Adsense</p>
-<p>These third-party ad servers or ad networks use technology to the advertisements and links that appear on www.klfoodie.com send directly to your browsers. They automatically receive your IP address when this occurs. Other technologies ( such as cookies, JavaScript, or Web Beacons ) may also be used by the third-party ad networks to measure the effectiveness of their advertisements and / or to personalize the advertising content that you see.</p>
-<p>www.klfoodie.com has no access to or control over these cookies that are used by third-party advertisers.</p>
-<p>You should consult the respective privacy policies of these third-party ad servers for more detailed information on their practices as well as for instructions about how to opt-out of certain practices. www.klfoodie.com’s privacy policy does not apply to, and we cannot control the activities of, such other advertisers or web sites.</p>
-<p>If you wish to disable cookies, you may do so through your individual browser options. More detailed information about cookie management with specific web browsers can be found at the browsers’ respective websites.</p>
-<p>&nbsp;</p>
-<p>Full Privacy Policy, click <a href="https://goodfoodiemedia.com/index.php/privacy-policy/">here</a>.</p>
+			<p>Affiliate Disclosure, click <a href=""><em>here</em></a>.</p>
+			<p><b>Privacy Policy for www.jomfun.com</b></p>
+			<p>If you require any more information or have any questions about our privacy policy, please feel free to contact us by email at hellojomfun@gmail.com.</p>
+			<p>At www.jomfun.com, the privacy of our visitors is of extreme importance to us. This privacy policy document outlines the types of personal information is received and collected by www.jomfun.com and how it is used.</p>
+			<p><b>Log Files</b><br />
+			Like many other Web sites, www.jomfun.com makes use of log files. The information inside the log files includes internet protocol ( IP ) addresses, type of browser, Internet Service Provider ( ISP ), date/time stamp, referring/exit pages, and number of clicks to analyze trends, administer the site, track user’s movement around the site, and gather demographic information. IP addresses, and other such information are not linked to any information that is personally identifiable.</p>
+			<p><b>Cookies and Web Beacons</b><br />
+			www.jomfun.com does use cookies to store information about visitors preferences, record user-specific information on which pages the user access or visit, customize Web page content based on visitors browser type or other information that the visitor sends via their browser.</p>
+			<p><b>DoubleClick DART Cookie</b><br />
+			.:: Google, as a third party vendor, uses cookies to serve ads on www.jomfun.com.<br />
+			.:: Google’s use of the DART cookie enables it to serve ads to users based on their visit to www.jomfun.com and other sites on the Internet.<br />
+			.:: Users may opt out of the use of the DART cookie by visiting the Google ad and content network privacy policy at the following URL – http://www.google.com/privacy_ads.html</p>
+			<p>Some of our advertising partners may use cookies and web beacons on our site. Our advertising partners include ….<br />
+			Google Adsense</p>
+			<p>These third-party ad servers or ad networks use technology to the advertisements and links that appear on www.jomfun.com send directly to your browsers. They automatically receive your IP address when this occurs. Other technologies ( such as cookies, JavaScript, or Web Beacons ) may also be used by the third-party ad networks to measure the effectiveness of their advertisements and / or to personalize the advertising content that you see.</p>
+			<p>www.jomfun.com has no access to or control over these cookies that are used by third-party advertisers.</p>
+			<p>You should consult the respective privacy policies of these third-party ad servers for more detailed information on their practices as well as for instructions about how to opt-out of certain practices. www.klfoodie.com’s privacy policy does not apply to, and we cannot control the activities of, such other advertisers or web sites.</p>
+			<p>If you wish to disable cookies, you may do so through your individual browser options. More detailed information about cookie management with specific web browsers can be found at the browsers’ respective websites.</p>
+			<p>&nbsp;</p>
 
-			
 		</div><!-- .entry-content /-->
 
 		

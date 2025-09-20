@@ -223,7 +223,7 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 @include('welcome.navtop')
 
 <div class="stream-item stream-item-top-wrapper"><div class="stream-item-top"></div></div><!-- .tie-col /--><div class="stream-item stream-item-below-header"><div id="billboardSpace" style="text-align:center; padding-top: 10px; padding-bottom: 10px;">
-	<div id="billboardSpaceLabel" style="padding-top: 5px;font-size: small; color: #888;">Advertisement</div>
+	<!-- <div id="billboardSpaceLabel" style="padding-top: 5px;font-size: small; color: #888;">Advertisement</div> -->
 	<!-- /43893936/KLF_DesktopBillboard -->
 	<div id='div-gpt-ad-1683022485054-0' style='min-width: 728px; min-height: 90px;'>
 		<script>
@@ -247,7 +247,7 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 </div>
 
 <div id="leaderboardSpace" style="text-align:center; padding-top: 10px; padding-bottom: 10px;">
-	<div id="leaderboardSpaceLabel" style="padding-top: 5px;font-size: small; color: #888;">Advertisement</div>
+	<!-- <div id="leaderboardSpaceLabel" style="padding-top: 5px;font-size: small; color: #888;">Advertisement</div> -->
 	<!-- /43893936/KLF_MobileLeaderboard -->
 	<div id='div-gpt-ad-1683022745852-0' style='min-width: 320px; min-height: 50px;'>
 	<script>
@@ -278,7 +278,9 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 		
 	<header class="entry-header-outer">
 
-		<nav id="breadcrumb"><a href="https://klfoodie.com/"><span class="tie-icon-home" aria-hidden="true"></span> Home</a><em class="delimiter">/</em><span class="current">Contact Us</span></nav><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","@id":"#Breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Home","@id":"https:\/\/klfoodie.com\/"}}]}</script>
+		<nav id="breadcrumb"><a href="{{ url('/') }}">
+					<i class="fa fa-home"></i> Home
+				</a><em class="delimiter">/</em><span class="current">Contact Us</span></nav><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","@id":"#Breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Home","@id":"https:\/\/klfoodie.com\/"}}]}</script>
 		<div class="entry-header">
 			<h1 class="post-title entry-title">Contact Us</h1>
 		</div><!-- .entry-header /-->
