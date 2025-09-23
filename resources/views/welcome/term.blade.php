@@ -165,11 +165,6 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 	}
 })('//klfoodie.com/?wordfence_lh=1&hid=1CD3761E4934C4B6A6813F7BE0F0DC5A');
 </script>	<style>img#wpstats{display:none}</style>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="theme-color" content="#294dffff " /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="icon" href="https://cdn.klfoodie.com/2023/01/kl-foodies.png" sizes="32x32" />
-<link rel="icon" href="https://cdn.klfoodie.com/2023/01/kl-foodies.png" sizes="192x192" />
-<link rel="apple-touch-icon" href="https://cdn.klfoodie.com/2023/01/kl-foodies.png" />
-<meta name="msapplication-TileImage" content="https://cdn.klfoodie.com/2023/01/kl-foodies.png" />
 		<style type="text/css" id="wp-custom-css">
 			.dable-widget {
     display: none;

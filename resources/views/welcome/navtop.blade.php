@@ -1,4 +1,12 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="theme-color" content="#294dffff" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="{{ asset('image/jomfun/J.png') }}" sizes="32x32" />
+<link rel="icon" href="{{ asset('image/jomfun/J.png') }}" sizes="192x192" />
+<link rel="apple-touch-icon" href="{{ asset('image/jomfun/J.png') }}" />
+<meta name="msapplication-TileImage" content="{{ asset('image/jomfun/J.png') }}" />
+
 <header id="theme-header" class="theme-header header-layout-1 main-nav-light main-nav-default-light main-nav-below has-stream-item top-nav-active top-nav-light top-nav-default-light top-nav-above is-stretch-header has-normal-width-logo mobile-header-default">	
 	<nav id="top-nav"  class="has-date top-nav header-nav" aria-label="Secondary Navigation">
 		<div class="container">
