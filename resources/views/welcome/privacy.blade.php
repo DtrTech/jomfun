@@ -187,159 +187,156 @@
 		<script src="https://js.rfp.fout.jp/rfp-display.js"></script>
 		<script type="text/javascript">RFP.Display.Default.run()</script>
 		<div class="background-overlay">
-
 			<div id="tie-container" class="site tie-container">
-
-				
 				<div id="tie-wrapper">
 
-					
-		@include('welcome.navtop')
+					@include('welcome.navtop')
 
-		<div class="stream-item stream-item-top-wrapper"><div class="stream-item-top"></div></div><!-- .tie-col /--><div class="stream-item stream-item-below-header"><div id="billboardSpace" style="text-align:center; padding-top: 10px; padding-bottom: 10px;">
-			<!-- <div id="billboardSpaceLabel" style="padding-top: 5px;font-size: small; color: #888;">Advertisement</div> -->
-			<!-- /43893936/KLF_DesktopBillboard -->
-			<div id='div-gpt-ad-1683022485054-0' style='min-width: 728px; min-height: 90px;'>
-				<script>
-					if(screen.width < 500 || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
-						document.getElementById('billboardSpace').style.visibility = 'hidden';
-						document.getElementById('billboardSpace').style.paddingTop = '0px';
-						document.getElementById('billboardSpace').style.paddingBottom = '0px';
-						document.getElementById('billboardSpaceLabel').style.paddingTop = "0px";
-						document.getElementById('billboardSpaceLabel').style.maxHeight = '0px';
-						document.getElementById('div-gpt-ad-1683022485054-0').style.minWidth = '0px';
-						document.getElementById('div-gpt-ad-1683022485054-0').style.minHeight = '0px';
-					}
-					else{
-						googletag.cmd.push(function() { 
-							googletag.defineSlot('/43893936/KLF_DesktopBillboard', [[970, 250], [1, 1], [728, 90]], 'div-gpt-ad-1683022485054-0').addService(googletag.pubads());	
-							googletag.display('div-gpt-ad-1683022485054-0'); 
-						});
-					}
-				</script>
-			</div>
-		</div>
+					<div class="stream-item stream-item-top-wrapper"><div class="stream-item-top"></div></div><div class="stream-item stream-item-below-header"><div id="billboardSpace" style="text-align:center; padding-top: 10px; padding-bottom: 10px;">
+						<div id='div-gpt-ad-1683022485054-0' style='min-width: 728px; min-height: 90px;'>
+							<script>
+								if(screen.width < 500 || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
+									document.getElementById('billboardSpace').style.visibility = 'hidden';
+									document.getElementById('billboardSpace').style.paddingTop = '0px';
+									document.getElementById('billboardSpace').style.paddingBottom = '0px';
+									document.getElementById('billboardSpaceLabel').style.paddingTop = "0px";
+									document.getElementById('billboardSpaceLabel').style.maxHeight = '0px';
+									document.getElementById('div-gpt-ad-1683022485054-0').style.minWidth = '0px';
+									document.getElementById('div-gpt-ad-1683022485054-0').style.minHeight = '0px';
+								}
+								else{
+									googletag.cmd.push(function() { 
+										googletag.defineSlot('/43893936/KLF_DesktopBillboard', [[970, 250], [1, 1], [728, 90]], 'div-gpt-ad-1683022485054-0').addService(googletag.pubads());	
+										googletag.display('div-gpt-ad-1683022485054-0'); 
+									});
+								}
+							</script>
+						</div>
+					</div>
+					<div id="leaderboardSpace" style="text-align:center; padding-top: 10px; padding-bottom: 10px;">
+						<div id='div-gpt-ad-1683022745852-0' style='min-width: 320px; min-height: 50px;'>
+							<script>
+								if(screen.width < 500 || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
+									googletag.cmd.push(function() { 
+										googletag.defineSlot('/43893936/KLF_MobileLeaderboard', [320, 50], 'div-gpt-ad-1683022745852-0').addService(googletag.pubads());
+										googletag.display('div-gpt-ad-1683022745852-0'); 
+									});
+								}
+								else{
+									document.getElementById('leaderboardSpace').style.visibility = 'hidden';
+									document.getElementById('leaderboardSpace').style.paddingTop = '0px';
+									document.getElementById('leaderboardSpace').style.paddingBottom = '0px';
+									document.getElementById('leaderboardSpaceLabel').style.paddingTop = "0px";
+									document.getElementById('leaderboardSpaceLabel').style.maxHeight = '0px';
+									document.getElementById('div-gpt-ad-1683022745852-0').style.minWidth  = '0px';
+									document.getElementById('div-gpt-ad-1683022745852-0').style.minHeight = '0px';
+								}
+							</script>
+						</div>
+					</div>
+				</div>
+				<div id="content" class="site-content container">
+					<div id="main-content-row" class="tie-row main-content-row">
+						<div class="main-content tie-col-md-8 tie-col-xs-12" role="main">
+							<article id="the-post" class="container-wrapper post-content">
+								<header class="entry-header-outer">
+									<nav id="breadcrumb">
+										<a href="{{ url('/') }}">
+											<i class="fa fa-home"></i> Home
+										</a>
+										<em class="delimiter">/</em>
+										<span class="current">Privacy Policy</span>
+									</nav>
+									<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","@id":"#Breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Home","@id":"https:\/\/klfoodie.com\/"}}]}</script>
+									<div class="entry-header">
+										<h1 class="post-title entry-title">Privacy Policy</h1>
+									</div>
+								</header>
+								<div itemprop="articleBody" class="entry-content entry clearfix">
+									<p>&nbsp;</p>
+									<p>Affiliate Disclosure, click <a href=""><em>here</em></a>.</p>
+									<p><b>Privacy Policy for www.jomfun.com</b></p>
+									<p>If you require any more information or have any questions about our privacy policy, please feel free to contact us by email at hellojomfun@gmail.com.</p>
+									<p>At www.jomfun.com, the privacy of our visitors is of extreme importance to us. This privacy policy document outlines the types of personal information is received and collected by www.jomfun.com and how it is used.</p>
+									<p><b>Log Files</b><br />
+									Like many other Web sites, www.jomfun.com makes use of log files. The information inside the log files includes internet protocol ( IP ) addresses, type of browser, Internet Service Provider ( ISP ), date/time stamp, referring/exit pages, and number of clicks to analyze trends, administer the site, track user’s movement around the site, and gather demographic information. IP addresses, and other such information are not linked to any information that is personally identifiable.</p>
+									<p><b>Cookies and Web Beacons</b><br />
+									www.jomfun.com does use cookies to store information about visitors preferences, record user-specific information on which pages the user access or visit, customize Web page content based on visitors browser type or other information that the visitor sends via their browser.</p>
+									<p><b>DoubleClick DART Cookie</b><br />
+									.:: Google, as a third party vendor, uses cookies to serve ads on www.jomfun.com.<br />
+									.:: Google’s use of the DART cookie enables it to serve ads to users based on their visit to www.jomfun.com and other sites on the Internet.<br />
+									.:: Users may opt out of the use of the DART cookie by visiting the Google ad and content network privacy policy at the following URL – http://www.google.com/privacy_ads.html</p>
+									<p>Some of our advertising partners may use cookies and web beacons on our site. Our advertising partners include ….<br />
+									Google Adsense</p>
+									<p>These third-party ad servers or ad networks use technology to the advertisements and links that appear on www.jomfun.com send directly to your browsers. They automatically receive your IP address when this occurs. Other technologies ( such as cookies, JavaScript, or Web Beacons ) may also be used by the third-party ad networks to measure the effectiveness of their advertisements and / or to personalize the advertising content that you see.</p>
+									<p>www.jomfun.com has no access to or control over these cookies that are used by third-party advertisers.</p>
+									<p>You should consult the respective privacy policies of these third-party ad servers for more detailed information on their practices as well as for instructions about how to opt-out of certain practices. www.klfoodie.com’s privacy policy does not apply to, and we cannot control the activities of, such other advertisers or web sites.</p>
+									<p>If you wish to disable cookies, you may do so through your individual browser options. More detailed information about cookie management with specific web browsers can be found at the browsers’ respective websites.</p>
+									<p>&nbsp;</p>
+								</div>
+							</article>
+							<div class="stream-item stream-item-below-post"></div>
+							<div class="post-components"></div>
+						</div>
 
-		<div id="leaderboardSpace" style="text-align:center; padding-top: 10px; padding-bottom: 10px;">
-			<!-- <div id="leaderboardSpaceLabel" style="padding-top: 5px;font-size: small; color: #888;">Advertisement</div> -->
-			<!-- /43893936/KLF_MobileLeaderboard -->
-			<div id='div-gpt-ad-1683022745852-0' style='min-width: 320px; min-height: 50px;'>
-			<script>
-				if(screen.width < 500 || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
-					googletag.cmd.push(function() { 
-						googletag.defineSlot('/43893936/KLF_MobileLeaderboard', [320, 50], 'div-gpt-ad-1683022745852-0').addService(googletag.pubads());
-						googletag.display('div-gpt-ad-1683022745852-0'); 
-					});
-				}
-				else{
-					document.getElementById('leaderboardSpace').style.visibility = 'hidden';
-					document.getElementById('leaderboardSpace').style.paddingTop = '0px';
-					document.getElementById('leaderboardSpace').style.paddingBottom = '0px';
-					document.getElementById('leaderboardSpaceLabel').style.paddingTop = "0px";
-					document.getElementById('leaderboardSpaceLabel').style.maxHeight = '0px';
-					document.getElementById('div-gpt-ad-1683022745852-0').style.minWidth  = '0px';
-					document.getElementById('div-gpt-ad-1683022745852-0').style.minHeight = '0px';
-				}
-			</script>
-			</div>
-		</div></div><div id="content" class="site-content container"><div id="main-content-row" class="tie-row main-content-row">
+						@include('welcome.sidebar')
 
-		<div class="main-content tie-col-md-8 tie-col-xs-12" role="main">
+					</div>
+				</div>
 
-			<article id="the-post" class="container-wrapper post-content">
-
-			<header class="entry-header-outer">
-
-				<nav id="breadcrumb"><a href="{{ url('/') }}">
-							<i class="fa fa-home"></i> Home
-						</a><em class="delimiter">/</em><span class="current">Privacy Policy</span></nav><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","@id":"#Breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Home","@id":"https:\/\/klfoodie.com\/"}}]}</script>
-				<div class="entry-header">
-					<h1 class="post-title entry-title">Privacy Policy</h1>
-				</div><!-- .entry-header /-->
-
-			</header><!-- .entry-header-outer /-->
-
-				<div itemprop="articleBody" class="entry-content entry clearfix">
-
-					
-					<p>&nbsp;</p>
-					<p>Affiliate Disclosure, click <a href=""><em>here</em></a>.</p>
-					<p><b>Privacy Policy for www.jomfun.com</b></p>
-					<p>If you require any more information or have any questions about our privacy policy, please feel free to contact us by email at hellojomfun@gmail.com.</p>
-					<p>At www.jomfun.com, the privacy of our visitors is of extreme importance to us. This privacy policy document outlines the types of personal information is received and collected by www.jomfun.com and how it is used.</p>
-					<p><b>Log Files</b><br />
-					Like many other Web sites, www.jomfun.com makes use of log files. The information inside the log files includes internet protocol ( IP ) addresses, type of browser, Internet Service Provider ( ISP ), date/time stamp, referring/exit pages, and number of clicks to analyze trends, administer the site, track user’s movement around the site, and gather demographic information. IP addresses, and other such information are not linked to any information that is personally identifiable.</p>
-					<p><b>Cookies and Web Beacons</b><br />
-					www.jomfun.com does use cookies to store information about visitors preferences, record user-specific information on which pages the user access or visit, customize Web page content based on visitors browser type or other information that the visitor sends via their browser.</p>
-					<p><b>DoubleClick DART Cookie</b><br />
-					.:: Google, as a third party vendor, uses cookies to serve ads on www.jomfun.com.<br />
-					.:: Google’s use of the DART cookie enables it to serve ads to users based on their visit to www.jomfun.com and other sites on the Internet.<br />
-					.:: Users may opt out of the use of the DART cookie by visiting the Google ad and content network privacy policy at the following URL – http://www.google.com/privacy_ads.html</p>
-					<p>Some of our advertising partners may use cookies and web beacons on our site. Our advertising partners include ….<br />
-					Google Adsense</p>
-					<p>These third-party ad servers or ad networks use technology to the advertisements and links that appear on www.jomfun.com send directly to your browsers. They automatically receive your IP address when this occurs. Other technologies ( such as cookies, JavaScript, or Web Beacons ) may also be used by the third-party ad networks to measure the effectiveness of their advertisements and / or to personalize the advertising content that you see.</p>
-					<p>www.jomfun.com has no access to or control over these cookies that are used by third-party advertisers.</p>
-					<p>You should consult the respective privacy policies of these third-party ad servers for more detailed information on their practices as well as for instructions about how to opt-out of certain practices. www.klfoodie.com’s privacy policy does not apply to, and we cannot control the activities of, such other advertisers or web sites.</p>
-					<p>If you wish to disable cookies, you may do so through your individual browser options. More detailed information about cookie management with specific web browsers can be found at the browsers’ respective websites.</p>
-					<p>&nbsp;</p>
-
-				</div><!-- .entry-content /-->
-
-				
-			</article><!-- #the-post /-->
-
-			<div class="stream-item stream-item-below-post"></div>
-			<div class="post-components">
-
-				
-			</div><!-- .post-components /-->
-
-			
-		</div><!-- .main-content -->
-
-
-			@include('welcome.sidebar')
-			</div><!-- .main-content-row /--></div><!-- #content /-->
-		@include('welcome.footer')
-
+				@include('welcome.footer')
 
 				<a id="go-to-top" class="go-to-top-button" href="#go-to-tie-body">
 					<span class="tie-icon-angle-up"></span>
 					<span class="screen-reader-text">Back to top button</span>
 				</a>
-			
-				</div><!-- #tie-wrapper /-->
-
-				
+			</div>	
 			<aside class=" side-aside normal-side dark-skin dark-widgetized-area appear-from-right" aria-label="Secondary Sidebar" style="visibility: hidden;">
 				<div data-height="100%" class="side-aside-wrapper has-custom-scroll">
-
 					<a href="#" class="close-side-aside remove big-btn light-btn">
 						<span class="screen-reader-text">Close</span>
-					</a><!-- .close-side-aside /-->
-
-
-					
-						<div id="mobile-container">
-
-							
-							<div id="mobile-menu" class="hide-menu-icons">
-													</div><!-- #mobile-menu /-->
-
-													<div id="mobile-social-icons" class="social-icons-widget solid-social-icons">
-									<ul><li class="social-icons-item"><a class="social-link facebook-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.facebook.com/klfoodie"><span class="tie-social-icon tie-icon-facebook"></span><span class="screen-reader-text">Facebook</span></a></li><li class="social-icons-item"><a class="social-link twitter-social-icon" rel="external noopener nofollow" target="_blank" href="https://twitter.com/klfoodie"><span class="tie-social-icon tie-icon-twitter"></span><span class="screen-reader-text">Twitter</span></a></li><li class="social-icons-item"><a class="social-link youtube-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.youtube.com/c/foodie"><span class="tie-social-icon tie-icon-youtube"></span><span class="screen-reader-text">YouTube</span></a></li><li class="social-icons-item"><a class="social-link instagram-social-icon" rel="external noopener nofollow" target="_blank" href="http://www.instagram.com/kl.foodie"><span class="tie-social-icon tie-icon-instagram"></span><span class="screen-reader-text">Instagram</span></a></li><li class="social-icons-item"><a class="social-link telegram-social-icon" rel="external noopener nofollow" target="_blank" href="https://t.me//foodieorg"><span class="tie-social-icon tie-icon-paper-plane"></span><span class="screen-reader-text">Telegram</span></a></li></ul> 
-								</div><!-- #mobile-social-icons /-->
-								
-						</div><!-- #mobile-container /-->
-					
-
-					
-				</div><!-- .side-aside-wrapper /-->
-			</aside><!-- .side-aside /-->
+					</a>
+					<div id="mobile-container">
+						<div id="mobile-menu" class="hide-menu-icons"></div>
+						<div id="mobile-social-icons" class="social-icons-widget solid-social-icons">
+							<ul>
+								<li class="social-icons-item">
+									<a class="social-link facebook-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.facebook.com/klfoodie">
+										<span class="tie-social-icon tie-icon-facebook"></span><span class="screen-reader-text">Facebook</span>
+									</a>
+								</li>
+								<li class="social-icons-item">
+									<a class="social-link twitter-social-icon" rel="external noopener nofollow" target="_blank" href="https://twitter.com/klfoodie">
+										<span class="tie-social-icon tie-icon-twitter"></span>
+										<span class="screen-reader-text">Twitter</span>
+									</a>
+								</li>
+								<li class="social-icons-item">
+									<a class="social-link youtube-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.youtube.com/c/foodie">
+										<span class="tie-social-icon tie-icon-youtube"></span>
+										<span class="screen-reader-text">YouTube</span>
+									</a>
+								</li>
+								<li class="social-icons-item">
+									<a class="social-link instagram-social-icon" rel="external noopener nofollow" target="_blank" href="http://www.instagram.com/kl.foodie">
+										<span class="tie-social-icon tie-icon-instagram"></span>
+										<span class="screen-reader-text">Instagram</span>
+									</a>
+								</li>
+								<li class="social-icons-item">
+									<a class="social-link telegram-social-icon" rel="external noopener nofollow" target="_blank" href="https://t.me//foodieorg">
+										<span class="tie-social-icon tie-icon-paper-plane"></span>
+										<span class="screen-reader-text">Telegram</span>
+									</a>
+								</li>
+							</ul> 
+						</div>
+					</div>
+				</div>
+			</aside>
 
 			
-			</div><!-- #tie-container /-->
-		</div><!-- .background-overlay /-->
+		</div>
 
 		<script type="speculationrules">
 		{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/jannah\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
