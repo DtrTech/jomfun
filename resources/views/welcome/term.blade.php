@@ -305,43 +305,11 @@ var pysOptions = {"staticEvents":{"facebook":{"init_event":[{"delay":0,"type":"s
 	@include('welcome.sidebar')
 	</div><!-- .main-content-row /--></div><!-- #content /-->
 @include('welcome.footer')
-
-
-		<a id="go-to-top" class="go-to-top-button" href="#go-to-tie-body">
-			<span class="tie-icon-angle-up"></span>
-			<span class="screen-reader-text">Back to top button</span>
-		</a>
 	
 		</div><!-- #tie-wrapper /-->
 
-		
-	<aside class=" side-aside normal-side dark-skin dark-widgetized-area appear-from-right" aria-label="Secondary Sidebar" style="visibility: hidden;">
-		<div data-height="100%" class="side-aside-wrapper has-custom-scroll">
+	@include('welcome.secondary_sidebar')
 
-			<a href="#" class="close-side-aside remove big-btn light-btn">
-				<span class="screen-reader-text">Close</span>
-			</a><!-- .close-side-aside /-->
-
-
-			
-				<div id="mobile-container">
-
-					
-					<div id="mobile-menu" class="hide-menu-icons">
-											</div><!-- #mobile-menu /-->
-
-											<div id="mobile-social-icons" class="social-icons-widget solid-social-icons">
-							<ul><li class="social-icons-item"><a class="social-link facebook-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.facebook.com/klfoodie"><span class="tie-social-icon tie-icon-facebook"></span><span class="screen-reader-text">Facebook</span></a></li><li class="social-icons-item"><a class="social-link twitter-social-icon" rel="external noopener nofollow" target="_blank" href="https://twitter.com/klfoodie"><span class="tie-social-icon tie-icon-twitter"></span><span class="screen-reader-text">Twitter</span></a></li><li class="social-icons-item"><a class="social-link youtube-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.youtube.com/c/foodie"><span class="tie-social-icon tie-icon-youtube"></span><span class="screen-reader-text">YouTube</span></a></li><li class="social-icons-item"><a class="social-link instagram-social-icon" rel="external noopener nofollow" target="_blank" href="http://www.instagram.com/kl.foodie"><span class="tie-social-icon tie-icon-instagram"></span><span class="screen-reader-text">Instagram</span></a></li><li class="social-icons-item"><a class="social-link telegram-social-icon" rel="external noopener nofollow" target="_blank" href="https://t.me//foodieorg"><span class="tie-social-icon tie-icon-paper-plane"></span><span class="screen-reader-text">Telegram</span></a></li></ul> 
-						</div><!-- #mobile-social-icons /-->
-						
-				</div><!-- #mobile-container /-->
-			
-
-			
-		</div><!-- .side-aside-wrapper /-->
-	</aside><!-- .side-aside /-->
-
-	
 	</div><!-- #tie-container /-->
 </div><!-- .background-overlay /-->
 

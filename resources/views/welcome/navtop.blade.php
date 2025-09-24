@@ -97,14 +97,7 @@
 						</div>					
 					</div>
 
-					<ul class="components">		
-						<!-- <li class="search-compact-icon menu-item custom-menu-link">
-							<a href="#" class="tie-search-trigger">
-								<i class="fas fa-search"></i>
-								<span class="screen-reader-text">Search for</span>
-							</a>
-						</li> -->
-
+					<ul class="components">
 						<li class="social-icons-item">
 							<a class="social-link telegram-social-icon" rel="external noopener nofollow" target="_blank" href="https://t.me/">
 								<i class="fab fa-telegram-plane"></i>
@@ -128,7 +121,7 @@
 
 						<li class="social-icons-item">
 							<a class="social-link twitter-social-icon" rel="external noopener nofollow" target="_blank" href="https://twitter.com/">
-								<i class="fab fa-x-twitter"></i> <!-- (new FA6 name) -->
+								<i class="fab fa-x-twitter"></i>
 								<span class="screen-reader-text">Twitter</span>
 							</a>
 						</li>
