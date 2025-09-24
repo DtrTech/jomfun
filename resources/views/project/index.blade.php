@@ -66,7 +66,15 @@
                                 <td>{{$row->author??''}}</td>
                                 <td>{{$row->publish_time??''}}</td>
                                 <td>{{$row->category->category_name??''}}</td>
-                                <td>{{$row->status??''}}</td>
+                                <td>
+                                    @if(strtolower($row->status ?? '') === 'active')
+                                        <span style="color: green;">{{ ucfirst($row->status) }}</span>
+                                    @elseif(strtolower($row->status ?? '') === 'inactive')
+                                        <span style="color: red;">{{ ucfirst($row->status) }}</span>
+                                    @else
+                                        {{ ucfirst($row->status ?? '') }}
+                                    @endif
+                                </td>
                                 <td class="text-center">
                                     <ul class="table-controls">
                                         <li>

@@ -20,8 +20,8 @@ class WelcomeController extends Controller
 {
     public function welcome()
 {
-    // Paginate instead of limit
     $projects = Project::select('id', 'title', 'author', 'publish_time', 'project_image', 'author_image', 'category_name')
+        ->where('status', 'active')
         ->orderBy('publish_time', 'desc')
         ->paginate(10)
         ->through(function ($project) {
@@ -35,6 +35,7 @@ class WelcomeController extends Controller
         ->get();
 
     $randomProjects = Project::inRandomOrder()
+        ->where('status', 'active')
         ->limit(5)
         ->get()
         ->map(function ($project) {
@@ -82,6 +83,7 @@ class WelcomeController extends Controller
         
         $projects = Project::select('id', 'title', 'author', 'publish_time', 'sub_title', 'project_image')
             ->where('category_name', $category_name)
+            ->where('status', 'active')
             ->orderBy('publish_time', 'desc')
             ->paginate(5) // use pagination instead of limit
             ->through(function ($project) {
@@ -92,6 +94,7 @@ class WelcomeController extends Controller
             });
 
         $randomProjects = Project::inRandomOrder()
+            ->where('status', 'active')
             ->limit(5)
             ->get()
             ->map(function ($project) {
@@ -121,6 +124,7 @@ class WelcomeController extends Controller
         $id = $project->id;
 
         $randomProjects = Project::inRandomOrder()
+            ->where('status', 'active')
             ->limit(5)
             ->get()
             ->map(function ($project) {
@@ -140,6 +144,7 @@ class WelcomeController extends Controller
             ->get();
 
         $randomProjects = Project::inRandomOrder()
+            ->where('status', 'active')
             ->limit(5)
             ->get()
             ->map(function ($project) {
@@ -159,6 +164,7 @@ class WelcomeController extends Controller
             ->get();
 
         $randomProjects = Project::inRandomOrder()
+            ->where('status', 'active')
             ->limit(5)
             ->get()
             ->map(function ($project) {
@@ -178,6 +184,7 @@ class WelcomeController extends Controller
             ->get();
 
         $randomProjects = Project::inRandomOrder()
+            ->where('status', 'active')
             ->limit(5)
             ->get()
             ->map(function ($project) {
@@ -197,6 +204,7 @@ class WelcomeController extends Controller
             ->get();
 
         $randomProjects = Project::inRandomOrder()
+            ->where('status', 'active')
             ->limit(5)
             ->get()
             ->map(function ($project) {
