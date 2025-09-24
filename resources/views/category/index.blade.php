@@ -37,7 +37,7 @@
                         <thead>
                             <tr>
                                 <th class="checkbox-column dt-no-sorting text-center">#</th>
-                                <th>Page SEO</th>
+                                <!-- <th>Page SEO</th> -->
                                 <th>Name</th>
                                 <th>Created At</th>
                                 <th class="text-center dt-no-sorting">Actions</th>
@@ -47,9 +47,9 @@
                             @foreach($categories as $num => $row)
                             <tr>
                                 <td class="text-center"> {{$num+1}} </td>
-                                <td style="max-width: 500px; white-space: normal; word-wrap: break-word;">
+                                <!-- <td style="max-width: 500px; white-space: normal; word-wrap: break-word;">
                                     {{ \Illuminate\Support\Str::words(strip_tags($row->page_seo), 50, '...') }}
-                                </td>
+                                </td> -->
                                 <td>{{$row->category_name??''}}</td>
                                 <td>{{$row->created_at??''}}</td>
                                 <td class="text-center">
