@@ -254,7 +254,7 @@
 											<span class="meta-item meta-author-wrapper meta-author-49">
 												<span class="meta-author-avatar">
 													<a href="">
-														<img alt='Photo of {{ $project->author }}' src="{{ $project->author_image ? asset($project->author_image) : 'https://secure.gravatar.com/avatar/17bbc2d36ab2cd21146949c7e05e9f1d50595287eeeb4c8f37faf69d727634e1?s=140&r=g' }}" srcset='https://secure.gravatar.com/avatar/17bbc2d36ab2cd21146949c7e05e9f1d50595287eeeb4c8f37faf69d727634e1?s=280&#038;r=g 2x' class='avatar avatar-140 photo' height='140' width='140' loading='lazy' decoding='async'/>
+														<img alt='Photo of {{ $project->author }}' src="{{ $project->author_image ? asset($project->author_image) : 'https://secure.gravatar.com/avatar/17bbc2d36ab2cd21146949c7e05e9f1d50595287eeeb4c8f37faf69d727634e1?s=140&r=g' }}" srcset="{{ $project->author_image ? asset($project->author_image) : 'https://secure.gravatar.com/avatar/17bbc2d36ab2cd21146949c7e05e9f1d50595287eeeb4c8f37faf69d727634e1?s=140&r=g' }}" class='avatar avatar-140 photo' height='140' width='140' loading='lazy' decoding='async'/>
 													</a>
 												</span>
 												<span class="meta-author">
@@ -306,7 +306,7 @@
 													<span class="meta-item meta-author-wrapper meta-author-49">
 														<span class="meta-author-avatar">
 															<a href="">
-																<img alt='Photo of {{ $project->author }}' src="{{ $project->author_image ? asset($project->author_image) : 'https://secure.gravatar.com/avatar/17bbc2d36ab2cd21146949c7e05e9f1d50595287eeeb4c8f37faf69d727634e1?s=140&r=g' }}" srcset='https://secure.gravatar.com/avatar/17bbc2d36ab2cd21146949c7e05e9f1d50595287eeeb4c8f37faf69d727634e1?s=280&#038;r=g 2x' class='avatar avatar-140 photo' height='140' width='140' loading='lazy' decoding='async'/>
+																<img alt='Photo of {{ $project->author }}' src="{{ $project->author_image ? asset($project->author_image) : 'https://secure.gravatar.com/avatar/17bbc2d36ab2cd21146949c7e05e9f1d50595287eeeb4c8f37faf69d727634e1?s=140&r=g' }}" srcset="{{ $project->author_image ? asset($project->author_image) : 'https://secure.gravatar.com/avatar/17bbc2d36ab2cd21146949c7e05e9f1d50595287eeeb4c8f37faf69d727634e1?s=140&r=g' }}" class='avatar avatar-140 photo' height='140' width='140' loading='lazy' decoding='async'/>
 															</a>
 														</span>
 														<span class="meta-author">
