@@ -80,21 +80,21 @@
                             <div class="col-lg-12 col-12">
                                 <div class="form-group">
                                     <label>Project Title</label>
-                                    <textarea id="title" name="title" class="form-control" rows="2" placeholder="Enter project title...">{{ $project->title ?? '' }}</textarea>
+                                    <textarea id="title" name="title" class="form-control" rows="2" placeholder="Enter project title..." required>{{ $project->title ?? '' }} </textarea>
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-12">
                                 <div class="form-group">
                                     <label>Sub Title</label>
-                                    <textarea id="sub_title" name="sub_title" class="form-control" rows="2" placeholder="Enter sub title...">{{ $project->sub_title ?? '' }}</textarea>
+                                    <textarea id="sub_title" name="sub_title" class="form-control" rows="2" placeholder="Enter sub title..." required>{{ $project->sub_title ?? '' }}</textarea>
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-12">
                                 <div class="form-group">
                                     <label>Description</label>
-                                    <textarea id="description" name="description" class="form-control summernote" rows="10" placeholder="Enter description...">{{ $project->description ?? '' }}</textarea>
+                                    <textarea id="description" name="description" class="form-control summernote" rows="10" placeholder="Enter description..." required>{{ $project->description ?? '' }}</textarea>
                                 </div>
                             </div>
 
