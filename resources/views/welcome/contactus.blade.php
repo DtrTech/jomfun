@@ -2,6 +2,11 @@
 <!DOCTYPE html>
 <html lang="en-US" class="" data-skin="light">
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="{{ asset('image/jomfun/J.png') }}" sizes="32x32" />
+		<link rel="icon" href="{{ asset('image/jomfun/J.png') }}" sizes="192x192" />
+		<link rel="apple-touch-icon" href="{{ asset('image/jomfun/J.png') }}" />
+		<meta name="msapplication-TileImage" content="{{ asset('image/jomfun/J.png') }}" />
 		<meta charset="UTF-8" />
 		<link rel="profile" href="https://gmpg.org/xfn/11" />
 		<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
