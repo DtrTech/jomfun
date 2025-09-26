@@ -5,7 +5,6 @@
 		$setup = DB::table('setups')->first();
 		$seo_header = $setup ? $setup->seo_header : '';
 		?>
-
 		<meta charset="UTF-8">
 		<link rel="profile" href="https://gmpg.org/xfn/11">
 		<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'>

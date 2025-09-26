@@ -1,11 +1,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jomfun</title>
 
 <!-- Favicon -->
-<link rel="icon" href="{{ asset('image/jomfun/J.png') }}" sizes="32x32">
-<link rel="icon" href="{{ asset('image/jomfun/J.png') }}" sizes="192x192">
-<link rel="apple-touch-icon" href="{{ asset('image/jomfun/J.png') }}">
-<meta name="msapplication-TileImage" content="{{ asset('image/jomfun/J.png') }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('image/jomfun/J.png') }}?v=2024">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('image/jomfun/J.png') }}?v=2024">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ asset('image/jomfun/J.png') }}?v=2024">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('image/jomfun/J.png') }}?v=2024">
+<link rel="shortcut icon" href="{{ asset('image/jomfun/favicon.ico') }}?v=2024" type="image/x-icon">
+<meta name="msapplication-TileImage" content="{{ asset('image/jomfun/J.png') }}?v=2024">
 
 <!-- Essential WordPress CSS -->
 <link rel="stylesheet" href="https://klfoodie.com/wp-includes/css/dist/block-library/style.min.css?ver=6.8.2">
