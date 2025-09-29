@@ -41,7 +41,6 @@
                     <div class="row">
                         <form enctype="multipart/form-data" @if (isset($project)) method="post" action="{{ route('project.update',$project->id) }}" @else method="post" action="{{ route('project.store') }}" @endif>
                             @csrf
-
                             <div class="col-lg-12 col-12">
                                 <div class="form-group">
                                     <label>Page SEO</label>
