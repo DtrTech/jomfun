@@ -12,11 +12,11 @@
 <!-- <link rel="stylesheet" href="https://klfoodie.com/wp-includes/css/dist/block-library/style.min.css?ver=6.8.2"> -->
 
 <!-- Theme CSS -->
-<link rel="stylesheet" href="https://klfoodie.com/wp-content/themes/jannah/assets/css/base.min.css?ver=5.4.5">
-<link rel="stylesheet" href="https://klfoodie.com/wp-content/themes/jannah/assets/css/style.min.css?ver=5.4.5">
-<link rel="stylesheet" href="https://klfoodie.com/wp-content/themes/jannah/assets/css/widgets.min.css?ver=5.4.5">
-<link rel="stylesheet" href="https://klfoodie.com/wp-content/themes/jannah/assets/css/helpers.min.css?ver=5.4.5">
-<link rel="stylesheet" href="https://klfoodie.com/wp-content/themes/jannah/assets/css/fontawesome.css?ver=5.4.5">
+<link rel="stylesheet" href="{{ asset('css/jomfun_base.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/jomfun_style.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/jomfun_widgets.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/jomfun_helpers.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/jomfun_fontawesome.css') }}">
 
 <!-- Plugin CSS -->
 <!-- <link rel="stylesheet" href="https://klfoodie.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.1.1">
