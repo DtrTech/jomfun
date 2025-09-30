@@ -140,3 +140,18 @@
 		</nav>
 	</div>
 </header>
+
+
+<script>
+// toggle sidebar
+document.getElementById("mobile-menu-icon").addEventListener("click", function(e) {
+  e.preventDefault();
+  document.getElementById("mobile-sidebar").classList.toggle("active");
+});
+
+// close button
+document.getElementById("close-sidebar").addEventListener("click", function(e) {
+  e.preventDefault();
+  document.getElementById("mobile-sidebar").classList.remove("active");
+});
+</script>

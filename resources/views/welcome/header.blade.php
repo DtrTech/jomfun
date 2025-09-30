@@ -32,8 +32,8 @@
 <meta property="fb:pages" content="112274292745476">
 
 <!-- Essential JavaScript -->
-<!-- <script src="https://klfoodie.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
-<script src="https://klfoodie.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script> -->
+<script src="{{ asset('script/jquery.min.js') }}"></script>
+<script src="{{ asset('script/jquery-migrate.min.js') }}"></script>
 
 <!-- Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109829759-1"></script>
