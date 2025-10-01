@@ -93,23 +93,6 @@
 			@include('welcome.secondary_sidebar')
 
 		</div>
-
-		<div id="autocomplete-suggestions" class="autocomplete-suggestions"></div><div id="is-scroller-outer"><div id="is-scroller"></div></div><div id="fb-root"></div>	<div id="tie-popup-search-desktop" class="tie-popup tie-popup-search-wrap" style="display: none;">
-				<a href="#" class="tie-btn-close remove big-btn light-btn">
-					<span class="screen-reader-text">Close</span>
-				</a>
-				<div class="popup-search-wrap-inner">
-					<div class="live-search-parent pop-up-live-search" data-skin="live-search-popup" aria-label="Search">
-						<form method="get" class="tie-popup-search-form" action="https://klfoodie.com/">
-							<input class="tie-popup-search-input is-ajax-search" inputmode="search" type="text" name="s" title="Search for" autocomplete="off" placeholder="Type and hit Enter" />
-							<button class="tie-popup-search-submit" type="submit">
-								<span class="tie-icon-search tie-search-icon" aria-hidden="true"></span>
-								<span class="screen-reader-text">Search for</span>
-							</button>
-						</form>
-					</div>
-				</div>
-			</div>
 			
 			@include('welcome.footer_script')
 

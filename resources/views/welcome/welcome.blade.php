@@ -145,30 +145,6 @@
 
 			</div>
 		</div>
-		
-		<div class='ai-viewports ai-viewport-1 ai-viewport-2 ai-insert-16-19994033' data-insertion-position='append' data-selector='#div_KLF_HP_Sidebar' data-code='PGRpdiBjbGFzcz0nY29kZS1ibG9jayBjb2RlLWJsb2NrLTE2JyBzdHlsZT0nbWFyZ2luOiA4cHggMDsgY2xlYXI6IGJvdGg7Jz4KPGRpdiBzdHlsZT0idGV4dC1hbGlnbjpjZW50ZXI7cGFkZGluZy10b3A6IDEwcHg7cGFkZGluZy1ib3R0b206IDEwcHg7Ij4KCTxkaXYgc3R5bGU9InBhZGRpbmctdG9wOiA1cHg7Zm9udC1zaXplOiBzbWFsbDsgY29sb3I6ICM4ODg7ICI+QWR2ZXJ0aXNlbWVudDwvZGl2PgoJPCEtLSAvNDM4OTM5MzYvS0xGX0hQX1NpZGViYXIgLS0+Cgk8ZGl2IGlkPSdkaXYtZ3B0LWFkLTE2ODMwMjI1MzQ0NTEtMCcgc3R5bGU9J21pbi13aWR0aDogMzAwcHg7IG1pbi1oZWlnaHQ6IDI1MHB4Oyc+CgkJPHNjcmlwdD4KCQkJaWYoc2NyZWVuLndpZHRoID4gNTAwKXsKCQkJCWdvb2dsZXRhZy5jbWQucHVzaChmdW5jdGlvbigpIHsKCQkJCQlnb29nbGV0YWcuZGVmaW5lU2xvdCgnLzQzODkzOTM2L0tMRl9IUF9TaWRlYmFyJywgW1szMDAsIDI1MF0sIFszMzYsIDI4MF1dLCAnZGl2LWdwdC1hZC0xNjgzMDIyNTM0NDUxLTAnKS5hZGRTZXJ2aWNlKGdvb2dsZXRhZy5wdWJhZHMoKSk7CgkJCQkJZ29vZ2xldGFnLmRpc3BsYXkoJ2Rpdi1ncHQtYWQtMTY4MzAyMjUzNDQ1MS0wJyk7IAoJCQkJfSk7CgkJCX0KCQk8L3NjcmlwdD4KCTwvZGl2Pgo8L2Rpdj48L2Rpdj4K' data-block='16'></div>
-
-		<div id="autocomplete-suggestions" class="autocomplete-suggestions"></div>
-		<div id="is-scroller-outer">
-			<div id="is-scroller"></div>
-		</div>
-		<div id="fb-root"></div>	
-		<div id="tie-popup-search-desktop" class="tie-popup tie-popup-search-wrap" style="display: none;">
-			<a href="#" class="tie-btn-close remove big-btn light-btn">
-				<span class="screen-reader-text">Close</span>
-			</a>
-			<div class="popup-search-wrap-inner">
-				<div class="live-search-parent pop-up-live-search" data-skin="live-search-popup" aria-label="Search">
-					<form method="get" class="tie-popup-search-form" action="">
-						<input class="tie-popup-search-input is-ajax-search" inputmode="search" type="text" name="s" title="Search for" autocomplete="off" placeholder="Type and hit Enter" />
-						<button class="tie-popup-search-submit" type="submit">
-							<span class="tie-icon-search tie-search-icon" aria-hidden="true"></span>
-							<span class="screen-reader-text">Search for</span>
-						</button>
-					</form>
-				</div>
-			</div>
-		</div>
 
 		@include('welcome.footer_script')
 
