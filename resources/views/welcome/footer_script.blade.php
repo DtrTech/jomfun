@@ -113,11 +113,6 @@ _stq.push([ "clickTrackerInit", "139068302", "67755" ]);
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(wf, s);
     })();
-</script>
-<div id='div-gpt-ad-1683023148072-0'>
-<script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1683023148072-0'); });
-</script>
 </div>
 
 <script type="text/javascript" charset="UTF-8">(function(w,d,s,i,c){var f=d.createElement(s);f.type="text/javascript";f.async=true;f.src="https://avd.innity.net/"+i+"/container_"+c+".js";var g=d.getElementsByTagName(s)[0];g.parentNode.insertBefore(f, g);})(window, document, "script", "1043", "64ca241647e7043801000000");</script>

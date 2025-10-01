@@ -24,9 +24,7 @@
 		@include('welcome.header')
 	</head>
 
-	<body data-rsssl=1 id="tie-body" class="archive category category-food category-3 wp-theme-jannah boxed-layout is-percent-width wrapper-has-shadow block-head-2 magazine2 is-thumb-overlay-disabled is-desktop is-header-layout-1 has-header-ad has-header-below-ad sidebar-right has-sidebar hide_banner_below_header hide_breaking_news hide_share_post_bottom hide_post_authorbio hide_post_nav hide_back_top_button aa-prefix-klfoo-">
-		<div id="rfp-ODU0OjIyNjEx"><ins data-rfp-display-adspot-id="ODU0OjIyNjEx" style="display:none"></ins></div>
-		<script type="text/javascript">RFP.Display.Default.run()</script>
+	<body data-rsssl=1 id="tie-body" class="archive category category-food category-3 wp-theme-jannah boxed-layout is-percent-width wrapper-has-shadow block-head-2 magazine2 is-thumb-overlay-disabled is-desktop is-header-layout-1 has-header-ad has-header-below-ad sidebar-right has-sidebar hide_banner_below_header hide_breaking_news hide_share_post_bottom hide_post_authorbio hide_post_nav hide_back_top_button">
 		<div class="background-overlay">
 			<div id="tie-container" class="site tie-container">	
 				<div id="tie-wrapper">
@@ -34,29 +32,7 @@
 					<div class="stream-item stream-item-top-wrapper">
 						<div class="stream-item-top"></div>
 					</div>
-					<div class="stream-item stream-item-below-header">
-						<div id="leaderboardSpace" style="text-align:center; padding-top: 10px; padding-bottom: 10px;">
-							<div id='div-gpt-ad-1683022745852-0' style='min-width: 320px; min-height: 50px;'>
-								<script>
-									if(screen.width < 500 || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
-										googletag.cmd.push(function() { 
-											googletag.defineSlot('/43893936/KLF_MobileLeaderboard', [320, 50], 'div-gpt-ad-1683022745852-0').addService(googletag.pubads());
-											googletag.display('div-gpt-ad-1683022745852-0'); 
-										});
-									}
-									else{
-										document.getElementById('leaderboardSpace').style.visibility = 'hidden';
-										document.getElementById('leaderboardSpace').style.paddingTop = '0px';
-										document.getElementById('leaderboardSpace').style.paddingBottom = '0px';
-										document.getElementById('leaderboardSpaceLabel').style.paddingTop = "0px";
-										document.getElementById('leaderboardSpaceLabel').style.maxHeight = '0px';
-										document.getElementById('div-gpt-ad-1683022745852-0').style.minWidth  = '0px';
-										document.getElementById('div-gpt-ad-1683022745852-0').style.minHeight = '0px';
-									}
-								</script>
-							</div>
-						</div>
-					</div>
+					
 					<div id="content" class="site-content container">
 						<div id="main-content-row" class="tie-row main-content-row">
 							<div class="main-content tie-col-md-8 tie-col-xs-12" role="main">
