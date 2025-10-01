@@ -148,10 +148,6 @@
 		
 		<div class='ai-viewports ai-viewport-1 ai-viewport-2 ai-insert-16-19994033' data-insertion-position='append' data-selector='#div_KLF_HP_Sidebar' data-code='PGRpdiBjbGFzcz0nY29kZS1ibG9jayBjb2RlLWJsb2NrLTE2JyBzdHlsZT0nbWFyZ2luOiA4cHggMDsgY2xlYXI6IGJvdGg7Jz4KPGRpdiBzdHlsZT0idGV4dC1hbGlnbjpjZW50ZXI7cGFkZGluZy10b3A6IDEwcHg7cGFkZGluZy1ib3R0b206IDEwcHg7Ij4KCTxkaXYgc3R5bGU9InBhZGRpbmctdG9wOiA1cHg7Zm9udC1zaXplOiBzbWFsbDsgY29sb3I6ICM4ODg7ICI+QWR2ZXJ0aXNlbWVudDwvZGl2PgoJPCEtLSAvNDM4OTM5MzYvS0xGX0hQX1NpZGViYXIgLS0+Cgk8ZGl2IGlkPSdkaXYtZ3B0LWFkLTE2ODMwMjI1MzQ0NTEtMCcgc3R5bGU9J21pbi13aWR0aDogMzAwcHg7IG1pbi1oZWlnaHQ6IDI1MHB4Oyc+CgkJPHNjcmlwdD4KCQkJaWYoc2NyZWVuLndpZHRoID4gNTAwKXsKCQkJCWdvb2dsZXRhZy5jbWQucHVzaChmdW5jdGlvbigpIHsKCQkJCQlnb29nbGV0YWcuZGVmaW5lU2xvdCgnLzQzODkzOTM2L0tMRl9IUF9TaWRlYmFyJywgW1szMDAsIDI1MF0sIFszMzYsIDI4MF1dLCAnZGl2LWdwdC1hZC0xNjgzMDIyNTM0NDUxLTAnKS5hZGRTZXJ2aWNlKGdvb2dsZXRhZy5wdWJhZHMoKSk7CgkJCQkJZ29vZ2xldGFnLmRpc3BsYXkoJ2Rpdi1ncHQtYWQtMTY4MzAyMjUzNDQ1MS0wJyk7IAoJCQkJfSk7CgkJCX0KCQk8L3NjcmlwdD4KCTwvZGl2Pgo8L2Rpdj48L2Rpdj4K' data-block='16'></div>
 
-		<script type="speculationrules">
-		{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/jannah\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
-		</script>
-
 		<div id="autocomplete-suggestions" class="autocomplete-suggestions"></div>
 		<div id="is-scroller-outer">
 			<div id="is-scroller"></div>

@@ -149,10 +149,7 @@
 
 			</div>
 		</div>
-
-		<script type="speculationrules">
-		{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/jannah\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
-		</script>
+		
 		<div id="autocomplete-suggestions" class="autocomplete-suggestions"></div>
 		<div id="is-scroller-outer">
 			<div id="is-scroller"></div>
