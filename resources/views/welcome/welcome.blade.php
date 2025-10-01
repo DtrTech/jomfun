@@ -17,7 +17,7 @@
 		@include('welcome.header')
 	</head>
 
-	<body data-rsssl=1 id="tie-body" class="home wp-singular page-template-default page page-id-67755 boxed-layout is-percent-width wrapper-has-shadow block-head-2 magazine2 is-thumb-overlay-disabled is-desktop is-header-layout-1 has-header-ad has-header-below-ad has-builder hide_banner_below_header hide_breaking_news hide_share_post_bottom hide_post_authorbio hide_post_nav hide_back_top_button">
+	<body data-rsssl=1 id="tie-body" class="boxed-layout is-percent-width wrapper-has-shadow block-head-2 magazine2 is-thumb-overlay-disabled is-desktop is-header-layout-1 has-header-ad has-header-below-ad has-builder hide_banner_below_header hide_breaking_news hide_share_post_bottom hide_post_authorbio hide_post_nav hide_back_top_button">
 		<script type="text/javascript">.Default.run()</script>
 
 		<div class="background-overlay">

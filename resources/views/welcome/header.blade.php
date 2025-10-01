@@ -7,6 +7,13 @@
 <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('image/jomfun/J.png') }}?v=2024">
 <link rel="shortcut icon" href="{{ asset('image/jomfun/favicon.ico') }}?v=2024" type="image/x-icon">
 <meta name="msapplication-TileImage" content="{{ asset('image/jomfun/J.png') }}?v=2024">
+<title>JomFun | Adventure, Relaxing and Thrilling</title>
+<meta name="description" content="JomFun is your hub for events, lifestyle, and entertainment across Malaysia. Discover concerts, festivals, travel experiences, and more.">
+<meta property="og:site_name" content="JomFun">
+<meta property="og:title" content="JomFun">
+<meta property="og:description" content="Discover JomFun: your hub for events, lifestyle, and entertainment in Malaysia.">
+<meta property="og:image" content="{{ asset('image/jomfun/J.png') }}">
+<link rel="canonical" href="https://jomfun.com">
 
 <!-- Essential WordPress CSS -->
 <!-- <link rel="stylesheet" href="https://klfoodie.com/wp-includes/css/dist/block-library/style.min.css?ver=6.8.2"> -->
