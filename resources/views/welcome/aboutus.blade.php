@@ -53,7 +53,6 @@
 											<em class="delimiter">/</em>
 											<span class="current">About Us</span>
 										</nav>
-										<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","@id":"#Breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Home","@id":"https:\/\/klfoodie.com\/"}}]}</script>
 										<div class="entry-header">
 											<h1 class="post-title entry-title">About Us</h1>
 										</div>

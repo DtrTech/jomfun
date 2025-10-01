@@ -49,8 +49,7 @@
 									<header class="entry-header-outer">
 										<nav id="breadcrumb"><a href="{{ url('/') }}">
 													<i class="fa fa-home"></i> Home
-												</a><em class="delimiter">/</em><span class="current">Contact Us</span></nav><script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","@id":"#Breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Home","@id":"https:\/\/klfoodie.com\/"}}]}</script>
-										<div class="entry-header">
+												</a><em class="delimiter">/</em><span class="current">Contact Us</span></nav>
 											<h1 class="post-title entry-title">Contact Us</h1>
 										</div>
 									</header>
