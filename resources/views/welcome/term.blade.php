@@ -5,7 +5,7 @@
 		@include('welcome.header')
 	</head>
 
-	<body data-rsssl=1 id="tie-body" class="wp-singular page-template-default page page-id-26 wp-theme-jannah boxed-layout is-percent-width wrapper-has-shadow block-head-2 magazine2 is-thumb-overlay-disabled is-desktop is-header-layout-1 has-header-ad has-header-below-ad sidebar-right has-sidebar post-layout-1 has-mobile-share hide_banner_below_header hide_breaking_news hide_share_post_bottom hide_post_authorbio hide_post_nav hide_back_top_button">
+	<body data-rsssl=1 id="tie-body" class="wp-singular page-template-default page page-id-26 boxed-layout is-percent-width wrapper-has-shadow block-head-2 magazine2 is-thumb-overlay-disabled is-desktop is-header-layout-1 has-header-ad has-header-below-ad sidebar-right has-sidebar post-layout-1 has-mobile-share hide_banner_below_header hide_breaking_news hide_share_post_bottom hide_post_authorbio hide_post_nav hide_back_top_button">
 	<div class="background-overlay">
 		<div id="tie-container" class="site tie-container">
 			<div id="tie-wrapper">

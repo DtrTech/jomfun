@@ -5,7 +5,7 @@
 		@include('welcome.header')
 	</head>
 
-	<body data-rsssl=1 id="tie-body" class="wp-singular page-template-default page page-id-26 wp-theme-jannah boxed-layout is-percent-width wrapper-has-shadow block-head-2 magazine2 is-thumb-overlay-disabled is-desktop is-header-layout-1 has-header-ad has-header-below-ad sidebar-right has-sidebar post-layout-1 has-mobile-share hide_banner_below_header hide_breaking_news hide_share_post_bottom hide_post_authorbio hide_post_nav hide_back_top_button">
+	<body data-rsssl=1 id="tie-body" class="wp-singular page-template-default page page-id-26 boxed-layout is-percent-width wrapper-has-shadow block-head-2 magazine2 is-thumb-overlay-disabled is-desktop is-header-layout-1 has-header-ad has-header-below-ad sidebar-right has-sidebar post-layout-1 has-mobile-share hide_banner_below_header hide_breaking_news hide_share_post_bottom hide_post_authorbio hide_post_nav hide_back_top_button">
 		<div class="background-overlay">
 			<div id="tie-container" class="site tie-container">
 				<div id="tie-wrapper">
@@ -50,7 +50,7 @@
 									Google Adsense</p>
 									<p>These third-party ad servers or ad networks use technology to the advertisements and links that appear on www.jomfun.com send directly to your browsers. They automatically receive your IP address when this occurs. Other technologies ( such as cookies, JavaScript, or Web Beacons ) may also be used by the third-party ad networks to measure the effectiveness of their advertisements and / or to personalize the advertising content that you see.</p>
 									<p>www.jomfun.com has no access to or control over these cookies that are used by third-party advertisers.</p>
-									<p>You should consult the respective privacy policies of these third-party ad servers for more detailed information on their practices as well as for instructions about how to opt-out of certain practices. www.klfoodie.com’s privacy policy does not apply to, and we cannot control the activities of, such other advertisers or web sites.</p>
+									<p>You should consult the respective privacy policies of these third-party ad servers for more detailed information on their practices as well as for instructions about how to opt-out of certain practices. www.jomfun.com’s privacy policy does not apply to, and we cannot control the activities of, such other advertisers or web sites.</p>
 									<p>If you wish to disable cookies, you may do so through your individual browser options. More detailed information about cookie management with specific web browsers can be found at the browsers’ respective websites.</p>
 									<p>&nbsp;</p>
 								</div>
