@@ -1,22 +1,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Favicon -->
-<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('image/jomfun/J.png') }}?v=2024">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('image/jomfun/J.png') }}?v=2024">
-<link rel="icon" type="image/png" sizes="192x192" href="{{ asset('image/jomfun/J.png') }}?v=2024">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('image/jomfun/J.png') }}?v=2024">
-<link rel="shortcut icon" href="{{ asset('image/jomfun/favicon.ico') }}?v=2024" type="image/x-icon">
-<meta name="msapplication-TileImage" content="{{ asset('image/jomfun/J.png') }}?v=2024">
-<title>JomFun | Adventure, Relaxing and Thrilling</title>
-<meta name="description" content="JomFun is your hub for events, lifestyle, and entertainment across Malaysia. Discover concerts, festivals, travel experiences, and more.">
-<meta property="og:site_name" content="JomFun">
-<meta property="og:title" content="JomFun">
-<meta property="og:description" content="Discover JomFun: your hub for events, lifestyle, and entertainment in Malaysia.">
-<meta property="og:image" content="{{ asset('image/jomfun/J.png') }}">
-<link rel="canonical" href="https://jomfun.com">
-
-<!-- Essential WordPress CSS -->
-<!-- <link rel="stylesheet" href="https://klfoodie.com/wp-includes/css/dist/block-library/style.min.css?ver=6.8.2"> -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="theme-color" content="#588800" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="{{ asset('image/jomfun/J.png') }}" sizes="32x32" />
+<link rel="icon" href="{{ asset('image/jomfun/J.png') }}" sizes="192x192" />
+<link rel="apple-touch-icon" href="{{ asset('image/jomfun/J.png') }}" />
+<meta name="msapplication-TileImage" content="{{ asset('image/jomfun/J.png') }}" />
 
 <!-- Theme CSS -->
 <link rel="stylesheet" href="{{ asset('css/jomfun_base.min.css') }}">
@@ -24,16 +15,6 @@
 <link rel="stylesheet" href="{{ asset('css/jomfun_widgets.min.css') }}">
 <link rel="stylesheet" href="{{ asset('css/jomfun_helpers.min.css') }}">
 <link rel="stylesheet" href="{{ asset('css/jomfun_fontawesome.css') }}">
-
-<!-- Plugin CSS -->
-<!-- <link rel="stylesheet" href="https://klfoodie.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.1.1">
-<link rel="stylesheet" href="https://klfoodie.com/wp-content/plugins/jetpack/modules/likes/style.css?ver=14.9.1"> -->
-
-<!-- WordPress Meta -->
-<!-- <link rel="https://api.w.org/" href="https://klfoodie.com/wp-json/">
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://klfoodie.com/xmlrpc.php?rsd">
-<link rel="shortlink" href="https://wp.me/P9pw18-hCP">
-<meta name="generator" content="WordPress 6.8.2"> -->
 
 <!-- Facebook -->
 <meta property="fb:pages" content="112274292745476">
