@@ -197,7 +197,7 @@
                             alert("Upload failed: " + xhr.responseText);
                         }
                     });
-                }
+                } 
             }
         });
     });

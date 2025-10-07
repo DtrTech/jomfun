@@ -18,9 +18,7 @@
 		</style>
 		{!! $page_seo !!}
 		<script type="text/javascript"></script>
-		</script>
 
-		<script id="klfoo-ready"></script>
 		@include('welcome.header')
 	</head>
 

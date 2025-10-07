@@ -13,7 +13,6 @@
 		</style>
 		{!! $seo_header !!}
 		<script type="text/javascript"></script>
-		<script id="klfoo-ready"></script>
 		@include('welcome.header')
 	</head>
 

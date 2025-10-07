@@ -117,10 +117,10 @@ class ProjectController extends Controller
         if ($request->hasFile('file')) {
             $file = $request->file('file');
             $filename = time() . '_' . $file->getClientOriginalName();
-            $path = $file->storeAs('uploads/summernote', $filename, 'public'); // save in storage/app/public/uploads/summernote
+            $path = $file->storeAs('uploads/summernote', $filename, 'public');
 
             return response()->json([
-                'url' => asset('storage/' . $path) // return file URL
+                'url' => asset('storage/' . $path)
             ]);
         }
 

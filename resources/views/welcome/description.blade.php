@@ -28,16 +28,16 @@
 		<meta name="msapplication-TileImage" content="{{ asset('image/jomfun/J.png') }}">
 		
 		<!-- Essential WordPress CSS -->
-		<link rel="stylesheet" href="https://klfoodie.com/wp-includes/css/dist/block-library/style.min.css?ver=6.8.2">
+		<link rel="stylesheet" href="{{ asset('css/jomfun_style.min.css') }}">
 		<link rel="stylesheet" href="https://klfoodie.com/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17">
 		<link rel="stylesheet" href="https://klfoodie.com/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.8.2">
 		
 		<!-- Theme CSS -->
-		<link rel="stylesheet" href="https://klfoodie.com/wp-content/themes/jannah/assets/css/base.min.css?ver=5.4.5">
+		<link rel="stylesheet" href="{{ asset('css/jomfun_base.min.css') }}">
 		<link rel="stylesheet" href="https://klfoodie.com/wp-content/themes/jannah/assets/css/style.min.css?ver=5.4.5">
-		<link rel="stylesheet" href="https://klfoodie.com/wp-content/themes/jannah/assets/css/widgets.min.css?ver=5.4.5">
-		<link rel="stylesheet" href="https://klfoodie.com/wp-content/themes/jannah/assets/css/helpers.min.css?ver=5.4.5">
-		<link rel="stylesheet" href="https://klfoodie.com/wp-content/themes/jannah/assets/css/fontawesome.css?ver=5.4.5">
+		<link rel="stylesheet" href="{{ asset('css/jomfun_widgets.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/jomfun_helpers.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/jomfun_fontawesome.css') }}">
 		<link rel="stylesheet" href="https://klfoodie.com/wp-content/themes/jannah/assets/ilightbox/dark-skin/skin.css?ver=5.4.5">
 		<link rel="stylesheet" href="https://klfoodie.com/wp-content/themes/jannah/assets/css/single.min.css?ver=5.4.5">
 		<link rel="stylesheet" href="https://klfoodie.com/wp-content/themes/jannah/assets/css/print.css?ver=5.4.5" media="print">
@@ -133,7 +133,6 @@
 			img#wpstats { display: none; }
 		</style>
 		
-		<meta name="agd-partner-manual-verification">
 	</head>
 
 	<body data-rsssl=1 id="tie-body" class="single-format-standard boxed-layout is-percent-width wrapper-has-shadow block-head-2 magazine2 is-thumb-overlay-disabled is-desktop is-header-layout-1 has-header-ad has-header-below-ad sidebar-right has-sidebar post-layout-3 wide-title-narrow-media is-standard-format has-mobile-share hide_banner_below_header hide_breaking_news hide_share_post_bottom hide_post_authorbio hide_post_nav hide_back_top_button">
