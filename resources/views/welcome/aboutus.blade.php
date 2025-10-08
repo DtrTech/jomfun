@@ -1,99 +1,291 @@
+@extends('welcome.layouts.app')
 
-<!DOCTYPE html>
-<html lang="en-US" class="" data-skin="light">
-	<head>
-		@include('welcome.header')
-	</head>
+@section('title', 'Home - WoOx Travel')
 
-	<body data-rsssl=1 id="tie-body" class="boxed-layout is-percent-width wrapper-has-shadow block-head-2 magazine2 is-thumb-overlay-disabled is-desktop is-header-layout-1 has-header-ad has-header-below-ad one-column-no-sidebar post-layout-1 has-mobile-share hide_banner_below_header hide_breaking_news hide_share_post_bottom hide_post_authorbio hide_post_nav hide_back_top_button">
-		<div class="background-overlay">
-			<div id="tie-container" class="site tie-container">
-				<div id="tie-wrapper">
-					@include('welcome.navtop')
-					<div class="stream-item stream-item-top-wrapper">
-						<div class="stream-item-top"></div>
-					</div>
-					<div id="content" class="site-content container">
-						<div id="main-content-row" class="tie-row main-content-row">
-							<div class="main-content tie-col-md-8 tie-col-xs-12" role="main">
-								<article id="the-post" class="container-wrapper post-content">
-									<header class="entry-header-outer">
-										<nav id="breadcrumb">
-											<a href="{{ url('/') }}">
-												<i class="fa fa-home"></i> Home
-											</a>
-											<em class="delimiter">/</em>
-											<span class="current">About Us</span>
-										</nav>
-										<div class="entry-header">
-											<h1 class="post-title entry-title">About Us</h1>
-										</div>
-									</header>
-									<div itemprop="articleBody" class="entry-content entry clearfix">
-										<p>Hello fun-seekers, welcome to JomFun.</p>
-										<p>JomFun is for people who love entertainment, lifestyle, and exciting events – that’s basically everyone!</p>
-										<p>Started in 2025, JomFun showcases the best events, activities, and happenings across Malaysia. From concerts and festivals to travel experiences and local fun, we aim to bring you the latest and most exciting updates. Follow us to discover more unforgettable journeys!</p>
-										<h3>Key Stats:</h3>
-										<ul>
-											<li>Monthly Website Traffic: 500,000+</li>
-											<li>Facebook Followers: 150,000+</li>
-											<li>Instagram Followers: 80,000+</li>
-											<li>Event Listings: 1,200+ and growing</li>
-											<li>Partnered Brands & Organizers: 100+</li>
-										</ul>
-										<p>*Last updated Sept 2025.</p>
-										<h3>We are on:</h3>
-										<p>
-											Facebook - <a href="">JomFun</a>
-											<br/>
-											Instagram - <a href="">@jom.fun</a>
-										</p>
-										<p>
-											<em>
-												<a href="">*JomFun</a> is part of 
-												<a href="#">Fun Media Sdn Bhd</a> 
-												(1234567-V)
-											</em>
-											<br />
-											<strong>Fun Media</strong> company also manages:
-										</p>
-										<ul class="rteindent1">
-											<li><a href="#">EventBuzz Malaysia</a></li>
-											<li><a href="#">TravelSpot Asia</a></li>
-											<li><a href="#">EatPlayLove Malaysia</a></li>
-											<li><a href="#">Lifestyle Now</a></li>
-										</ul>
-										<h3>Contact:</h3>
-										<p><b>Address: </b>123, Jalan Tun Razak, 50400 Kuala Lumpur, Malaysia</p>
-										<p>	For <strong>advertising</strong> inquiries:<br/>
-											Email: <a href="mailto:ads@jomfun.my">ads@jomfun.my</a><br/>
-											Tel: <a href="tel:+60123456789">+6012-345 6789 (Alex)</a>
-										</p>
-										<p>	For <strong>collaboration or other</strong> inquiries:<br/>
-											Email: <a href="mailto:hello@jomfun.my">hello@jomfun.my</a>
-										</p>
-										<p>	For <strong>career</strong> opportunities:<br/>
-											Email: <a href="mailto:hr@jomfun.my">hr@jomfun.my</a>
-										</p>
-									</div>
+@section('content')
 
-								</article>
-								<div class="stream-item stream-item-below-post"></div>
-								<div class="post-components"></div>
-							</div>
-						</div>
-					</div>
-
-					@include('welcome.footer')
-		
-				</div>
-
-				@include('welcome.secondary_sidebar')
-				
+<div class="about-main-content">
+	<div class="container">
+		<div class="row">
+		<div class="col-lg-12">
+			<div class="content">
+			<div class="blur-bg"></div>
+			<h4>EXPLORE OUR COUNTRY</h4>
+			<div class="line-dec"></div>
+			<h2>Welcome To Caribbean</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt uttersi labore et dolore magna aliqua is ipsum suspendisse ultrices gravida</p>
 			</div>
 		</div>
-		
-		@include('welcome.footer_script')
+		</div>
+	</div>
+	</div>
 
-	</body>
-</html>
+	<div class="cities-town">
+	<div class="container">
+		<div class="row">
+		<div class="slider-content">
+			<div class="row">
+			<div class="col-lg-12">
+				<h2>Caribbean’s <em>Cities &amp; Towns</em></h2>
+			</div>
+			<div class="col-lg-12">
+				<div class="owl-cites-town owl-carousel">
+				<div class="item">
+					<div class="thumb">
+					<img src="assets/images/cities-01.jpg" alt="">
+					<h4>Havana</h4>
+					</div>
+				</div>
+				<div class="item">
+					<div class="thumb">
+					<img src="assets/images/cities-02.jpg" alt="">
+					<h4>Kingston</h4>
+					</div>
+				</div>
+				<div class="item">
+					<div class="thumb">
+					<img src="assets/images/cities-03.jpg" alt="">
+					<h4>George Town</h4>
+					</div>
+				</div>
+				<div class="item">
+					<div class="thumb">
+					<img src="assets/images/cities-04.jpg" alt="">
+					<h4>Santo Domingo</h4>
+					</div>
+				</div>
+				<div class="item">
+					<div class="thumb">
+					<img src="assets/images/cities-01.jpg" alt="">
+					<h4>Havana</h4>
+					</div>
+				</div>
+				<div class="item">
+					<div class="thumb">
+					<img src="assets/images/cities-02.jpg" alt="">
+					<h4>Kingston</h4>
+					</div>
+				</div>
+				<div class="item">
+					<div class="thumb">
+					<img src="assets/images/cities-03.jpg" alt="">
+					<h4>George Town</h4>
+					</div>
+				</div>
+				<div class="item">
+					<div class="thumb">
+					<img src="assets/images/cities-04.jpg" alt="">
+					<h4>Santo Domingo</h4>
+					</div>
+				</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+
+<div class="weekly-offers">
+	<div class="container">
+		<div class="row">
+		<div class="col-lg-6 offset-lg-3">
+			<div class="section-heading text-center">
+			<h2>Best Weekly Offers In Each City</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+		<div class="col-lg-12">
+			<div class="owl-weekly-offers owl-carousel">
+			<div class="item">
+				<div class="thumb">
+				<img src="assets/images/offers-01.jpg" alt="">
+				<div class="text">
+					<h4>Havana<br><span><i class="fa fa-users"></i> 234 Check Ins</span></h4>
+					<h6>$420<br><span>/person</span></h6>
+					<div class="line-dec"></div>
+					<ul>
+					<li>Deal Includes:</li>
+					<li><i class="fa fa-taxi"></i> 5 Days Trip > Hotel Included</li>
+					<li><i class="fa fa-plane"></i> Airplane Bill Included</li>
+					<li><i class="fa fa-building"></i> Daily Places Visit</li>
+					</ul>
+					<div class="main-button">
+					<a href="reservation.html">Make a Reservation</a>
+					</div>
+				</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="thumb">
+				<img src="assets/images/offers-02.jpg" alt="">
+				<div class="text">
+					<h4>Kingston<br><span><i class="fa fa-users"></i> 234 Check Ins</span></h4>
+					<h6>$420<br><span>/person</span></h6>
+					<div class="line-dec"></div>
+					<ul>
+					<li>Deal Includes:</li>
+					<li><i class="fa fa-taxi"></i> 5 Days Trip > Hotel Included</li>
+					<li><i class="fa fa-plane"></i> Airplane Bill Included</li>
+					<li><i class="fa fa-building"></i> Daily Places Visit</li>
+					</ul>
+					<div class="main-button">
+					<a href="reservation.html">Make a Reservation</a>
+					</div>
+				</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="thumb">
+				<img src="assets/images/offers-03.jpg" alt="">
+				<div class="text">
+					<h4>George Town<br><span><i class="fa fa-users"></i> 234 Check Ins</span></h4>
+					<h6>$420<br><span>/person</span></h6>
+					<div class="line-dec"></div>
+					<ul>
+					<li>Deal Includes:</li>
+					<li><i class="fa fa-taxi"></i> 5 Days Trip > Hotel Included</li>
+					<li><i class="fa fa-plane"></i> Airplane Bill Included</li>
+					<li><i class="fa fa-building"></i> Daily Places Visit</li>
+					</ul>
+					<div class="main-button">
+					<a href="reservation.html">Make a Reservation</a>
+					</div>
+				</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="thumb">
+				<img src="assets/images/offers-01.jpg" alt="">
+				<div class="text">
+					<h4>Havana<br><span><i class="fa fa-users"></i> 234 Check Ins</span></h4>
+					<h6>$420<br><span>/person</span></h6>
+					<div class="line-dec"></div>
+					<ul>
+					<li>Deal Includes:</li>
+					<li><i class="fa fa-taxi"></i> 5 Days Trip > Hotel Included</li>
+					<li><i class="fa fa-plane"></i> Airplane Bill Included</li>
+					<li><i class="fa fa-building"></i> Daily Places Visit</li>
+					</ul>
+					<div class="main-button">
+					<a href="reservation.html">Make a Reservation</a>
+					</div>
+				</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="thumb">
+				<img src="assets/images/offers-02.jpg" alt="">
+				<div class="text">
+					<h4>Kingston<br><span><i class="fa fa-users"></i> 234 Check Ins</span></h4>
+					<h6>$420<br><span>/person</span></h6>
+					<div class="line-dec"></div>
+					<ul>
+					<li>Deal Includes:</li>
+					<li><i class="fa fa-taxi"></i> 5 Days Trip > Hotel Included</li>
+					<li><i class="fa fa-plane"></i> Airplane Bill Included</li>
+					<li><i class="fa fa-building"></i> Daily Places Visit</li>
+					</ul>
+					<div class="main-button">
+					<a href="reservation.html">Make a Reservation</a>
+					</div>
+				</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="thumb">
+				<img src="assets/images/offers-03.jpg" alt="">
+				<div class="text">
+					<h4>George Town<br><span><i class="fa fa-users"></i> 234 Check Ins</span></h4>
+					<h6>$420<br><span>/person</span></h6>
+					<div class="line-dec"></div>
+					<ul>
+					<li>Deal Includes:</li>
+					<li><i class="fa fa-taxi"></i> 5 Days Trip > Hotel Included</li>
+					<li><i class="fa fa-plane"></i> Airplane Bill Included</li>
+					<li><i class="fa fa-building"></i> Daily Places Visit</li>
+					</ul>
+					<div class="main-button">
+					<a href="reservation.html">Make a Reservation</a>
+					</div>
+				</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+
+<div class="more-about">
+	<div class="container">
+		<div class="row">
+		<div class="col-lg-6 align-self-center">
+			<div class="left-image">
+			<img src="assets/images/about-left-image.jpg" alt="">
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="section-heading">
+			<h2>Discover More About Our Country</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+			</div>
+			<div class="row">
+			<div class="col-lg-6">
+				<div class="info-item">
+				<h4>150.640 +</h4>
+				<span>Total Guests Yearly</span>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="info-item">
+				<h4>175.000+</h4>
+				<span>Amazing Accomoditations</span>
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="info-item">
+				<div class="row">
+					<div class="col-lg-6">
+					<h4>12.560+</h4>
+					<span>Amazing Places</span>
+					</div>
+					<div class="col-lg-6">
+					<h4>240.580+</h4>
+					<span>Different Check-ins Yearly</span>
+					</div>
+				</div>
+				</div>
+			</div>
+			</div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+			<div class="main-button">
+			<a href="reservation.html">Discover More</a>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+
+@endsection
+
+@push('scripts')
+<script>
+    function bannerSwitcher() {
+        next = $('.sec-1-input').filter(':checked').next('.sec-1-input');
+        if (next.length) next.prop('checked', true);
+        else $('.sec-1-input').first().prop('checked', true);
+    }
+
+    var bannerTimer = setInterval(bannerSwitcher, 5000);
+
+    $('nav .controls label').click(function() {
+        clearInterval(bannerTimer);
+        bannerTimer = setInterval(bannerSwitcher, 5000)
+    });
+</script>
+@endpush

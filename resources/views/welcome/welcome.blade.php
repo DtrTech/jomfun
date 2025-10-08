@@ -1,127 +1,210 @@
-<!DOCTYPE html>
-<html lang="en-US" data-skin="light">
-	<head>
-		<?php
-		$setup = DB::table('setups')->first();
-		$seo_header = $setup ? $setup->seo_header : '';
-		?>
-		<meta charset="UTF-8">
-		<link rel="profile" href="https://gmpg.org/xfn/11">
-		<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'>
-		<style>
-			img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }
-		</style>
-		{!! $seo_header !!}
-		<script type="text/javascript"></script>
-		@include('welcome.header')
-	</head>
+@extends('welcome.layouts.app')
 
-	<body data-rsssl=1 id="tie-body" class="boxed-layout is-percent-width wrapper-has-shadow block-head-2 magazine2 is-thumb-overlay-disabled is-desktop is-header-layout-1 has-header-ad has-header-below-ad has-builder hide_banner_below_header hide_breaking_news hide_share_post_bottom hide_post_authorbio hide_post_nav hide_back_top_button">
-		<script type="text/javascript">.Default.run()</script>
+@section('title', 'Home - WoOx Travel')
 
-		<div class="background-overlay">
-			<div id="tie-container" class="site tie-container">
-				<div id="tie-wrapper">
-					@include('welcome.navtop')
-					<div class="stream-item stream-item-top-wrapper">
-						<div class="stream-item-top"></div>
-					</div>
+@push('styles')
+<style>
+    .banner-dimmed {
+        position: relative;
+    }
+    
+    .banner-dimmed::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* Adjust darkness here */
+        z-index: 1;
+    }
+    
+    .banner-dimmed .banner-inner-wrapper {
+        position: relative;
+        z-index: 2;
+    }
 
-					<div id="tiepost-67755-section-7296" class="section-wrapper container normal-width without-background">
-						<div class="section-item is-first-section sidebar-right has-sidebar" style="" >
-							<div class="container-normal">
-								<div class="tie-row main-content-row">
-									<div class="main-content tie-col-md-8 tie-col-xs-12" role="main">
-										<div id="tie-block_2325" class="mag-box big-posts-box" data-current="1">
-											<div class="container-wrapper">
-												<div class="mag-box-title the-global-title">
-													<h3>This Just In 🔥</h3>
-												</div>
-												<div class="mag-box-container clearfix">
-													<ul class="posts-items posts-list-container">
-														@foreach($projects as $project)
-														<li class="{{ $project->title }}">
-															<a aria-label="{{ $project->title }}" href="{{ url('/' . \Illuminate\Support\Str::slug(\Illuminate\Support\Str::words($project->title, 10))) }}" class="post-thumb">
-																<span class="post-cat-wrap">
-																	<span class="post-cat tie-cat-660">{{ $project->category_name }}</span>
-																</span>
-																<img width="390" height="220" src="{{ $project->project_image ? asset($project->project_image) : 'https://cdn.klfoodie.com/2025/08/MDEC-Hotel-Cover-3-1-390x220.png' }}" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt="">
-															</a>
-															<div class="post-details">
-																<div class="post-meta clearfix">
-																	<span class="author-meta single-author no-avatars">
-																		<span class="meta-item meta-author-wrapper meta-author-49">
-																			<span class="meta-author">
-																				<i class="fas fa-user"></i>
-																				<a class="" title="{{ $project->author }}">{{ $project->author }}</a>
-																			</span>
-																		</span>
-																	</span>
+    .custom-pagination .pagination {
+        justify-content: center;
+        gap: 8px;
+    }
 
-																	<span class="publish-time">
-																		<i class="far fa-clock"></i>
-																		{{ $project->publish_time }}
-																	</span>
-																	<div class="tie-alignright"></div>
-																</div>
-																<h2 class="post-title">
-																	<a href="{{ url('/' . \Illuminate\Support\Str::slug(\Illuminate\Support\Str::words($project->title, 10))) }}">{{ $project->title }}</a>
-																</h2>
-															</div>
-														</li>
-														@endforeach
-													</ul>
-													<div class="clearfix"></div>
-												</div>
-												<div class="pages-nav">					
-													<div class="pages-numbers pages-standard">
-														@if ($projects->onFirstPage())
-														<span class="first-page first-last-pages disabled">
-															<!-- <span class="fas fa-arrow-left"></span> Previous -->
-														</span>
-														@else
-														<span class="first-page first-last-pages">
-															<a href="{{ $projects->previousPageUrl() }}">
-																<span class="fas fa-arrow-left"></span> Previous
-															</a>
-														</span>
-														@endif
+    .custom-pagination .page-item .page-link {
+        border: none;
+        color: #555;
+        background-color: #f8f9fa;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
 
-														@if ($projects->hasMorePages())
-														<span class="last-page first-last-pages">
-															<a href="{{ $projects->nextPageUrl() }}">
-																<span class="fas fa-arrow-right"></span> Next
-															</a>
-														</span>
-														@else
-														<span class="last-page first-last-pages disabled">
-															<!-- <span class="fas fa-arrow-right"></span> Next -->
-														</span>
-														@endif
-													</div>
-												</div>
-											</div>
-										</div>
-										<script>var js_tie_block_2325 = {"order":"latest","source":"id","exclude_posts":"74031, 74033, 74035, 74039, 74037, 84117","number":"20","pagi":"show-more","post_meta":"true","breaking_effect":"reveal","sub_style":"big","style":"default","title_length":"","excerpt_length":"","media_overlay":"","read_more_text":""};</script>
-									</div>
+    .custom-pagination .page-item.active .page-link {
+        background-color: #588800;
+        color: #fff;
+        box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);
+    }
 
-									@include('welcome.sidebar')
+    .custom-pagination .page-link:hover {
+        background-color: #588800;
+        color: #fff;
+        transform: translateY(-2px);
+    }
+</style>
+@endpush
 
-								</div>
-							</div>
-						</div>
-					</div>
+@section('content')
+<section id="section-1">
+    <div class="content-slider">
 
-					@include('welcome.footer')
-			
-				</div>
-				
-				@include('welcome.secondary_sidebar')
+        @foreach($randomProjects as $index => $project)
+            <input type="radio" id="banner{{ $index + 1 }}" class="sec-1-input" name="banner" @if($index == 0) checked @endif>
+        @endforeach
 
-			</div>
-		</div>
+        <div class="slider">
+            @foreach($randomProjects as $index => $project)
+                <div id="top-banner-{{ $index + 1 }}" 
+                     class="banner banner-dimmed" 
+                     style="background-image: url('{{ $project->project_image ? asset($project->project_image) : asset('default-banner.jpg') }}'); background-size: cover; background-position: center;">
+                    
+                    <div class="banner-inner-wrapper header-text col-lg-8 mx-auto text-center">
+                        <div class="main-caption">
+                            <h2>Explore JomFun:</h2>
+                            <h1>{{ $project->title }}</h1>
+                            <div class="border-button">
+                                <a href="{{ url('/' . $project->slug) }}">Go There</a>
+                            </div>
+                        </div>
 
-		@include('welcome.footer_script')
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="more-info">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-sm-6 col-6">
+                                                <i class="fa fa-user"></i>
+                                                <h4><span>Author:</span><br>{{ $project->author }}</h4>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6 col-6">
+                                                <i class="fa fa-folder"></i>
+                                                <h4><span>Category:</span><br>{{ $project->category_name }}</h4>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6 col-6">
+                                                <i class="fa fa-calendar"></i>
+                                                <h4><span>Publish Date:</span><br>{{ $project->publish_time }}</h4>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6 col-6">
+                                                <div class="main-button">
+                                                    <a href="{{ url('/' . $project->slug) }}">Explore More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
 
-	</body>
-</html>
+        <nav>
+            <div class="controls">
+                @foreach($randomProjects as $index => $project)
+                    <label for="banner{{ $index + 1 }}">
+                        <span class="progressbar">
+                            <span class="progressbar-fill"></span>
+                        </span>
+                        <span class="text">{{ $index + 1 }}</span>
+                    </label>
+                @endforeach
+            </div>
+        </nav>
+
+    </div>
+</section>
+
+<div class="visit-country" style="padding-bottom: 50px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="section-heading">
+                    <h2>Visit One Of Our Trips Now</h2>
+                    <p>JomFun</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="items">
+                    <div class="row">
+
+                        @foreach($projects as $project)
+                        <div class="col-lg-12 mb-4">
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-lg-4 col-sm-5">
+                                        <div class="image">
+                                            <img src="{{ $project->project_image ? asset($project->project_image) : asset('default-banner.jpg') }}" alt="{{ $project->title }}" style="width:100%; height:auto; border-radius:10px;">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-sm-7">
+                                        <div class="right-content">
+                                            <h4>{{ $project->title }}</h4>
+                                            <span>{{ $project->category_name }}</span>
+
+
+                                            <p>{{ $project->sub_title }}</p>
+
+                                            <ul class="info">
+                                                <li><i class="fa fa-user"></i> {{ $project->author }}</li>
+                                                <li><i class="fa fa-calendar"></i> {{ $project->publish_time }}</li>
+                                            </ul>
+                                            
+
+                                            <div class="main-button mb-2">
+                                                <a href="{{ url('/' . $project->slug) }}">Explore More</a>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+
+                        <div class="col-lg-12">
+                            <div class="custom-pagination text-center mt-5">
+                                {{ $projects->onEachSide(1)->links('pagination::bootstrap-4') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@endsection
+
+@push('scripts')
+<script>
+    function bannerSwitcher() {
+        next = $('.sec-1-input').filter(':checked').next('.sec-1-input');
+        if (next.length) next.prop('checked', true);
+        else $('.sec-1-input').first().prop('checked', true);
+    }
+
+    var bannerTimer = setInterval(bannerSwitcher, 5000);
+
+    $('nav .controls label').click(function() {
+        clearInterval(bannerTimer);
+        bannerTimer = setInterval(bannerSwitcher, 5000)
+    });
+</script>
+@endpush

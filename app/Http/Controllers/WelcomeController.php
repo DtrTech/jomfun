@@ -19,34 +19,49 @@ use Illuminate\Support\Str;
 class WelcomeController extends Controller
 {
     public function welcome()
-{
-    $projects = Project::select('id', 'title', 'author', 'publish_time', 'project_image', 'author_image', 'category_name')
-        ->where('status', 'active')
-        ->orderBy('publish_time', 'desc')
-        ->paginate(10)
-        ->through(function ($project) {
+    {
+        $projects = Project::select('id', 'title', 'author', 'publish_time', 'project_image', 'author_image', 'category_name')
+            ->where('status', 'active')
+            ->orderBy('publish_time', 'desc')
+            ->paginate(5)
+            ->through(function ($project) {
+                $project->publish_time = Carbon::parse($project->publish_time)->format('Y-m-d');
+                $project->title_short = Str::words($project->title, 10, '');
+                $project->slug = Str::slug($project->title_short);
+                return $project;
+            });
+
+        $categories = Category::select('id', 'category_name')->orderBy('id')->get();
+
+        $randomProjects = collect();
+
+        foreach ($categories as $category) {
+            $project = Project::where('status', 'active')
+                ->where('category_name', $category->category_name)
+                ->inRandomOrder()
+                ->first();
+            if ($project) {
+                $randomProjects->push($project);
+            }
+        }
+
+        if ($randomProjects->count() < 5) {
+            $additionalProjects = Project::where('status', 'active')
+                ->inRandomOrder()
+                ->limit(5 - $randomProjects->count())
+                ->get();
+            $randomProjects = $randomProjects->merge($additionalProjects);
+        }
+
+        $randomProjects = $randomProjects->unique('id')->values()->take(4)->map(function ($project) {
             $project->publish_time = Carbon::parse($project->publish_time)->format('Y-m-d');
-            $project->title = Str::words($project->title, 20, '...');
+            $project->title_short = Str::words($project->title, 10, '');
+            $project->slug = Str::slug($project->title_short);
             return $project;
         });
 
-    $categories = Category::select('id', 'category_name')
-        ->orderBy('id')
-        ->get();
-
-    $randomProjects = Project::inRandomOrder()
-        ->where('status', 'active')
-        ->limit(5)
-        ->get()
-        ->map(function ($project) {
-            $project->publish_time = \Carbon\Carbon::parse($project->publish_time)->format('Y-m-d');
-            $project->title = \Illuminate\Support\Str::words($project->title, 20, '...');
-            $project->sub_title = \Illuminate\Support\Str::words($project->sub_title, 50, '...');
-            return $project;
-        });
-    
-    return view('welcome.welcome', compact('projects', 'categories', 'randomProjects'));
-}
+        return view('welcome.welcome', compact('projects', 'categories', 'randomProjects'));
+    }
 
     public function trackEvent(Request $request)
     {
@@ -85,7 +100,7 @@ class WelcomeController extends Controller
             ->where('category_name', $category_name)
             ->where('status', 'active')
             ->orderBy('publish_time', 'desc')
-            ->paginate(5) // use pagination instead of limit
+            ->paginate(5)
             ->through(function ($project) {
                 $project->publish_time = \Carbon\Carbon::parse($project->publish_time)->format('Y-m-d');
                 $project->title = \Illuminate\Support\Str::words($project->title, 20, '...');
@@ -107,34 +122,44 @@ class WelcomeController extends Controller
         return view('welcome.category', compact('category_name', 'categories', 'projects', 'randomProjects'));
     }
 
-    public function welcomeDescription($title)
+    public function welcomeDescription($slug)
     {
         $categories = Category::select('id', 'category_name')
             ->orderBy('id')
             ->get();
 
-        $project = Project::get()->first(function ($proj) use ($title) {
-            return Str::slug(Str::words($proj->title, 10)) === $title;
+        $project = Project::get()->first(function ($proj) use ($slug) {
+            return \Illuminate\Support\Str::slug(\Illuminate\Support\Str::words($proj->title, 10)) === $slug;
         });
 
         if (!$project) {
             abort(404);
         }
 
+        $project->publish_time = \Carbon\Carbon::parse($project->publish_time)->format('Y-m-d');
+        $project->title = $project->title; // keep full title here
+        $project->sub_title = $project->sub_title;
+        $project->author = $project->author ?? 'Unknown';
+
         $id = $project->id;
 
-        $randomProjects = Project::inRandomOrder()
-            ->where('status', 'active')
-            ->limit(5)
-            ->get()
-            ->map(function ($project) {
-                $project->publish_time = \Carbon\Carbon::parse($project->publish_time)->format('Y-m-d');
-                $project->title = \Illuminate\Support\Str::words($project->title, 20, '...');
-                $project->sub_title = \Illuminate\Support\Str::words($project->sub_title, 50, '...');
-                return $project;
-            });
+        $relatedProjects = Project::where('category_id', $project->category_id)
+        ->where('id', '!=', $project->id)
+        ->where('status', 'active')
+        ->inRandomOrder()
+        ->limit(5)
+        ->get()
+        ->map(function ($proj) {
+            $proj->publish_time = \Carbon\Carbon::parse($proj->publish_time)->format('Y-m-d');
+            return $proj;
+        });
 
-        return view('welcome.description', compact('project', 'randomProjects', 'categories', 'id'));
+        return view('welcome.description', [
+            'project' => $project,
+            'categories' => $categories,
+            'id' => $id,
+            'relatedProjects' => $relatedProjects,
+        ]);
     }
 
     public function welcomeAboutUs()
