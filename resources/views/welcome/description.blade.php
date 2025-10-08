@@ -5,7 +5,7 @@
 @push('styles')
 <style>
 .post-meta i {
-	color: #22b3c1;
+	color: #ffce00;
 	margin-right: 6px;
 }
 
