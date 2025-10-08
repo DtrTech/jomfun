@@ -1,6 +1,6 @@
 @extends('welcome.layouts.app')
 
-@section('title', 'Home - WoOx Travel')
+@section('title', 'Home - JomFun')
 
 @push('styles')
 <style>
