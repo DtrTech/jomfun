@@ -151,8 +151,8 @@ body {
 
 .border-button a {
   font-size: 14px;
-  color: #fff;
-  background-color: #ffce00;
+  color: #ffce00;
+  background-color: #fff;
   border: 1px solid #ffce00;
   padding: 12px 30px;
   display: inline-block;
@@ -166,8 +166,8 @@ body {
 }
 
 .border-button a:hover {
-  background-color: #fff;
-  color: #ffce00;
+  background-color: #ffce00;
+  color: #fff;
 }
 
 .main-button a {
@@ -1424,7 +1424,7 @@ About Page Style
 }
 
 .more-about .left-image {
-  margin-right: 60px;
+  margin-right: 30px;
 }
 
 .more-about .section-heading {

@@ -8,8 +8,8 @@
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading text-center">
-            <h2>Best Weekly Offers In Each City</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            <h2>Explore the Best JomFun Activities</h2>
+            <p>Discover the passionate minds behind our success. Our dedicated team of professionals works together to create innovative solutions, deliver exceptional results, and bring every project to life with creativity and expertise.</p>
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@
       <div class="row">
         <div class="col-lg-6 align-self-center">
           <div class="left-image">
-            <img src="assets/images/about-left-image.jpg" alt="">
+            <img src="assets/images/malaysia-map.jpg" alt="">
           </div>
         </div>
         <div class="col-lg-6">
