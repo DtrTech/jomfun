@@ -4,55 +4,7 @@
 
 @push('styles')
 <style>
-    .banner-dimmed {
-        position: relative;
-    }
     
-    .banner-dimmed::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5); /* Adjust darkness here */
-        z-index: 1;
-    }
-    
-    .banner-dimmed .banner-inner-wrapper {
-        position: relative;
-        z-index: 2;
-    }
-
-    .custom-pagination .pagination {
-        justify-content: center;
-        gap: 8px;
-    }
-
-    .custom-pagination .page-item .page-link {
-        border: none;
-        color: #555;
-        background-color: #f8f9fa;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        text-align: center;
-        line-height: 40px;
-        font-weight: 500;
-        transition: all 0.3s ease;
-    }
-
-    .custom-pagination .page-item.active .page-link {
-        background-color: #588800;
-        color: #fff;
-        box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);
-    }
-
-    .custom-pagination .page-link:hover {
-        background-color: #588800;
-        color: #fff;
-        transform: translateY(-2px);
-    }
 </style>
 @endpush
 
@@ -74,6 +26,7 @@
                         <div class="main-caption">
                             <h2>Explore JomFun:</h2>
                             <h1>{{ $project->title }}</h1>
+                            <h2>{{ $project->sub_title }}</h2>
                             <div class="border-button">
                                 <a href="{{ url('/' . $project->slug) }}">Go There</a>
                             </div>
