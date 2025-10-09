@@ -14,52 +14,39 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="owl-weekly-offers owl-carousel">
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/offers-01.jpg" alt="">
-                <div class="text">
-                  <h4>Havana<br><span><i class="fa fa-users"></i> 234 Check Ins</span></h4>
-                  <h6>$420<br><span>/person</span></h6>
-                  <div class="line-dec"></div>
-                  <ul>
-                    <li>Deal Includes:</li>
-                    <li><i class="fa fa-taxi"></i> 5 Days Trip > Hotel Included</li>
-                    <li><i class="fa fa-plane"></i> Airplane Bill Included</li>
-                    <li><i class="fa fa-building"></i> Daily Places Visit</li>
-                  </ul>
-                  <div class="main-button">
-                    <a href="reservation.html">Make a Reservation</a>
+
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="owl-weekly-offers owl-carousel">
+                      @foreach ($randomProjects as $random)
+                          <div class="item">
+                            <div class="thumb">
+                              <img src="{{ $random->project_image ? asset($random->project_image) : asset('default-banner.jpg') }}" alt="{{ $random->title }}">
+                              <div class="text" style="max-width: 300px; margin: 0 auto;">
+                                <h4>
+                                  <span><i class="fa fa-user"></i> {{ $random->author }}</span><br>
+                                  <span><i class="fa fa-tag"></i> {{ $random->category_name }}</span>
+                                </h4><br><br>
+                                <h6>{{ $random->publish_time }}<br></h6>
+                                <div class="line-dec"></div>
+                                <ul>
+                                  <li style="white-space: normal; word-wrap: break-word;">
+                                    {{ \Illuminate\Support\Str::words($random->title, 20, '...') }}
+                                  </li>
+                                </ul>
+                                <div class="main-button">
+                                  <a href="{{ url('/' . \Illuminate\Support\Str::slug(\Illuminate\Support\Str::words($random->title, 10))) }}">Explore More</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      @endforeach
                   </div>
-                </div>
               </div>
-            </div>
-            <div class="item">
-              <div class="thumb">
-                <img src="assets/images/offers-02.jpg" alt="">
-                <div class="text">
-                  <h4>Kingston<br><span><i class="fa fa-users"></i> 234 Check Ins</span></h4>
-                  <h6>$420<br><span>/person</span></h6>
-                  <div class="line-dec"></div>
-                  <ul>
-                    <li>Deal Includes:</li>
-                    <li><i class="fa fa-taxi"></i> 5 Days Trip > Hotel Included</li>
-                    <li><i class="fa fa-plane"></i> Airplane Bill Included</li>
-                    <li><i class="fa fa-building"></i> Daily Places Visit</li>
-                  </ul>
-                  <div class="main-button">
-                    <a href="reservation.html">Make a Reservation</a>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
+  </div>
   </div>
 
   <div class="more-about">
