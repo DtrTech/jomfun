@@ -20,7 +20,7 @@ class WelcomeController extends Controller
 {
     public function welcome()
     {
-        $projects = Project::select('id', 'title', 'author', 'publish_time', 'project_image', 'author_image', 'category_name')
+        $projects = Project::select('id', 'title', 'author', 'publish_time', 'project_image', 'author_image', 'category_name', 'sub_title')
             ->where('status', 'active')
             ->orderBy('publish_time', 'desc')
             ->paginate(5)
@@ -28,6 +28,8 @@ class WelcomeController extends Controller
                 $project->publish_time = Carbon::parse($project->publish_time)->format('Y-m-d');
                 $project->title_short = Str::words($project->title, 10, '');
                 $project->slug = Str::slug($project->title_short);
+                $project->sub_title_short = Str::words($project->sub_title, 10, '');
+                $project->sub_slug = Str::slug($project->sub_title_short);
                 return $project;
             });
 
@@ -96,30 +98,21 @@ class WelcomeController extends Controller
             ->orderBy('id')
             ->get();
         
-        $projects = Project::select('id', 'title', 'author', 'publish_time', 'sub_title', 'project_image')
+        $projects = Project::select('id', 'title', 'author', 'publish_time', 'sub_title', 'project_image', 'sub_title', 'category_name')
             ->where('category_name', $category_name)
             ->where('status', 'active')
             ->orderBy('publish_time', 'desc')
             ->paginate(5)
             ->through(function ($project) {
                 $project->publish_time = \Carbon\Carbon::parse($project->publish_time)->format('Y-m-d');
-                $project->title = \Illuminate\Support\Str::words($project->title, 20, '...');
-                $project->sub_title = \Illuminate\Support\Str::words($project->sub_title, 50, '...');
+                $project->title_short = Str::words($project->title, 10, '');
+                $project->slug = Str::slug($project->title_short);
+                $project->sub_title_short = Str::words($project->sub_title, 10, '');
+                $project->sub_slug = Str::slug($project->sub_title_short);
                 return $project;
             });
 
-        $randomProjects = Project::inRandomOrder()
-            ->where('status', 'active')
-            ->limit(5)
-            ->get()
-            ->map(function ($project) {
-                $project->publish_time = \Carbon\Carbon::parse($project->publish_time)->format('Y-m-d');
-                $project->title = \Illuminate\Support\Str::words($project->title, 20, '...');
-                $project->sub_title = \Illuminate\Support\Str::words($project->sub_title, 50, '...');
-                return $project;
-            });
-        
-        return view('welcome.category', compact('category_name', 'categories', 'projects', 'randomProjects'));
+        return view('welcome.category', compact('category_name', 'categories', 'projects'));
     }
 
     public function welcomeDescription($slug)
@@ -170,7 +163,7 @@ class WelcomeController extends Controller
 
         $randomProjects = Project::inRandomOrder()
             ->where('status', 'active')
-            ->limit(5)
+            ->limit(10)
             ->get()
             ->map(function ($project) {
                 $project->publish_time = \Carbon\Carbon::parse($project->publish_time)->format('Y-m-d');
@@ -188,57 +181,46 @@ class WelcomeController extends Controller
             ->orderBy('id')
             ->get();
 
-        $randomProjects = Project::inRandomOrder()
-            ->where('status', 'active')
-            ->limit(5)
-            ->get()
-            ->map(function ($project) {
-                $project->publish_time = \Carbon\Carbon::parse($project->publish_time)->format('Y-m-d');
-                $project->title = \Illuminate\Support\Str::words($project->title, 20, '...');
-                $project->sub_title = \Illuminate\Support\Str::words($project->sub_title, 50, '...');
-                return $project;
-            });
-
-        return view('welcome.contactus', compact('categories', 'randomProjects'));
+        return view('welcome.contactus', compact('categories'));
     }
 
-    public function welcomeTerm()
-    {
-        $categories = Category::select('id', 'category_name')
-            ->orderBy('id')
-            ->get();
+    // public function welcomeTerm()
+    // {
+    //     $categories = Category::select('id', 'category_name')
+    //         ->orderBy('id')
+    //         ->get();
 
-        $randomProjects = Project::inRandomOrder()
-            ->where('status', 'active')
-            ->limit(5)
-            ->get()
-            ->map(function ($project) {
-                $project->publish_time = \Carbon\Carbon::parse($project->publish_time)->format('Y-m-d');
-                $project->title = \Illuminate\Support\Str::words($project->title, 20, '...');
-                $project->sub_title = \Illuminate\Support\Str::words($project->sub_title, 50, '...');
-                return $project;
-            });
+    //     $randomProjects = Project::inRandomOrder()
+    //         ->where('status', 'active')
+    //         ->limit(5)
+    //         ->get()
+    //         ->map(function ($project) {
+    //             $project->publish_time = \Carbon\Carbon::parse($project->publish_time)->format('Y-m-d');
+    //             $project->title = \Illuminate\Support\Str::words($project->title, 20, '...');
+    //             $project->sub_title = \Illuminate\Support\Str::words($project->sub_title, 50, '...');
+    //             return $project;
+    //         });
 
-        return view('welcome.term', compact('categories', 'randomProjects'));
-    }
+    //     return view('welcome.term', compact('categories', 'randomProjects'));
+    // }
 
-    public function welcomePrivacy()
-    {
-        $categories = Category::select('id', 'category_name')
-            ->orderBy('id')
-            ->get();
+    // public function welcomePrivacy()
+    // {
+    //     $categories = Category::select('id', 'category_name')
+    //         ->orderBy('id')
+    //         ->get();
 
-        $randomProjects = Project::inRandomOrder()
-            ->where('status', 'active')
-            ->limit(5)
-            ->get()
-            ->map(function ($project) {
-                $project->publish_time = \Carbon\Carbon::parse($project->publish_time)->format('Y-m-d');
-                $project->title = \Illuminate\Support\Str::words($project->title, 20, '...');
-                $project->sub_title = \Illuminate\Support\Str::words($project->sub_title, 50, '...');
-                return $project;
-            });
+    //     $randomProjects = Project::inRandomOrder()
+    //         ->where('status', 'active')
+    //         ->limit(5)
+    //         ->get()
+    //         ->map(function ($project) {
+    //             $project->publish_time = \Carbon\Carbon::parse($project->publish_time)->format('Y-m-d');
+    //             $project->title = \Illuminate\Support\Str::words($project->title, 20, '...');
+    //             $project->sub_title = \Illuminate\Support\Str::words($project->sub_title, 50, '...');
+    //             return $project;
+    //         });
 
-        return view('welcome.privacy', compact('categories', 'randomProjects'));
-    }
+    //     return view('welcome.privacy', compact('categories', 'randomProjects'));
+    // }
 }

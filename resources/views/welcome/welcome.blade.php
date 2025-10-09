@@ -43,13 +43,13 @@
 }
 
 .custom-pagination .page-item.active .page-link {
-    background-color: #ffce00;
+    background-color: #588800;
     color: #fff;
     box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);
 }
 
 .custom-pagination .page-link:hover {
-    background-color: #ffce00;
+    background-color: #588800;
     color: #fff;
     transform: translateY(-2px);
 }    
@@ -85,13 +85,26 @@
                                 <div class="col-lg-12">
                                     <div class="more-info">
                                         <div class="row">
-                                            <div class="col-lg-3 col-sm-6 col-6">
-                                                <i class="fa fa-user"></i>
-                                                <h4><span>Author:</span><br>{{ $project->author }}</h4>
+                                            <div class="col-lg-3 col-sm-6 col-6" style="display:flex; align-items:center; gap:10px;">
+                                                <a href="">
+                                                    <img alt="Photo of {{ $project->author }}" 
+                                                        src="{{ $project->author_image ? asset($project->author_image) : 'https://secure.gravatar.com/avatar/17bbc2d36ab2cd21146949c7e05e9f1d50595287eeeb4c8f37faf69d727634e1?s=140&r=g' }}" 
+                                                        height="50" width="50" 
+                                                        style="border-radius:50%; object-fit:cover;">
+                                                </a>
+                                                <h4 style="margin:0;">
+                                                    <span>Author:</span><br>{{ $project->author }}
+                                                </h4>
                                             </div>
                                             <div class="col-lg-3 col-sm-6 col-6">
-                                                <i class="fa fa-folder"></i>
-                                                <h4><span>Category:</span><br>{{ $project->category_name }}</h4>
+                                                <a href="/category/{{ strtolower($project->category_name) }}" style="text-decoration:none; color:inherit;">
+                                                    <div style="display:flex; align-items:center; gap:10px;">
+                                                    <i class="fa fa-folder"></i>
+                                                    <h4 style="margin:0;">
+                                                        <span>Category:</span><br>{{ $project->category_name }}
+                                                    </h4>
+                                                    </div>
+                                                </a>
                                             </div>
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <i class="fa fa-calendar"></i>
@@ -156,10 +169,13 @@
                                     <div class="col-lg-8 col-sm-7">
                                         <div class="right-content">
                                             <h4>{{ $project->title }}</h4>
-                                            <span>{{ $project->category_name }}</span>
-
-
                                             <p>{{ $project->sub_title }}</p>
+                                            <span>
+												<a href="/category/{{ strtolower($project->category_name) }}" 
+													style="text-decoration:none; color:#fff;">
+													{{ $project->category_name }}
+												</a>
+											</span>
 
                                             <ul class="info">
                                                 <li><i class="fa fa-user"></i> {{ $project->author }}</li>

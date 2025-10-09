@@ -84,8 +84,16 @@ body, html {
 								<div class="text" style="max-width: 300px; margin: 0 auto;">
 									<h4>
 										<span><i class="fa fa-user"></i> {{ $related->author }}</span>
-									</h4><br><br>
-									<h6>{{ $related->publish_time }}<br></h6>
+									</h4>
+                                    <br>
+                                    <br>
+                                    <span>
+                                        <a href="/category/{{ strtolower($project->category_name) }}" 
+                                            style="text-decoration:none; color:#fff; background:#588800; padding:5px;">
+                                            {{ $project->category_name }}
+                                        </a>
+                                    </span>
+                                    <br>
 									<div class="line-dec"></div>
 									<ul>
 										<li style="white-space: normal; word-wrap: break-word;">
@@ -110,18 +118,22 @@ body, html {
         <div class="row">
 			<div class="col-lg-12">
 				<div class="post-meta text-center mb-4">
-					<ul class="list-inline">
-						<li class="list-inline-item mx-3">
-							<i class="fa fa-user"></i> <strong>{{ $project->author }}</strong>
-						</li>
-						<li class="list-inline-item mx-3">
-							<i class="fa fa-folder"></i> {{ $project->category_name }}
-						</li>
-						<li class="list-inline-item mx-3">
-							<i class="fa fa-calendar"></i> {{ $project->publish_time }}
-						</li>
-					</ul>
-				</div>
+                    <ul class="list-inline" style="display:flex; justify-content:center; flex-wrap:wrap; gap:15px; padding:0; margin:0;">
+                        <li class="list-inline-item mx-3" style="display:flex; align-items:center; gap:8px;">
+                        <img alt="Photo of {{ $project->author }}" 
+                            src="{{ $project->author_image ? asset($project->author_image) : 'https://secure.gravatar.com/avatar/17bbc2d36ab2cd21146949c7e05e9f1d50595287eeeb4c8f37faf69d727634e1?s=140&r=g' }}" 
+                            height="25" width="25" 
+                            style="border-radius:50%; object-fit:cover;">
+                        {{ $project->author }}
+                        </li>
+                        <li class="list-inline-item mx-3" style="display:flex; align-items:center; gap:6px;">
+                        <i class="fa fa-folder"></i> {{ $project->category_name }}
+                        </li>
+                        <li class="list-inline-item mx-3" style="display:flex; align-items:center; gap:6px;">
+                        <i class="fa fa-calendar"></i> {{ $project->publish_time }}
+                        </li>
+                    </ul>
+                </div>
 				<article id="the-post" class="container-wrapper post-content tie-standard">
 					<div class='code-block code-block-8' style='margin: 8px 0; clear: both;'>
 						<p>{!! $project->description !!}</p>
