@@ -25,6 +25,7 @@ class ProjectController extends Controller
         $categories = Category::all();
 
         return view('project.index')->with('projects', $projects);
+        
     }
 
     public function create()
@@ -127,3 +128,4 @@ class ProjectController extends Controller
         return response()->json(['error' => 'No file uploaded'], 400);
     }
 }
+

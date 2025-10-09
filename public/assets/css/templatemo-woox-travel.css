@@ -102,7 +102,7 @@ ul {
 }
 
 p {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 30px;
   color: #afafaf;
 }
@@ -2204,6 +2204,10 @@ body {
 
 
 @media (max-width: 767px) {
+  .about-main-content .content h2 {
+    font-size: 24px;
+  }
+
   #section-1 .content-slider .slider .banner .banner-inner-wrapper {
     padding-top: 120px;
   }
@@ -2287,7 +2291,9 @@ body {
     margin-top: 30px;
   }
   .about-main-content .content p {
-    padding: 0px 5%;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 0px 0%;
   }
   .weekly-offers .container-fluid {
     padding: 0px;
