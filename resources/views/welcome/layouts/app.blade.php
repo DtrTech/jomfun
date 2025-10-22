@@ -19,7 +19,7 @@
     @stack('styles')
 </head>
 
-<body>
+<body style="background-color: white !important;">
     <div id="js-preloader" class="js-preloader">
         <div class="preloader-inner">
             <span class="dot"></span>

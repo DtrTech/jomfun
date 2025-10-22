@@ -26,11 +26,6 @@
       color: #007bff !important;
       border-radius: 4px;
     }
-
-    body {
-      overflow-x: hidden;
-      background:white !important;
-    }
   }
 </style>
 
