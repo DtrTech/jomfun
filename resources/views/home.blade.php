@@ -3,7 +3,6 @@
 @section('content')
 <div class="middle-content container-xxl p-0">
 
-    <!--  BEGIN BREADCRUMBS  -->
     <div class="secondary-nav">
         <div class="breadcrumbs-container" data-page-heading="Analytics">
             <header class="header navbar navbar-expand-sm">
@@ -24,9 +23,7 @@
                         </nav>
                     </div>
                 </div>
-                
         </div>
-
     </div>
     <div class="text-center mt-5">
         <h1>Welcome to JomFun Backend</h1>

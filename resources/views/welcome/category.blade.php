@@ -45,7 +45,7 @@
 .custom-pagination .page-item.active .page-link {
     background-color: #588800;
     color: #fff;
-    box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);
+    box-shadow: 0 0 10px rgba(150, 255, 108, 0.3);
 }
 
 .custom-pagination .page-link:hover {
@@ -64,7 +64,7 @@
             <div class="col-lg-5">
                 <div class="section-heading">
 					<strong style="font-size:28px; margin-top:10px">
-						Category {{ strtoupper($category_name) }}
+						{{ strtoupper($category_name) }}
 					</strong>
 				</div>
             </div>
@@ -81,7 +81,11 @@
                                 <div class="row">
                                     <div class="col-lg-4 col-sm-5">
                                         <div class="image">
-                                            <img src="{{ $project->project_image ? asset($project->project_image) : asset('default-banner.jpg') }}" alt="{{ $project->title }}" style="width:100%; height:auto; border-radius:10px;">
+                                            <a href="{{ url('/' . $project->slug) }}">
+                                                <img src="{{ $project->project_image ? asset($project->project_image) : asset('default-banner.jpg') }}" 
+                                                    alt="{{ $project->title }}" 
+                                                    style="width:100%; height:auto; border-radius:10px;">
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="col-lg-8 col-sm-7">

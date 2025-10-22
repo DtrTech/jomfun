@@ -86,7 +86,7 @@ html, body {
 }
 
 a {
-	color: #ffce00;
+	color: #ffb41f;
   text-decoration: none !important;
 }
 
@@ -124,18 +124,18 @@ body {
 }
 
 ::selection {
-  background: #ffce00;
+  background: #ffb41f;
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #ffce00;
+  background: #ffb41f;
   color: #fff;
 }
 
 .text-button a {
   font-size: 14px;
-  color: #ffce00;
+  color: #ffb41f;
   font-weight: 500;
   transition: all .3s;
 }
@@ -151,9 +151,9 @@ body {
 
 .border-button a {
   font-size: 14px;
-  color: #ffce00;
+  color: #ffb41f;
   background-color: #fff;
-  border: 1px solid #ffce00;
+  border: 1px solid #ffb41f;
   padding: 12px 30px;
   display: inline-block;
   border-radius: 25px;
@@ -166,7 +166,7 @@ body {
 }
 
 .border-button a:hover {
-  background-color: #ffce00;
+  background-color: #ffb41f;
   color: #fff;
 }
 
@@ -287,7 +287,7 @@ Pre-loader Style
   height: 16px;
   top: 12px;
   left: 15px;
-  background: #ffce00;
+  background: #ffb41f;
   border-radius: 50%;
   -webkit-transform: translateX(0);
   transform: translateX(0);
@@ -310,7 +310,7 @@ Pre-loader Style
   width: 16px;
   height: 16px;
   margin-left: 16px;
-  background: #ffce00;
+  background: #ffb41f;
   border-radius: 50%;
 }
 
@@ -323,7 +323,7 @@ Header Style
 */
 
 .background-header {
-  background-color: #ffce00 !important;
+  background-color: #ffb41f !important;
   height: 70px!important;
   position: fixed!important;
   top: 0!important;
@@ -337,7 +337,7 @@ Header Style
 }
 
 .header-area {
-  background-color: #ffce00;
+  background-color: #ffb41f;
   position: absolute;
   height: 70px;
   top: 0;
@@ -577,7 +577,7 @@ Header Style
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1025px) {
   .header-area {
     top: 0;
   }
@@ -607,14 +607,14 @@ Header Style
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #ffce00!important;
+    color: #ffb41f!important;
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
     width: 100%;
   }
   .header-area {
-    background-color: #ffce00;
+    background-color: #ffb41f;
     padding: 0px 15px;
     height: 100px;
     box-shadow: none;
@@ -668,7 +668,7 @@ Header Style
   }
   .header-area .main-nav .nav li a:hover {
     background: #f7f7f7 !important;
-    color: #ffce00!important;
+    color: #ffb41f!important;
   }
   .header-area .main-nav .nav li.has-sub ul.sub-menu {
     position: relative;
@@ -813,8 +813,8 @@ Banner Style
   margin-bottom: 30px;
 }
 #section-1 .content-slider .slider .banner .banner-inner-wrapper .learn-more-button a:hover {
-  color: #ffce00;
-  border-color: #ffce00;
+  color: #ffb41f;
+  border-color: #ffb41f;
   transition: 0.3s;
 }
 #section-1 .content-slider .slider #top-banner-1 {
@@ -878,7 +878,7 @@ Banner Style
   width: inherit;
   height: inherit;
   margin-left: -100%;
-  background: #ffce00;
+  background: #ffb41f;
 }
 #section-1 .content-slider nav .controls label span.text {
   font-size: 20px;
@@ -888,7 +888,7 @@ Banner Style
   width: 100%;
 }
 #section-1 .content-slider nav .controls label:hover {
-  color: #ffce00;
+  color: #ffb41f;
 }
 #section-1 .content-slider #banner1:checked ~ .slider #top-banner-1,
 #section-1 .content-slider #banner2:checked ~ .slider #top-banner-2,
@@ -1032,9 +1032,9 @@ Visit Country Style
   display: inline-block;
   width: 46px;
   height: 46px;
-  border: 1px solid #ffce00;
+  border: 1px solid #ffb41f;
   line-height: 44px;
-  color: #ffce00;
+  color: #ffb41f;
   text-align: center;
   font-size: 18px;
   font-weight: 500;
@@ -1043,12 +1043,12 @@ Visit Country Style
 }
 
 .visit-country ul.page-numbers li a:hover {
-  background-color: #ffce00;
+  background-color: #ffb41f;
   color: #fff;
 }
 
 .visit-country ul.page-numbers li.active a {
-  background-color: #ffce00;
+  background-color: #ffb41f;
   color: #fff;
 }
 
@@ -1100,7 +1100,7 @@ Call To Action Style
 
 .call-to-action .border-button a:hover {
   background-color: #fff;
-  color: #ffce00;
+  color: #ffb41f;
 }
 
 
@@ -1111,7 +1111,7 @@ Footer Style
 */
 
 footer {
-  background-color: #ffce00;
+  background-color: #ffb41f;
   text-align: center;
   padding: 25px 0px;
 }
@@ -1236,7 +1236,7 @@ About Page Style
 
 .cities-town .slider-content h2 em {
   font-style: normal;
-  color: #ffce00;
+  color: #ffb41f;
 }
 
 .cities-town .slider-content .item .thumb {
@@ -1286,7 +1286,7 @@ About Page Style
 
 .cities-town .owl-nav .owl-prev:hover::after,
 .cities-town .owl-nav .owl-next:hover::after {
-  color: #ffce00;
+  color: #ffb41f;
 }
 
 .weekly-offers {
@@ -1331,7 +1331,7 @@ About Page Style
   float: right;
   text-align: right;
   font-size: 20px;
-  color: #ffce00;
+  color: #ffb41f;
 }
 
 .weekly-offers .item .thumb .text h4 span,
@@ -1381,12 +1381,12 @@ About Page Style
 .weekly-offers .owl-nav .owl-next::after {
   font-family: "FontAwesome";
   content: '\f061'; 
-  color: #ffce00;
+  color: #ffb41f;
   font-size: 20px;
   width: 46px;
   height: 46px;
   text-align: center;
-  border: 1px solid #ffce00;
+  border: 1px solid #ffb41f;
   display: inline-block;
   line-height: 44px;
   border-radius: 50%;
@@ -1401,12 +1401,12 @@ About Page Style
 .weekly-offers .owl-nav .owl-prev::after {
   font-family: "FontAwesome";
   content: '\f060'; 
-  color: #ffce00;
+  color: #ffb41f;
   font-size: 20px;
   width: 46px;
   height: 46px;
   text-align: center;
-  border: 1px solid #ffce00;
+  border: 1px solid #ffb41f;
   display: inline-block;
   line-height: 44px;
   border-radius: 50%;
@@ -1417,7 +1417,7 @@ About Page Style
 .weekly-offers .owl-nav .owl-prev:hover::after,
 .weekly-offers .owl-nav .owl-next:hover::after {
   color: #fff;
-  background-color: #ffce00;
+  background-color: #ffb41f;
 }
 
 .more-about {
@@ -1446,7 +1446,7 @@ About Page Style
 }
 
 .more-about .info-item span {
-  color: #ffce00;
+  color: #ffb41f;
   font-size: 15px;
 }
 
@@ -1735,7 +1735,7 @@ body .options .option {
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
 body .options .option {
-  --defaultBackground:#ffce00;
+  --defaultBackground:#ffb41f;
 }
 body .options .option.active {
   flex-grow: 10000;
@@ -1873,11 +1873,11 @@ Deals Page Style
 }
 
 .page-heading .border-button a:hover {
-  border-color: #ffce00;
+  border-color: #ffb41f;
 }
 
 .search-form #search-form {
-  background-color: #ffce00;
+  background-color: #ffb41f;
   border-bottom-left-radius: 23px;
   border-bottom-right-radius: 23px;
   padding: 35px 60px;
@@ -1928,7 +1928,7 @@ Deals Page Style
 
 .search-form #search-form button:hover {
   background-color: #fff;
-  color: #ffce00;
+  color: #ffb41f;
 }
 
 .amazing-deals {
@@ -1949,7 +1949,7 @@ Deals Page Style
 }
 
 .amazing-deals .item span.info {
-  color: #ffce00;
+  color: #ffb41f;
   font-size: 15px;
   margin-bottom: 20px;
   display: block;
@@ -1999,9 +1999,9 @@ Deals Page Style
   display: inline-block;
   width: 46px;
   height: 46px;
-  border: 1px solid #ffce00;
+  border: 1px solid #ffb41f;
   line-height: 44px;
-  color: #ffce00;
+  color: #ffb41f;
   text-align: center;
   font-size: 18px;
   font-weight: 500;
@@ -2011,7 +2011,7 @@ Deals Page Style
 
 .amazing-deals ul.page-numbers li.active a,
 .amazing-deals ul.page-numbers li a:hover {
-  background-color: #ffce00;
+  background-color: #ffb41f;
   color: #fff;
 }
 
@@ -2101,7 +2101,7 @@ Reservation Page Style
   text-align: center;
   line-height: 60px;
   border-radius: 50px;
-  color: #ffce00;
+  color: #ffb41f;
   font-size: 20px;
   margin-bottom: 20px;
 }
@@ -2114,7 +2114,7 @@ Reservation Page Style
 
 .more-info .info-item a {
   font-size: 15px;
-  color: #ffce00;
+  color: #ffb41f;
 }
 
 .reservation-form {
@@ -2133,7 +2133,7 @@ Reservation Page Style
 
 .reservation-form #reservation-form h4 em {
   font-style: normal;
-  color: #ffce00;
+  color: #ffb41f;
 }
 
 .reservation-form #reservation-form {
@@ -2167,8 +2167,8 @@ Reservation Page Style
 .reservation-form #reservation-form button {
   font-size: 14px;
   color: #fff;
-  background-color: #ffce00;
-  border: 1px solid #ffce00;
+  background-color: #ffb41f;
+  border: 1px solid #ffb41f;
   padding: 12px 30px;
   width: 100%;
   text-align: center;
@@ -2196,6 +2196,7 @@ Responsive Style
 
 body {
   overflow-x: hidden;
+  background:white;
 }
 
 @media (max-width: 575px) {
@@ -2203,7 +2204,7 @@ body {
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 1500px) {
   .about-main-content .content h2 {
     font-size: 24px;
   }
@@ -2212,7 +2213,7 @@ body {
     padding-top: 120px;
   }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper h2 {
-    font-size: 12px;
+    font-size: 18px;
   }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper h1 {
     font-size: 20px;
@@ -2254,7 +2255,7 @@ body {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1025px) {
   #section-1 .more-info {
     margin-top: 60px;
   }
@@ -2377,13 +2378,13 @@ body {
 }
 
 .custom-pagination .page-item.active .page-link {
-    background-color: #ffce00;
+    background-color: #ffb41f;
     color: #fff;
     box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);
 }
 
 .custom-pagination .page-link:hover {
-    background-color: #ffce00;
+    background-color: #ffb41f;
     color: #fff;
     transform: translateY(-2px);
 }

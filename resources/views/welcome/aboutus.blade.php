@@ -92,7 +92,7 @@
           </div>
           <p>Jomfun isn’t just about discovering new places — it’s about creating stories worth sharing. From hidden food stalls to breathtaking destinations and adrenaline-filled adventures, we connect explorers with authentic local experiences. Our mission is to inspire everyone to step out, taste something new, and embrace the excitement of every journey. Whether you’re a foodie, traveler, or thrill-seeker, Jomfun is your gateway to unforgettable moments.</p>
           <div class="main-button">
-            <a href="reservation.html">Discover More</a>
+            <a href="/">Discover More</a>
           </div>
         </div>
       </div>

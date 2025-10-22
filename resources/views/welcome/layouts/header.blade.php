@@ -1,9 +1,12 @@
 <style>
   .dropdown-menu.show { display:block !important; }
   .dropdown > a.active { color:#007bff; }
-  .dropdown-menu a:hover { color:#007bff; }
+  .dropdown-menu a:hover { 
+    color:#007bff;
+    background-color: #ffce00 !important;
+    border-radius: 4px;
+  }
   
-  /* Mobile dropdown styles */
   @media (max-width: 991px) {
     .nav .dropdown-menu {
       position: static !important;
@@ -16,6 +19,12 @@
       color: #fff !important;
       padding: 8px 0;
       display: block;
+    }
+
+    .nav .dropdown-menu li a:hover {
+      background-color: yellow !important;
+      color: #007bff !important;
+      border-radius: 4px;
     }
   }
 </style>
@@ -36,7 +45,7 @@
 
                         <li class="dropdown">
                             <a href="javascript:void(0);" 
-                               class="dropdown-toggle {{ Request::is('category*') ? 'active' : '' }}" 
+                               class="dropdown-toggle {{ Request::is('category') ? 'active' : '' }}" 
                                onclick="toggleDropdown(this);">
                                 Category
                             </a>
@@ -67,18 +76,15 @@
     const dropdown = element.nextElementSibling;
     const isShowing = dropdown.classList.contains('show');
     
-    // Close all dropdowns
     document.querySelectorAll('.dropdown-menu').forEach(menu => {
       menu.classList.remove('show');
     });
     
-    // Toggle current dropdown
     if (!isShowing) {
       dropdown.classList.add('show');
     }
   }
 
-  // Close dropdown when clicking outside
   document.addEventListener('click', function(e) {
     if (!e.target.closest('.dropdown')) {
       document.querySelectorAll('.dropdown-menu').forEach(menu => {
@@ -87,7 +93,6 @@
     }
   });
   
-  // Prevent dropdown from closing when clicking inside it
   document.addEventListener('click', function(e) {
     if (e.target.closest('.dropdown-menu')) {
       e.stopPropagation();
