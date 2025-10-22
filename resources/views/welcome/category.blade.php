@@ -63,7 +63,7 @@
         <div class="row">
             <div class="col-lg-5">
                 <div class="section-heading">
-					<strong style="font-size:28px; margin-top:10px">
+					<strong style="font-size:28px; margin-top:10px; color:black;">
 						{{ strtoupper($category_name) }}
 					</strong>
 				</div>
