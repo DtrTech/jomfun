@@ -98,10 +98,13 @@
 													{{ $project->category_name }}
 												</a>
 											</span>
-
-                                            <ul class="info">
-                                                <li><i class="fa fa-user"></i> {{ $project->author }}</li>
-                                                <li><i class="fa fa-calendar"></i> {{ $project->publish_time }}</li>
+                                            <ul class="info" style="list-style: none; display: flex; align-items: center; gap: 20px;">
+                                                <li style="display: flex; align-items: center;">
+                                                    <i class="fa fa-user" style="margin-right: 5px;"></i> {{ $project->author }}
+                                                </li>
+                                                <li style="display: flex; align-items: center;">
+                                                    <i class="fa fa-calendar" style="margin-right: 5px;"></i> {{ $project->publish_time }}
+                                                </li>
                                             </ul>
                                             <div class="main-button mb-2">
                                                 <a href="{{ url('/' . $project->slug) }}">Explore More</a>
