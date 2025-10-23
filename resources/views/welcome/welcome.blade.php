@@ -75,9 +75,9 @@
                             <h2>Explore JomFun:</h2>
                             <h1>{{ $project->title }}</h1>
                             <h2>{{ $project->sub_title }}</h2>
-                            <div class="border-button">
+                            <!-- <div class="border-button">
                                 <a href="{{ url('/' . $project->slug) }}">Go There</a>
-                            </div>
+                            </div> -->
                         </div>
 
                         <div class="container">
