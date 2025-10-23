@@ -804,13 +804,13 @@ Banner Style
   font-weight: 500;
   font-size: 20px;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 #section-1 .content-slider .slider .banner .banner-inner-wrapper h1 {
   font-size: 50px;
   color: #fff;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 #section-1 .content-slider .slider .banner .banner-inner-wrapper .learn-more-button a:hover {
   color: #ffb41f;
@@ -2213,10 +2213,10 @@ body {
     padding-top: 120px;
   }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper h2 {
-    font-size: 18px;
+    font-size: 14px;
   }
   #section-1 .content-slider .slider .banner .banner-inner-wrapper h1 {
-    font-size: 20px;
+    font-size: 16px;
   }
   #section-1 .more-info {
     padding: 30px;

@@ -73,11 +73,11 @@
                     <div class="banner-inner-wrapper header-text col-lg-8 mx-auto text-center">
                         <div class="main-caption">
                             <h2>Explore JomFun:</h2>
-                            <h1>{{ $project->title }}</h1>
-                            <h2>{{ $project->sub_title }}</h2>
-                            <!-- <div class="border-button">
+                            <h1>{{ \Illuminate\Support\Str::words($project->title, 15, '...') }}</h1>
+                            <h2>{{ \Illuminate\Support\Str::words($project->sub_title, 25, '...') }}</h2>
+                            <div class="border-button">
                                 <a href="{{ url('/' . $project->slug) }}">Go There</a>
-                            </div> -->
+                            </div>
                         </div>
 
                         <div class="container">
