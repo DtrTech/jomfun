@@ -179,8 +179,8 @@
 													style="text-decoration:none; color:#fff;">
 													{{ $project->category_name }}
 												</a>
-											</span>
-                                            <ul class="info" style="list-style: none; display: flex; align-items: center;">
+											</span>  
+                                            <ul class="info" style="list-style: none; display: flex; align-items: center; gap:5px;">
                                                 <a href="">
                                                     <img alt="Photo of {{ $project->author }}" 
                                                         src="{{ $project->author_image ? asset($project->author_image) : 'https://secure.gravatar.com/avatar/17bbc2d36ab2cd21146949c7e05e9f1d50595287eeeb4c8f37faf69d727634e1?s=140&r=g' }}" 

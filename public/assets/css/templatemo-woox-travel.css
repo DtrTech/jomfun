@@ -1381,12 +1381,12 @@ About Page Style
 .weekly-offers .owl-nav .owl-next::after {
   font-family: "FontAwesome";
   content: '\f061'; 
-  color: #ffb41f;
+  color: #588800;
   font-size: 20px;
   width: 46px;
   height: 46px;
   text-align: center;
-  border: 1px solid #ffb41f;
+  border: 1px solid #588800;
   display: inline-block;
   line-height: 44px;
   border-radius: 50%;
@@ -1401,12 +1401,12 @@ About Page Style
 .weekly-offers .owl-nav .owl-prev::after {
   font-family: "FontAwesome";
   content: '\f060'; 
-  color: #ffb41f;
+  color: #588800;
   font-size: 20px;
   width: 46px;
   height: 46px;
   text-align: center;
-  border: 1px solid #ffb41f;
+  border: 1px solid #588800;
   display: inline-block;
   line-height: 44px;
   border-radius: 50%;
@@ -1417,7 +1417,7 @@ About Page Style
 .weekly-offers .owl-nav .owl-prev:hover::after,
 .weekly-offers .owl-nav .owl-next:hover::after {
   color: #fff;
-  background-color: #ffb41f;
+  background-color: #588800;
 }
 
 .more-about {
