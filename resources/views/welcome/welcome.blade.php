@@ -180,9 +180,15 @@
 													{{ $project->category_name }}
 												</a>
 											</span>
-                                            <ul class="info" style="list-style: none; display: flex; align-items: center; gap: 20px;">
+                                            <ul class="info" style="list-style: none; display: flex; align-items: center;">
+                                                <a href="">
+                                                    <img alt="Photo of {{ $project->author }}" 
+                                                        src="{{ $project->author_image ? asset($project->author_image) : 'https://secure.gravatar.com/avatar/17bbc2d36ab2cd21146949c7e05e9f1d50595287eeeb4c8f37faf69d727634e1?s=140&r=g' }}" 
+                                                        height="25" width="25" 
+                                                        style="border-radius:50%; object-fit:cover;">
+                                                </a>
                                                 <li style="display: flex; align-items: center;">
-                                                    <i class="fa fa-user" style="margin-right: 5px;"></i> {{ $project->author }}
+                                                    <i style="margin-right: 5px;"></i> {{ $project->author }}
                                                 </li>
                                                 <li style="display: flex; align-items: center;">
                                                     <i class="fa fa-calendar" style="margin-right: 5px;"></i> {{ $project->publish_time }}
