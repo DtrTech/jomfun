@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Setup;
 use App\Models\Banner;
 use App\Models\PageView;
 use App\Models\Project;
@@ -15,6 +16,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
 
 class WelcomeController extends Controller
 {
@@ -62,7 +64,9 @@ class WelcomeController extends Controller
             return $project;
         });
 
-        return view('welcome.welcome', compact('projects', 'categories', 'randomProjects'));
+        $setup = \App\Models\Setup::getFirstSetup();
+
+        return view('welcome.welcome', compact('projects', 'categories', 'randomProjects', 'setup'));
     }
 
     public function trackEvent(Request $request)

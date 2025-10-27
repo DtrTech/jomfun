@@ -1,6 +1,10 @@
 @extends('welcome.layouts.app')
 
-@section('title', 'Home - JomFun')
+@section('title', $project->title . ' - JomFun')
+
+@section('seo')
+{!! $project->page_seo !!}
+@endsection
 
 @push('styles')
 <style>
@@ -94,10 +98,10 @@ body, html {
 @endsection
 
 @push('scripts')
-  <script>
-    $(".option").click(function(){
-      $(".option").removeClass("active");
-      $(this).addClass("active"); 
-    });
-  </script>
+<script>
+$(".option").click(function(){
+  $(".option").removeClass("active");
+  $(this).addClass("active"); 
+});
+</script>
 @endpush

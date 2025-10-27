@@ -2,6 +2,10 @@
 
 @section('title', 'Home - JomFun')
 
+@section('seo')
+{!! $setup->seo_header !!}
+@endsection
+
 @push('styles')
 <style>
 .banner-dimmed {
