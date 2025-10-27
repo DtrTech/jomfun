@@ -102,7 +102,7 @@ class WelcomeController extends Controller
             ->orderBy('id')
             ->get();
         
-        $projects = Project::select('id', 'title', 'author', 'publish_time', 'sub_title', 'project_image', 'sub_title', 'category_name')
+        $projects = Project::select('id', 'title', 'author', 'publish_time', 'sub_title', 'project_image', 'sub_title', 'category_name', 'author_image')
             ->where('category_name', $category_name)
             ->where('status', 'active')
             ->orderBy('publish_time', 'desc')
