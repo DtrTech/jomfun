@@ -3,6 +3,11 @@
 <!-- Summernote CSS -->
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<style>
+.note-editor .note-editable {
+  background-color: #fff !important;
+}
+</style>
 
 @section('content')
 <div class="middle-content container-xxl p-0">
@@ -93,7 +98,7 @@
                             <div class="col-lg-12 col-12">
                                 <div class="form-group">
                                     <label>Description</label>
-                                    <textarea id="description" name="description" class="form-control summernote" rows="10" placeholder="Enter description..." required>{{ $project->description ?? '' }}</textarea>
+                                    <textarea id="description" name="description" class="form-control summernote" rows="10" placeholder="Enter description..." required style="background-color: white !important;">{{ $project->description ?? '' }}</textarea>
                                 </div>
                             </div>
 
