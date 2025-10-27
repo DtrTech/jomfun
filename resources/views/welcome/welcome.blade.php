@@ -151,7 +151,6 @@
             <div class="col-lg-5">
                 <div class="section-heading">
                     <h2>Visit One Of Our Trips Now</h2>
-                    <p>JomFun</p>
                 </div>
             </div>
         </div>
