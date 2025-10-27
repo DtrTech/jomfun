@@ -239,4 +239,6 @@
         bannerTimer = setInterval(bannerSwitcher, 5000)
     });
 </script>
+
+{!! $setup->script !!}
 @endpush
