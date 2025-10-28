@@ -69,7 +69,7 @@
 
                             <div class="col-lg-12 col-12">
                                 <div class="form-group">
-                                    <label>Project Image (Recommend 344 X 194px)</label>
+                                    <label>Project Image (Recommend 681 X 696px)</label>
                                     <input type="file" name="project_image" class="form-control" accept="image/*" onchange="previewImage(event)">
 
                                     <div class="mt-2">
