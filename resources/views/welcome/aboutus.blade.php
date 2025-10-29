@@ -2,8 +2,15 @@
 
 @section('title', 'Home - JomFun')
 
+<style>
+html, body {
+  overflow-x: hidden !important;
+}
+</style>
+
 @section('content')
   <div class="weekly-offers">
+
     <div class="container">
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
@@ -15,38 +22,38 @@
       </div>
     </div>
 
-      <div class="container-fluid">
-          <div class="row">
-              <div class="col-lg-12">
-                  <div class="owl-weekly-offers owl-carousel">
-                      @foreach ($randomProjects as $random)
-                          <div class="item">
-                            <div class="thumb">
-                              <img src="{{ $random->project_image ? asset($random->project_image) : asset('default-banner.jpg') }}" alt="{{ $random->title }}">
-                              <div class="text" style="max-width: 300px; margin: 0 auto;">
-                                <h4>
-                                  <span><i class="fa fa-user"></i> {{ $random->author }}</span><br>
-                                  <span><i class="fa fa-tag"></i> {{ $random->category_name }}</span>
-                                </h4><br><br>
-                                <h6>{{ $random->publish_time }}<br></h6>
-                                <div class="line-dec"></div>
-                                <ul>
-                                  <li style="white-space: normal; word-wrap: break-word;">
-                                    {{ \Illuminate\Support\Str::words($random->title, 20, '...') }}
-                                  </li>
-                                </ul>
-                                <div class="main-button">
-                                  <a href="{{ url('/' . \Illuminate\Support\Str::slug(\Illuminate\Support\Str::words($random->title, 10))) }}">Explore More</a>
-                                </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="owl-weekly-offers owl-carousel">
+                    @foreach ($randomProjects as $random)
+                        <div class="item">
+                          <div class="thumb">
+                            <img src="{{ $random->project_image ? asset($random->project_image) : asset('default-banner.jpg') }}" alt="{{ $random->title }}">
+                            <div class="text" style="max-width: 300px; margin: 0 auto;">
+                              <h4>
+                                <span><i class="fa fa-user"></i> {{ $random->author }}</span><br>
+                                <span><i class="fa fa-tag"></i> {{ $random->category_name }}</span>
+                              </h4><br><br>
+                              <h6>{{ $random->publish_time }}<br></h6>
+                              <div class="line-dec"></div>
+                              <ul>
+                                <li style="white-space: normal; word-wrap: break-word;">
+                                  {{ \Illuminate\Support\Str::words($random->title, 20, '...') }}
+                                </li>
+                              </ul>
+                              <div class="main-button">
+                                <a href="{{ url('/' . \Illuminate\Support\Str::slug(\Illuminate\Support\Str::words($random->title, 10))) }}">Explore More</a>
                               </div>
                             </div>
                           </div>
-                      @endforeach
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+
   </div>
 
   <div class="more-about">
