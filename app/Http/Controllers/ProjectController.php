@@ -51,6 +51,7 @@ class ProjectController extends Controller
 
         $category = Category::find($validated['category_id']);
         $validated['category_name'] = $category?->category_name;
+        dd($request);
 
         if ($request->hasFile('project_image')) {
             $path = $request->file('project_image')->store('public-images', 'public');
@@ -61,7 +62,6 @@ class ProjectController extends Controller
             $path = $request->file('author_image')->store('public-images', 'public');
             $validated['author_image'] = Storage::url($path);
         }
-        dd($request);
 
         Project::create($validated);
 
