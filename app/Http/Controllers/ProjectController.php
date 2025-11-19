@@ -100,7 +100,6 @@ class ProjectController extends Controller
             $path = $request->file('author_image')->store('public-images', 'public');
             $validated['author_image'] = Storage::url($path);
         }
-        dd($request->all());
 
         $project->update($validated);
 
